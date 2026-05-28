@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Inter, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
 import "streamdown/styles.css";
 import "./globals.css";
 
@@ -25,6 +25,17 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+// Cormorant Garamond — serif clássica de inspiração humanista,
+// herança jurídica/editorial. Vira display principal.
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+// Playfair mantido por compat com componentes que referenciem --font-playfair.
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
@@ -65,7 +76,7 @@ export default function RootLayout({
         <GoogleAdsTag />
       </head>
       <body
-        className={`${inter.variable} ${playfair.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${cormorant.variable} ${playfair.variable} ${geistMono.variable} antialiased`}
       >
         {children}
         <Analytics />

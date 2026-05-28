@@ -6,34 +6,51 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/*
+  Tema Clássico — Fustinoni Advocacia
+  Paleta inspirada em encadernação jurídica clássica:
+  - Azul-marinho profundo como cor institucional (toga, sobriedade)
+  - Dourado fosco como acento (relevos de capa, foliação a ouro)
+  - Off-white quente como fundo (papel envelhecido, conforto de leitura)
+  - Grafite suave como texto (sem o contraste agressivo do preto puro)
+  Tipografia: Cormorant Garamond (display/serif) + Inter (corpo)
+  Radius: 3px (sóbrio, sem brutalismo de canto reto)
+*/
+
 @theme inline {
-  --color-background: 0 0% 100%;
-  --color-foreground: 0 0% 0%;
-  --color-card: 0 0% 100%;
-  --color-card-foreground: 0 0% 0%;
+  /* Light — papel e tinta */
+  --color-background: 48 33% 97%;          /* #faf8f3 off-white quente */
+  --color-foreground: 220 18% 14%;         /* #1d2330 grafite suave */
+  --color-card: 0 0% 100%;                 /* branco puro pra cards destacarem */
+  --color-card-foreground: 220 18% 14%;
   --color-popover: 0 0% 100%;
-  --color-popover-foreground: 0 0% 0%;
-  --color-primary: 0 0% 0%;
-  --color-primary-foreground: 0 0% 100%;
-  --color-secondary: 0 0% 96%;
-  --color-secondary-foreground: 0 0% 0%;
-  --color-muted: 0 0% 96%;
-  --color-muted-foreground: 0 0% 45%;
-  --color-accent: 0 0% 96%;
-  --color-accent-foreground: 0 0% 0%;
-  --color-destructive: 0 84% 60%;
-  --color-destructive-foreground: 0 0% 100%;
-  --color-border: 0 0% 85%;
-  --color-input: 0 0% 85%;
-  --color-ring: 0 0% 0%;
-  --font-sans: var(--font-inter), sans-serif;
-  --font-serif: var(--font-playfair), serif;
-  --font-mono: var(--font-geist-mono);
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
-  --radius-xl: 0px;
-  --radius: 0px;
+  --color-popover-foreground: 220 18% 14%;
+  --color-primary: 213 51% 22%;            /* #1c3759 azul-marinho institucional */
+  --color-primary-foreground: 42 47% 88%;  /* dourado claro sobre marinho */
+  --color-secondary: 42 28% 92%;           /* #ece5d4 creme suave */
+  --color-secondary-foreground: 213 51% 22%;
+  --color-muted: 42 22% 94%;               /* #efebde fundo de seções alternadas */
+  --color-muted-foreground: 220 10% 38%;   /* #555e6d cinza-azulado pra texto secundário */
+  --color-accent: 38 50% 56%;              /* #c9a86a dourado fosco */
+  --color-accent-foreground: 220 18% 14%;
+  --color-destructive: 0 65% 42%;          /* vinho ao invés de vermelho puro */
+  --color-destructive-foreground: 48 33% 97%;
+  --color-border: 40 18% 84%;              /* #dcd5c5 borda quente sutil */
+  --color-input: 40 18% 84%;
+  --color-ring: 38 50% 56%;                /* foco no dourado */
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* Radius sóbrio — humaniza sem perder a seriedade */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
+  --radius: 3px;
+
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   @keyframes marquee {
@@ -54,6 +71,29 @@
   }
 }
 
+/* Dark — couro azul-noite com dourado vivo */
+.dark {
+  --color-background: 215 30% 8%;          /* #0f1620 azul-noite profundo */
+  --color-foreground: 42 35% 88%;          /* #ece1c8 dourado claro pra texto */
+  --color-card: 215 28% 11%;               /* #141d2a card um tom acima */
+  --color-card-foreground: 42 35% 88%;
+  --color-popover: 215 28% 11%;
+  --color-popover-foreground: 42 35% 88%;
+  --color-primary: 38 50% 60%;             /* dourado vira primário no dark */
+  --color-primary-foreground: 215 30% 8%;
+  --color-secondary: 215 22% 16%;          /* #1f2733 secundário escuro */
+  --color-secondary-foreground: 42 35% 88%;
+  --color-muted: 215 22% 14%;
+  --color-muted-foreground: 42 18% 65%;    /* dourado dessaturado */
+  --color-accent: 38 65% 62%;              /* dourado mais vivo no escuro */
+  --color-accent-foreground: 215 30% 8%;
+  --color-destructive: 0 55% 45%;
+  --color-destructive-foreground: 42 35% 88%;
+  --color-border: 215 18% 22%;             /* #2d3540 borda discreta */
+  --color-input: 215 18% 22%;
+  --color-ring: 38 65% 62%;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -64,6 +104,30 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+
+  /* Headings com refinamento serifado clássico */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "dlig" 1, "swsh" 1;
+    letter-spacing: -0.01em;
+  }
+
+  /* Itálico no Cormorant ganha personalidade — usa nos blockquotes */
+  blockquote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.125em;
+    border-left: 3px solid hsl(var(--color-accent));
+    padding-left: 1.25rem;
+    color: hsl(var(--color-muted-foreground));
+  }
+
+  /* Selecção em dourado translúcido */
+  ::selection {
+    background-color: hsl(var(--color-accent) / 0.35);
+    color: hsl(var(--color-foreground));
   }
 }
 
@@ -71,15 +135,39 @@
   .bg-grid-pattern {
     background-size: 40px 40px;
     background-image:
-      linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+      linear-gradient(to right, hsl(var(--color-foreground) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--color-foreground) / 0.04) 1px, transparent 1px);
   }
 
   .bg-grid-pattern-small {
     background-image:
-      linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+      linear-gradient(to right, hsl(var(--color-foreground) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--color-foreground) / 0.04) 1px, transparent 1px);
     background-size: 20px 20px;
+  }
+
+  /* Filete dourado decorativo — separador editorial */
+  .rule-gold {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      hsl(var(--color-accent) / 0.6) 20%,
+      hsl(var(--color-accent)) 50%,
+      hsl(var(--color-accent) / 0.6) 80%,
+      transparent 100%
+    );
+  }
+
+  /* Letra capitular (drop cap) — usar em parágrafos editoriais */
+  .editorial::first-letter {
+    font-family: var(--font-serif);
+    font-size: 3.25em;
+    font-weight: 600;
+    line-height: 0.9;
+    float: left;
+    padding: 0.1em 0.1em 0 0;
+    color: hsl(var(--color-accent));
   }
 
   .chat-streamdown {
