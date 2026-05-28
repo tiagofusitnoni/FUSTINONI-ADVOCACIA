@@ -131,6 +131,71 @@
   }
 }
 
+/*
+  OVERLAY DE COMPATIBILIDADE
+  O site foi escrito com cores hardcoded (bg-white, bg-black, text-black/70,
+  border-black/15, etc) em ~280 lugares. Para que o tema novo apareça SEM
+  precisar refatorar cada componente, sobrescrevemos as classes utilitárias
+  mais usadas para apontar para os tokens do tema.
+
+  Essa é a etapa 1 ("overlay visual"). A etapa 2, futura, é remapear
+  componente a componente para usar bg-background, text-foreground, etc.
+*/
+@layer utilities {
+  /* Backgrounds — branco vira off-white quente; preto vira marinho */
+  .bg-white { background-color: hsl(var(--color-background)); }
+  .bg-white\/90 { background-color: hsl(var(--color-background) / 0.92); }
+  .bg-white\/10 { background-color: hsl(var(--color-background) / 0.1); }
+  .bg-black { background-color: hsl(var(--color-primary)); }
+  .bg-black\/30 { background-color: hsl(var(--color-primary) / 0.3); }
+  .bg-black\/80 { background-color: hsl(var(--color-primary) / 0.82); }
+  .bg-black\/85 { background-color: hsl(var(--color-primary) / 0.86); }
+  .bg-black\/90 { background-color: hsl(var(--color-primary) / 0.92); }
+  .bg-neutral-50 { background-color: hsl(var(--color-secondary)); }
+  .bg-neutral-100 { background-color: hsl(var(--color-muted)); }
+  .bg-neutral-200 { background-color: hsl(var(--color-secondary)); }
+  .bg-neutral-800 { background-color: hsl(var(--color-primary) / 0.92); }
+  .bg-neutral-900 { background-color: hsl(var(--color-primary)); }
+  .bg-neutral-950 { background-color: hsl(var(--color-primary)); }
+  .bg-zinc-50 { background-color: hsl(var(--color-secondary)); }
+  .bg-zinc-800 { background-color: hsl(var(--color-primary) / 0.92); }
+  .bg-zinc-950 { background-color: hsl(var(--color-primary)); }
+
+  /* Texts — black/X vira foreground/X; white vira primary-foreground (dourado claro) */
+  .text-black { color: hsl(var(--color-foreground)); }
+  .text-black\/30 { color: hsl(var(--color-foreground) / 0.32); }
+  .text-black\/60 { color: hsl(var(--color-foreground) / 0.66); }
+  .text-black\/65 { color: hsl(var(--color-foreground) / 0.7); }
+  .text-black\/70 { color: hsl(var(--color-foreground) / 0.78); }
+  .text-white { color: hsl(var(--color-primary-foreground)); }
+  .text-white\/70 { color: hsl(var(--color-primary-foreground) / 0.72); }
+  .text-white\/80 { color: hsl(var(--color-primary-foreground) / 0.82); }
+  .text-white\/85 { color: hsl(var(--color-primary-foreground) / 0.88); }
+  .text-white\/90 { color: hsl(var(--color-primary-foreground) / 0.92); }
+  .text-neutral-300 { color: hsl(var(--color-primary-foreground) / 0.88); }
+  .text-neutral-400 { color: hsl(var(--color-primary-foreground) / 0.72); }
+  .text-neutral-500 { color: hsl(var(--color-muted-foreground)); }
+  .text-neutral-600 { color: hsl(var(--color-muted-foreground)); }
+  .text-neutral-700 { color: hsl(var(--color-foreground) / 0.82); }
+
+  /* Borders — black/15 vira borda bege; black puro vira marinho */
+  .border-black { border-color: hsl(var(--color-primary)); }
+  .border-black\/15 { border-color: hsl(var(--color-border)); }
+  .border-black\/20 { border-color: hsl(var(--color-border)); }
+  .border-white { border-color: hsl(var(--color-accent) / 0.45); }
+  .border-white\/20 { border-color: hsl(var(--color-accent) / 0.22); }
+  .border-white\/35 { border-color: hsl(var(--color-accent) / 0.4); }
+  .border-neutral-200 { border-color: hsl(var(--color-border)); }
+  .border-neutral-800 { border-color: hsl(var(--color-primary) / 0.4); }
+  .border-zinc-300 { border-color: hsl(var(--color-border)); }
+  .border-zinc-950\/35 { border-color: hsl(var(--color-primary) / 0.35); }
+
+  /* Gradientes (poucos, mas presentes em CTAs) */
+  .from-neutral-200 { --tw-gradient-from: hsl(var(--color-secondary)) var(--tw-gradient-from-position); --tw-gradient-to: hsl(var(--color-secondary) / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+  .to-neutral-500 { --tw-gradient-to: hsl(var(--color-muted-foreground)) var(--tw-gradient-to-position); }
+  .to-neutral-600 { --tw-gradient-to: hsl(var(--color-muted-foreground)) var(--tw-gradient-to-position); }
+}
+
 @layer utilities {
   .bg-grid-pattern {
     background-size: 40px 40px;
