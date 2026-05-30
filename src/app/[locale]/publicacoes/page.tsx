@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { Link } from "@/i18n/navigation";
 import { type AppLocale } from "@/i18n/routing";
+import { NewsletterForm } from "@/components/newsletter-form";
 import { OG_LOCALE_BY_APP_LOCALE } from "@/lib/i18n";
 import {
   listarPublicacoes,
@@ -120,12 +121,15 @@ export default async function PublicacoesPage({ params, searchParams }: PageProp
       <section className="px-4 py-12 sm:px-6 md:px-10">
         <div className="mx-auto max-w-6xl">
           {publicacoes.length === 0 ? (
-            <div className="py-20 text-center">
+            <div className="py-16 text-center">
               <p className="font-serif text-2xl text-black/40">
                 Em breve as primeiras publicações.
               </p>
               <p className="mt-3 text-sm text-black/50">
                 Nosso agente está acompanhando STF, STJ, TJSP e outros tribunais.
+              </p>
+              <p className="mt-6 text-sm text-black/65">
+                Quer ser avisado por e-mail assim que sairem as primeiras?
               </p>
             </div>
           ) : (
@@ -156,6 +160,13 @@ export default async function PublicacoesPage({ params, searchParams }: PageProp
               ))}
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Seção de inscrição na newsletter */}
+      <section className="border-t border-black/15 bg-neutral-50/60 px-4 py-16 sm:px-6 md:px-10">
+        <div className="mx-auto max-w-2xl">
+          <NewsletterForm />
         </div>
       </section>
     </main>

@@ -41,6 +41,24 @@ export const routing = defineRouting({
       es: "/publicaciones/[slug]",
       it: "/pubblicazioni/[slug]",
     },
+    "/newsletter/obrigado": {
+      pt: "/newsletter/obrigado",
+      en: "/newsletter/thank-you",
+      es: "/newsletter/gracias",
+      it: "/newsletter/grazie",
+    },
+    "/newsletter/confirmado": {
+      pt: "/newsletter/confirmado",
+      en: "/newsletter/confirmed",
+      es: "/newsletter/confirmado",
+      it: "/newsletter/confermato",
+    },
+    "/newsletter/descadastrado": {
+      pt: "/newsletter/descadastrado",
+      en: "/newsletter/unsubscribed",
+      es: "/newsletter/dado-de-baja",
+      it: "/newsletter/cancellato",
+    },
   },
 });
 
