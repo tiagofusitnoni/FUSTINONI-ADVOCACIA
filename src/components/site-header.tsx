@@ -112,6 +112,15 @@ export function SiteHeader({
             );
           })}
 
+          {locale === "pt" && (
+            <Link
+              href="/publicacoes"
+              className={`transition-colors hover:text-black ${pathname === "/publicacoes" ? "text-black" : ""}`}
+            >
+              {t("nav.sections.publications")}
+            </Link>
+          )}
+
           <NavigationMenu viewport={false}>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -217,6 +226,16 @@ export function SiteHeader({
                 </Link>
               );
             })}
+
+            {locale === "pt" && (
+              <Link
+                href="/publicacoes"
+                className="border-b border-black/15 px-4 py-3 text-xs font-medium tracking-wider uppercase transition-colors hover:bg-neutral-50"
+                onClick={closeMobileMenu}
+              >
+                {t("nav.sections.publications")}
+              </Link>
+            )}
 
             <button
               type="button"

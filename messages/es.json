@@ -35,6 +35,9 @@
       "products": {
         "creditReview": "Análisis de registros indebidos",
         "factorKReview": "Revisión de Factor K"
+      },
+      "sections": {
+        "publications": "Publicaciones"
       }
     }
   },

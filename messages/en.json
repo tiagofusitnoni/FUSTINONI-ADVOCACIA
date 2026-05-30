@@ -35,6 +35,9 @@
       "products": {
         "creditReview": "Improper listing review",
         "factorKReview": "Factor K review"
+      },
+      "sections": {
+        "publications": "Publications"
       }
     }
   },

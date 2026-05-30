@@ -1,6 +1,6 @@
 import { type AppLocale } from "@/i18n/routing";
 
-export type NavPathname = "/" | "/analise-credito" | "/fator-k";
+export type NavPathname = "/" | "/analise-credito" | "/fator-k" | "/publicacoes";
 
 export type HomeNavItem = {
   hash: string;

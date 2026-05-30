@@ -35,6 +35,9 @@
       "products": {
         "creditReview": "Analisi di segnalazioni indebite",
         "factorKReview": "Revisione del Fattore K"
+      },
+      "sections": {
+        "publications": "Pubblicazioni"
       }
     }
   },

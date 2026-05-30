@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { type AppLocale } from "@/i18n/routing";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { PublicacoesHomeBlock } from "@/components/publicacoes-home-block";
 import { WhatsAppCTAButton } from "@/components/whatsapp-cta-button";
 import { OG_LOCALE_BY_APP_LOCALE } from "@/lib/i18n";
 import { getLocalizedHash } from "@/lib/navigation";
@@ -1436,6 +1437,9 @@ export default async function Home({ params }: HomePageProps) {
       </section>
 
       <div className="h-16 w-full border-b border-black/15 bg-grid-pattern-small" />
+
+      {/* === Bloco Publicações (S33+) — só em pt === */}
+      {locale === "pt" && <PublicacoesHomeBlock />}
 
       <section id={homeSectionHashes.faq} className="scroll-mt-24 grid grid-cols-1 border-b border-black/15 sm:scroll-mt-28 lg:grid-cols-2">
         <div className="flex flex-col justify-center border-b border-black/15 p-8 sm:p-12 lg:border-r lg:border-b-0 lg:p-20">

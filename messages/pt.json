@@ -35,6 +35,9 @@
       "products": {
         "creditReview": "Análise de apontamentos indevidos",
         "factorKReview": "Revisão de Fator K"
+      },
+      "sections": {
+        "publications": "Publicações"
       }
     }
   },
