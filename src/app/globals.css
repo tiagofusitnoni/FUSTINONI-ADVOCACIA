@@ -270,4 +270,66 @@
       line-height: 1.25rem;
     }
   }
+
+  /* S33+ — Tipografia editorial do artigo de publicação */
+  .publicacao-prose article h1 {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    text-align: center;
+    margin-bottom: 1.75rem;
+  }
+  .publicacao-prose article h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.4);
+    margin: 1.5rem auto 0;
+  }
+  .publicacao-prose article p {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: 1.18rem;
+    line-height: 1.7;
+    color: #1d2330;
+    margin-bottom: 1.35rem;
+  }
+  .publicacao-prose article p.lead {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.72);
+    border-left: 3px solid rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 0 0.5rem 1.25rem;
+    margin-bottom: 1.75rem;
+  }
+  .publicacao-prose article p.lead strong {
+    font-weight: 500;
+    font-style: normal;
+  }
+  .publicacao-prose article h3 {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2.25rem 0 1rem;
+    color: #1d2330;
+  }
+  .publicacao-prose article footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    font-family: inherit;
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.55);
+    text-align: center;
+  }
+  .publicacao-prose article footer a {
+    color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+    text-decoration: none;
+  }
+  .publicacao-prose article footer a:hover {
+    color: black;
+  }
 }

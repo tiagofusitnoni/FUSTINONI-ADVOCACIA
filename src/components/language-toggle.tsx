@@ -61,8 +61,12 @@ export function LanguageToggle() {
   const hrefByLocale = useMemo(() => {
     return Object.fromEntries(
       routing.locales.map(option => {
+        // S33+: cast pra contornar typed routes que reclamam de [slug] dinâmico.
+        // Em runtime funciona — getPathname aceita strings; pra rotas dinâmicas
+        // que só existem em pt (ex: /publicacoes/[slug]) o redirect cai em
+        // notFound() na locale alvo, comportamento ok.
         const localizedPathname = getPathname({
-          href: pathname,
+          href: pathname as never,
           locale: option,
         });
         const internalHash = currentHash
