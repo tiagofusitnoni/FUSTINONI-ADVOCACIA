@@ -26,6 +26,21 @@ export const routing = defineRouting({
       es: "/correo-confirmado",
       it: "/email-confermata",
     },
+    // S33+: Publicações jurídicas (só conteúdo em pt; outras locales redirecionam
+    // pra notFound() dentro do page.tsx). Pathnames espelhados pra os outros
+    // idiomas só pra atender exigência de tipo do next-intl.
+    "/publicacoes": {
+      pt: "/publicacoes",
+      en: "/publications",
+      es: "/publicaciones",
+      it: "/pubblicazioni",
+    },
+    "/publicacoes/[slug]": {
+      pt: "/publicacoes/[slug]",
+      en: "/publications/[slug]",
+      es: "/publicaciones/[slug]",
+      it: "/pubblicazioni/[slug]",
+    },
   },
 });
 

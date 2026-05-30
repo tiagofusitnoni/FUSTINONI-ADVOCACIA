@@ -133,7 +133,7 @@ export default async function PublicacoesPage({ params, searchParams }: PageProp
               {publicacoes.map((p) => (
                 <Link
                   key={p.id}
-                  href={`/publicacoes/${p.slug}` as never}
+                  href={{ pathname: "/publicacoes/[slug]", params: { slug: p.slug } }}
                   className="group flex flex-col border border-black/15 bg-white p-7 transition-all hover:border-black/40 hover:-translate-y-0.5"
                 >
                   <div className="mb-4 flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-[0.12em] font-medium text-black/50">
