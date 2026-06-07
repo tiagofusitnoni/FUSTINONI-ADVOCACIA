@@ -1105,31 +1105,43 @@ export default async function Home({ params }: HomePageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <section className="relative flex flex-col items-center overflow-hidden border-b border-black/15 px-4 pt-20 pb-14 text-center sm:px-6 sm:pt-28 sm:pb-16 md:px-10 md:pt-36 md:pb-20">
-        <div className="mb-6 text-xs font-bold uppercase tracking-widest text-black/70">
-          FUSTINONI ADVOCACIA
+      {/* Hero fotográfico (S72): aérea de São Paulo + overlay navy frio + texto
+          claro por cima. Estilo editorial de banca grande. */}
+      <section className="relative flex min-h-[78vh] flex-col items-center justify-center overflow-hidden border-b border-black/15 px-4 py-24 text-center sm:px-6 sm:py-28 md:px-10 md:py-36">
+        <Image
+          src="/hero-saopaulo.jpg"
+          alt={text.heroImageAlt}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c2636]/75 via-[#0c2636]/72 to-[#0c2636]/90" />
+
+        {/* Cores em hex arbitrário (NÃO text-white/bg-white): o hero é sempre escuro
+            nos dois temas, e o overlay de compat remapeia .text-white → primary-
+            foreground (que fica navy no dark). Hex arbitrário escapa do overlay. */}
+        <div className="relative z-10 flex flex-col items-center">
+          <div className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-[#c3d2dc]">
+            FUSTINONI ADVOCACIA
+          </div>
+
+          <h1 className="mb-8 max-w-4xl text-balance font-serif text-4xl leading-[1.05] tracking-tight text-[#f7fafc] sm:mb-10 sm:text-5xl md:text-6xl lg:text-7xl">
+            {text.heroTitle}
+          </h1>
+
+          <p className="mb-10 max-w-2xl text-sm leading-7 text-[#f7fafc]/80 sm:text-base">
+            {text.heroDescription}
+          </p>
+
+          <WhatsAppCTAButton origem="pagina_principal"
+            whatsappPhone={whatsappPhone}
+            whatsappBaseMessage={msgConsulta}
+            className="z-10 w-full max-w-xs rounded-none border border-[#f7fafc]/50 bg-transparent px-8 py-5 text-sm uppercase tracking-wider text-[#f7fafc] backdrop-blur-sm transition-colors hover:bg-[#f7fafc] hover:text-[#0c2636] sm:w-auto sm:py-6"
+          >
+            {text.heroCta}
+          </WhatsAppCTAButton>
         </div>
-
-        <h1 className="mb-8 max-w-4xl text-balance font-serif text-4xl leading-[1.0] tracking-tight sm:mb-10 sm:text-5xl md:text-6xl lg:text-7xl">
-          {text.heroTitle}
-        </h1>
-
-        <p className="mb-10 max-w-2xl text-sm leading-7 text-black/65 sm:text-base">
-          {text.heroDescription}
-        </p>
-
-        <WhatsAppCTAButton origem="pagina_principal"
-          whatsappPhone={whatsappPhone}
-          whatsappBaseMessage={msgConsulta}
-          className="z-10 mb-12 w-full max-w-xs rounded-none bg-black px-8 py-5 text-sm uppercase tracking-wider text-white hover:bg-black/80 sm:mb-16 sm:w-auto sm:py-6"
-        >
-          {text.heroCta}
-        </WhatsAppCTAButton>
-
-        {/* Redesign editorial (S72): a arte do fórum usava mix-blend-multiply e
-            sumia no fundo frio, virando espaço morto. Hero agora é tipográfico
-            limpo (estilo banca grande). Um hero fotográfico real pode entrar aqui
-            depois, se o Tiago quiser. */}
       </section>
 
       <div className="grid grid-cols-2 border-b border-black/15 md:grid-cols-6">
@@ -1194,13 +1206,15 @@ export default async function Home({ params }: HomePageProps) {
         </div>
 
         <div className="relative mx-auto w-full max-w-2xl px-4 pb-8 sm:px-6 sm:pb-10">
-          <Image
-            src="/studio-elements-sketch.png"
-            alt={text.studioImageAlt}
-            width={1200}
-            height={1200}
-            className="h-auto w-full mix-blend-multiply contrast-125"
-          />
+          <div className="relative aspect-[4/3] w-full overflow-hidden border border-black/10">
+            <Image
+              src="/office-lounge.jpg"
+              alt={text.studioImageAlt}
+              fill
+              sizes="(max-width: 768px) 100vw, 672px"
+              className="object-cover object-center"
+            />
+          </div>
         </div>
 
         <div className="grid w-full grid-cols-2 border-t border-black/15 text-center text-sm font-medium sm:grid-cols-3 md:grid-cols-5 md:text-base">
@@ -1483,11 +1497,11 @@ export default async function Home({ params }: HomePageProps) {
 
         <div className="relative top-1 mt-auto w-full">
           <Image
-            src="/footer-meeting-sketch.png"
+            src="/office-corredor.jpg"
             alt={text.heroImageAlt}
-            width={1600}
-            height={700}
-            className="h-auto w-full max-h-[400px] object-cover object-bottom mix-blend-multiply opacity-90 contrast-125"
+            width={2000}
+            height={1335}
+            className="h-auto max-h-[400px] w-full object-cover object-center"
           />
         </div>
       </section>
