@@ -73,13 +73,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
-        {/* Anti-flash: aplica o tema salvo antes da pintura (evita flash de claro→escuro).
-            Padrão = claro; só ativa escuro se o usuário tiver optado. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();`,
-          }}
-        />
         <GoogleAdsTag />
       </head>
       <body

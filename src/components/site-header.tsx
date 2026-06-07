@@ -6,7 +6,6 @@ import { useLocale, useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { LanguageToggle } from "@/components/language-toggle";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { LeadCaptureDialog } from "@/components/lead-capture-dialog";
 import { Link, usePathname } from "@/i18n/navigation";
 import { type AppLocale } from "@/i18n/routing";
@@ -157,8 +156,6 @@ export function SiteHeader({
         </nav>
 
         <div className="flex items-center gap-2">
-          <ThemeToggle />
-
           <div className="hidden xl:block">
             <LanguageToggle />
           </div>
