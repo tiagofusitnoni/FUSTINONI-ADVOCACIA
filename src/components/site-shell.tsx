@@ -24,7 +24,7 @@ export async function SiteShell({ children, locale }: SiteShellProps) {
   );
 
   return (
-    <div className="min-h-screen overflow-x-clip bg-grid-pattern text-black font-sans selection:bg-black selection:text-white">
+    <div className="min-h-screen overflow-x-clip bg-background text-black font-sans selection:bg-primary selection:text-primary-foreground">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[90] focus:bg-black focus:px-3 focus:py-2 focus:text-xs focus:font-semibold focus:uppercase focus:tracking-wider focus:text-white"
@@ -32,7 +32,7 @@ export async function SiteShell({ children, locale }: SiteShellProps) {
         {t("skipToContent")}
       </a>
 
-      <div className="mx-auto flex min-h-screen w-full max-w-[84rem] flex-col bg-white shadow-2xl sm:border-x sm:border-black/15">
+      <div className="mx-auto flex min-h-screen w-full max-w-[120rem] flex-col bg-background">
         <SiteHeader
           homeNavItems={HOME_NAV_ITEMS}
           productNavItems={PRODUCT_NAV_ITEMS}

@@ -1107,7 +1107,7 @@ export default async function Home({ params }: HomePageProps) {
 
       {/* Hero fotográfico (S72): aérea de São Paulo + overlay navy frio + texto
           claro por cima. Estilo editorial de banca grande. */}
-      <section className="relative flex min-h-[78vh] flex-col items-center justify-center overflow-hidden border-b border-black/15 px-4 py-24 text-center sm:px-6 sm:py-28 md:px-10 md:py-36">
+      <section className="relative flex min-h-[92vh] flex-col items-center justify-center overflow-hidden border-b border-black/15 px-4 py-24 text-center sm:px-6 sm:py-28 md:px-10 md:py-40">
         <Image
           src="/hero-saopaulo.jpg"
           alt={text.heroImageAlt}
@@ -1116,7 +1116,7 @@ export default async function Home({ params }: HomePageProps) {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0c2636]/75 via-[#0c2636]/72 to-[#0c2636]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c2636]/55 via-[#0c2636]/62 to-[#0c2636]/88" />
 
         {/* Cores em hex arbitrário (NÃO text-white/bg-white): o hero é sempre escuro
             nos dois temas, e o overlay de compat remapeia .text-white → primary-
@@ -1126,11 +1126,11 @@ export default async function Home({ params }: HomePageProps) {
             FUSTINONI ADVOCACIA
           </div>
 
-          <h1 className="mb-8 max-w-4xl text-balance font-serif text-4xl leading-[1.05] tracking-tight text-[#f7fafc] sm:mb-10 sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mb-8 max-w-5xl text-balance font-serif text-5xl leading-[1.02] tracking-tight text-[#f7fafc] sm:mb-10 sm:text-6xl md:text-7xl lg:text-8xl">
             {text.heroTitle}
           </h1>
 
-          <p className="mb-10 max-w-2xl text-sm leading-7 text-[#f7fafc]/80 sm:text-base">
+          <p className="mb-10 max-w-2xl text-base leading-7 text-[#f7fafc]/80 sm:text-lg">
             {text.heroDescription}
           </p>
 
