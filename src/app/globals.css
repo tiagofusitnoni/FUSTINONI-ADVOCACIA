@@ -71,27 +71,27 @@
   }
 }
 
-/* Dark — Ônix noturno (S72: carvão profundo monocromático) */
+/* Dark — Ônix noturno (S72, REVAMPADO: texto crisp + hierarquia clara + acento com vida) */
 .dark {
-  --color-background: 225 13% 8%;          /* #121318 carvão profundo */
-  --color-foreground: 220 9% 90%;          /* #e3e5e8 cinza claro (texto) */
-  --color-card: 225 12% 11%;               /* #181a1f card um tom acima */
-  --color-card-foreground: 220 9% 90%;
-  --color-popover: 225 12% 11%;
-  --color-popover-foreground: 220 9% 90%;
-  --color-primary: 220 12% 89%;            /* quase-branco vira primário no dark (botões invertidos) */
-  --color-primary-foreground: 225 13% 9%;
-  --color-secondary: 225 10% 16%;          /* #23262c secundário escuro */
-  --color-secondary-foreground: 220 9% 90%;
-  --color-muted: 225 10% 14%;
-  --color-muted-foreground: 220 7% 62%;    /* cinza médio claro */
-  --color-accent: 217 18% 64%;             /* #97a1b3 aço claro (acento no dark) */
-  --color-accent-foreground: 225 13% 9%;
-  --color-destructive: 0 55% 52%;
-  --color-destructive-foreground: 220 9% 90%;
-  --color-border: 222 9% 22%;              /* #31343b borda discreta */
-  --color-input: 222 9% 22%;
-  --color-ring: 217 18% 64%;
+  --color-background: 222 16% 11%;         /* #181b22 carvão refinado (não um preto chapado) */
+  --color-foreground: 210 22% 96%;         /* #f0f3f6 branco-frio CRISP (texto) */
+  --color-card: 222 14% 16%;               /* #232733 card claramente ACIMA do fundo */
+  --color-card-foreground: 210 22% 96%;
+  --color-popover: 222 14% 16%;
+  --color-popover-foreground: 210 22% 96%;
+  --color-primary: 210 22% 95%;            /* quase-branco (botões invertidos) */
+  --color-primary-foreground: 222 16% 11%;
+  --color-secondary: 222 13% 20%;          /* #2b303c secundário, distinto do card */
+  --color-secondary-foreground: 210 22% 96%;
+  --color-muted: 222 13% 17%;
+  --color-muted-foreground: 215 16% 74%;   /* #aab4c2 secundário CLARO e legível (era cinza apagado) */
+  --color-accent: 208 45% 68%;             /* #7aa7cf aço-azulado com vida — respiro de cor no escuro */
+  --color-accent-foreground: 222 16% 11%;
+  --color-destructive: 0 62% 60%;
+  --color-destructive-foreground: 210 22% 96%;
+  --color-border: 220 13% 30%;             /* #424a59 borda nitidamente visível */
+  --color-input: 220 13% 30%;
+  --color-ring: 208 45% 68%;
 }
 
 @layer base {

@@ -1181,7 +1181,7 @@ export default async function Home({ params }: HomePageProps) {
                 }`}
               >
                 <div className="mb-6 flex items-baseline justify-between gap-4 border-b border-black/15 pb-4">
-                  <span className="font-serif text-3xl text-black/15">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="font-serif text-3xl text-foreground/30">{String(index + 1).padStart(2, "0")}</span>
                   {oab && (
                     <span className="text-[11px] font-semibold uppercase tracking-wider text-accent">{oab}</span>
                   )}
@@ -1320,7 +1320,7 @@ export default async function Home({ params }: HomePageProps) {
               key={area}
               className="group flex min-h-[8.5rem] flex-col justify-between border-b border-r border-black/15 p-5 transition-colors hover:bg-neutral-50 sm:min-h-[10rem] sm:p-6"
             >
-              <span className="font-serif text-lg text-foreground/20 transition-colors group-hover:text-accent">
+              <span className="font-serif text-lg text-foreground/30 transition-colors group-hover:text-accent">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <span className="font-serif text-base leading-snug sm:text-lg">{area}</span>
