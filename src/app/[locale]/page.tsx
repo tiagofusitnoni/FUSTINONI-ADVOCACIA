@@ -1116,7 +1116,7 @@ export default async function Home({ params }: HomePageProps) {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#16181d]/52 via-[#16181d]/60 to-[#16181d]/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#16181d]/42 via-[#16181d]/52 to-[#16181d]/80" />
 
         {/* Cores em hex arbitrário (NÃO text-white/bg-white): o hero é sempre escuro
             nos dois temas, e o overlay de compat remapeia .text-white → primary-
@@ -1313,58 +1313,19 @@ export default async function Home({ params }: HomePageProps) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col justify-between border-b border-black/15 p-6 sm:p-8 lg:border-r">
-            <h3 className="mb-10 font-serif text-xl leading-snug sm:mb-16 sm:text-2xl">
-              {text.sectorCard1Title}
-            </h3>
-            <div className="text-sm font-medium">{text.sectorCard1Description}</div>
-          </div>
-
-          <div className="grid grid-rows-2 border-b border-black/15 lg:border-r">
-            <div className="flex items-center justify-center border-b border-black/15 p-6 sm:p-8">
-              <div className="text-center">
-                <div className="text-xs font-bold uppercase tracking-widest text-black/70">{text.sectorPatrimonialLabel}</div>
-                <div className="mt-3 font-serif text-3xl sm:text-4xl">{text.sectorPatrimonialTitle}</div>
-              </div>
+        {/* Grade numerada e uniforme das 12 áreas (repaginação S72) — limpa, com hover */}
+        <div className="grid grid-cols-2 border-l border-black/15 md:grid-cols-3 lg:grid-cols-4">
+          {localizedLegalAreas.map((area, index) => (
+            <div
+              key={area}
+              className="group flex min-h-[8.5rem] flex-col justify-between border-b border-r border-black/15 p-5 transition-colors hover:bg-neutral-50 sm:min-h-[10rem] sm:p-6"
+            >
+              <span className="font-serif text-lg text-foreground/20 transition-colors group-hover:text-accent">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <span className="font-serif text-base leading-snug sm:text-lg">{area}</span>
             </div>
-            <div className="flex flex-col justify-end bg-neutral-50 p-6 sm:p-8">
-              <div className="mb-2 text-xs font-bold uppercase tracking-widest text-black/70">{text.sectorPlanningLabel}</div>
-              <div className="font-serif text-3xl sm:text-4xl">{text.sectorPlanningTitle}</div>
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-between border-b border-black/15 bg-white p-6 sm:p-8 lg:border-b-0">
-            <h3 className="mb-10 font-serif text-xl leading-snug sm:mb-16 sm:text-2xl">
-              {text.sectorCard3Title}
-            </h3>
-            <div className="text-sm font-medium">{text.sectorCard3Description}</div>
-          </div>
-
-          <div className="flex flex-col justify-end bg-neutral-50 p-6 sm:p-8 md:border-r md:border-black/15">
-            <div className="mb-2 text-xs font-bold uppercase tracking-widest text-black/70">{text.sectorRegulatedLabel}</div>
-            <div className="font-serif text-3xl sm:text-4xl">{text.sectorRegulatedTitle}</div>
-          </div>
-
-          <div className="grid grid-rows-2 md:border-r md:border-black/15">
-            <div className="flex items-center justify-center border-b border-black/15 p-6 sm:p-8">
-              <div className="text-center">
-                <div className="text-xs font-bold uppercase tracking-widest text-black/70">{text.sectorInternationalLabel}</div>
-                <div className="mt-3 font-serif text-3xl sm:text-4xl">{text.sectorInternationalTitle}</div>
-              </div>
-            </div>
-            <div className="flex flex-col justify-end bg-neutral-50 p-6 sm:p-8">
-              <div className="mb-2 text-xs font-bold uppercase tracking-widest text-black/70">{text.sectorRiskLabel}</div>
-              <div className="font-serif text-3xl sm:text-4xl">{text.sectorRiskTitle}</div>
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-between p-6 sm:p-8">
-            <h3 className="mb-10 font-serif text-xl leading-snug sm:mb-16 sm:text-2xl">
-              {text.sectorClosingTitle}
-            </h3>
-            <div className="text-sm font-medium">{text.sectorClosingDescription}</div>
-          </div>
+          ))}
         </div>
       </section>
 
