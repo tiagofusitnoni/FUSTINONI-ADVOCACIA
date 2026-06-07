@@ -1126,7 +1126,7 @@ export default async function Home({ params }: HomePageProps) {
             FUSTINONI ADVOCACIA
           </div>
 
-          <h1 className="mb-8 max-w-5xl text-balance font-serif text-5xl leading-[1.02] tracking-tight text-[#f7fafc] sm:mb-10 sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="mb-8 max-w-5xl text-balance font-serif text-4xl leading-[1.05] tracking-tight text-[#f7fafc] sm:mb-10 sm:text-6xl md:text-7xl lg:text-8xl">
             {text.heroTitle}
           </h1>
 
