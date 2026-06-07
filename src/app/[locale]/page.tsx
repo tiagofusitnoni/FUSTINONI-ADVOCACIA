@@ -779,7 +779,7 @@ const HOME_TEXT_BY_LOCALE: Record<AppLocale, HomeTextCopy> = {
       "Se você precisa de consultoria preventiva ou representação contenciosa, estruturamos a atuação ideal para proteger seus interesses com segurança jurídica.",
   },
   en: {
-    heroTitle: "Legal advisory with strategy, discretion and technical precision",
+    heroTitle: "Strategy, discretion and technical precision for high-complexity matters",
     heroDescription:
       "Advisory and litigation services for individuals and companies, focused on asset protection, risk mitigation and qualified legal defense for high-stakes matters.",
     heroCta: "Schedule Consultation",
@@ -788,7 +788,7 @@ const HOME_TEXT_BY_LOCALE: Record<AppLocale, HomeTextCopy> = {
     teamTitle: "Lawyers with strong academic training and multidisciplinary practice",
     studioLabel: "Firm",
     studioTitle:
-      "Technical excellence with strategic vision for high-relevance decisions",
+      "Technical rigor and strategic vision for sensitive matters",
     studioDescription:
       "Our practice combines legal rigor, absolute discretion and personalized service to turn complexity into safe, effective and sustainable solutions.",
     studioImageAlt: "Institutional positioning of the law firm",
@@ -837,12 +837,12 @@ const HOME_TEXT_BY_LOCALE: Record<AppLocale, HomeTextCopy> = {
       "Explore focused legal services with clear scope, technical approach and strategic follow-up.",
     faqTitle: "Frequently asked questions before legal representation starts",
     finalLabel: "Schedule Your Consultation",
-    finalTitle: "Speak with a team prepared for strategic legal decisions",
+    finalTitle: "Talk to a team prepared for your most sensitive decisions",
     finalDescription:
       "If you need preventive advisory or litigation representation, we structure the ideal approach to protect your interests with legal certainty.",
   },
   es: {
-    heroTitle: "Asesoría jurídica con estrategia, discreción y precisión técnica",
+    heroTitle: "Estrategia, discreción y precisión técnica para asuntos de alta complejidad",
     heroDescription:
       "Actuación consultiva y contenciosa para personas y empresas, con foco en protección patrimonial, mitigación de riesgos y defensa cualificada de intereses relevantes.",
     heroCta: "Agendar Consulta",
@@ -851,7 +851,7 @@ const HOME_TEXT_BY_LOCALE: Record<AppLocale, HomeTextCopy> = {
     teamTitle: "Abogados con formación sólida y actuación multidisciplinaria",
     studioLabel: "Despacho",
     studioTitle:
-      "Excelencia técnica con visión estratégica para decisiones de alta relevancia",
+      "Rigor técnico y visión estratégica para asuntos sensibles",
     studioDescription:
       "Nuestra actuación combina rigor jurídico, discreción absoluta y atención personalizada para transformar complejidad en soluciones seguras, eficaces y sostenibles.",
     studioImageAlt: "Posicionamiento institucional del despacho",
@@ -900,12 +900,12 @@ const HOME_TEXT_BY_LOCALE: Record<AppLocale, HomeTextCopy> = {
       "Conozca frentes específicas de actuación con alcance claro, enfoque técnico y seguimiento estratégico.",
     faqTitle: "Preguntas frecuentes antes del inicio de la actuación jurídica",
     finalLabel: "Agende Su Consulta",
-    finalTitle: "Hable con un equipo preparado para decisiones jurídicas estratégicas",
+    finalTitle: "Converse con un equipo preparado para sus decisiones más sensibles",
     finalDescription:
       "Si necesita consultoría preventiva o representación contenciosa, estructuramos la actuación ideal para proteger sus intereses con seguridad jurídica.",
   },
   it: {
-    heroTitle: "Consulenza legale con strategia, discrezione e precisione tecnica",
+    heroTitle: "Strategia, discrezione e precisione tecnica per questioni di alta complessità",
     heroDescription:
       "Attività consulenziale e contenziosa per persone e imprese, con focus su protezione patrimoniale, mitigazione dei rischi e tutela qualificata di interessi rilevanti.",
     heroCta: "Prenota Consulenza",
@@ -914,7 +914,7 @@ const HOME_TEXT_BY_LOCALE: Record<AppLocale, HomeTextCopy> = {
     teamTitle: "Avvocati con formazione solida e attività multidisciplinare",
     studioLabel: "Studio",
     studioTitle:
-      "Eccellenza tecnica con visione strategica per decisioni di alta rilevanza",
+      "Rigore tecnico e visione strategica per questioni delicate",
     studioDescription:
       "La nostra attività unisce rigore giuridico, discrezione assoluta e assistenza personalizzata per trasformare la complessità in soluzioni sicure, efficaci e sostenibili.",
     studioImageAlt: "Posizionamento istituzionale dello studio",
@@ -963,7 +963,7 @@ const HOME_TEXT_BY_LOCALE: Record<AppLocale, HomeTextCopy> = {
       "Scopri linee di attività specifiche con ambito chiaro, approccio tecnico e monitoraggio strategico.",
     faqTitle: "Domande frequenti prima dell'avvio dell'assistenza legale",
     finalLabel: "Prenota la Tua Consulenza",
-    finalTitle: "Parla con un team preparato per decisioni legali strategiche",
+    finalTitle: "Parli con un team preparato per le sue decisioni più delicate",
     finalDescription:
       "Se hai bisogno di consulenza preventiva o rappresentanza contenziosa, strutturiamo l'approccio ideale per proteggere i tuoi interessi con certezza giuridica.",
   },
