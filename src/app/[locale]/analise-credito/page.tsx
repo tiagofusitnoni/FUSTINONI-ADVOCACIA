@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 import { Link } from "@/i18n/navigation";
 import { type AppLocale } from "@/i18n/routing";
@@ -647,15 +648,24 @@ export default async function AnaliseCreditoPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <section className="border-b border-black/15 px-4 pt-16 pb-12 sm:px-6 sm:pt-20 md:px-10 md:pt-24">
+      {/* Hero fotográfico (S72) — faixa com foto + título; o conteúdo funcional segue abaixo */}
+      <section className="relative flex min-h-[48vh] flex-col justify-end overflow-hidden border-b border-black/15 px-4 py-14 sm:px-6 sm:py-16 md:px-10 md:py-20">
+        <Image src="/office-corredor.jpg" alt="" fill priority sizes="100vw" className="object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#16181d]/55 via-[#16181d]/62 to-[#16181d]/88" />
+        <div className="relative z-10 w-full max-w-4xl">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-8 bg-[#9aa3b0]" />
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#c3d2dc]">{heroEyebrow}</span>
+          </div>
+          <h1 className="max-w-3xl font-serif text-4xl leading-[1.03] tracking-tight text-[#f7fafc] sm:text-5xl md:text-6xl">
+            {heroTitle}
+          </h1>
+        </div>
+      </section>
+
+      <section className="border-b border-black/15 px-4 pt-12 pb-12 sm:px-6 sm:pt-14 md:px-10 md:pt-16">
         <div className="grid items-start gap-10 md:grid-cols-[1.1fr_0.9fr]">
           <div className="min-w-0">
-            <p className="mb-5 text-xs font-bold uppercase tracking-widest text-black/70">
-              {heroEyebrow}
-            </p>
-            <h1 className="mb-8 max-w-3xl font-serif text-4xl leading-[0.95] tracking-tight sm:text-5xl md:text-6xl">
-              {heroTitle}
-            </h1>
             <p className="mb-5 max-w-3xl text-sm leading-7 text-black/70 sm:text-base">
               {heroDescription1}
             </p>
