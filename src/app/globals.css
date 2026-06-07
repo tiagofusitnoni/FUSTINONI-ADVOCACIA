@@ -79,19 +79,19 @@
   --color-card-foreground: 42 35% 88%;
   --color-popover: 215 28% 11%;
   --color-popover-foreground: 42 35% 88%;
-  --color-primary: 38 50% 60%;             /* dourado vira primário no dark */
+  --color-primary: 38 38% 56%;             /* dourado fosco (S72: dessaturado, mais sóbrio) */
   --color-primary-foreground: 215 30% 8%;
   --color-secondary: 215 22% 16%;          /* #1f2733 secundário escuro */
   --color-secondary-foreground: 42 35% 88%;
   --color-muted: 215 22% 14%;
   --color-muted-foreground: 42 18% 65%;    /* dourado dessaturado */
-  --color-accent: 38 65% 62%;              /* dourado mais vivo no escuro */
+  --color-accent: 38 44% 56%;              /* dourado fosco no escuro (S72: menos saturado) */
   --color-accent-foreground: 215 30% 8%;
   --color-destructive: 0 55% 45%;
   --color-destructive-foreground: 42 35% 88%;
   --color-border: 215 18% 22%;             /* #2d3540 borda discreta */
   --color-input: 215 18% 22%;
-  --color-ring: 38 65% 62%;
+  --color-ring: 38 44% 56%;
 }
 
 @layer base {
@@ -331,5 +331,20 @@
   }
   .publicacao-prose article footer a:hover {
     color: black;
+  }
+}
+
+/*
+  S72 — Refino editorial (claro + escuro)
+  Os "olhos" de seção (eyebrows: text-xs font-bold uppercase tracking-widest
+  text-black/70) passam a dourado, com mais respiro entre letras — toque
+  clássico/editorial. Escopo no .text-black/70 evita os eyebrows de faixas
+  escuras (text-white/8x), que ficariam dourado-sobre-dourado. Especificidade
+  (3 classes) + ordem posterior vencem o overlay de compatibilidade.
+*/
+@layer utilities {
+  .uppercase.tracking-widest.text-black\/70 {
+    color: hsl(var(--color-accent));
+    letter-spacing: 0.16em;
   }
 }
