@@ -1160,31 +1160,35 @@ export default async function Home({ params }: HomePageProps) {
       <div className="h-16 w-full border-b border-black/15 bg-grid-pattern-small" />
 
       <section id={homeSectionHashes.services} className="scroll-mt-24 border-b border-black/15 sm:scroll-mt-28">
-        <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 md:px-20 md:py-24">
-          <div className="mb-6 text-xs font-bold uppercase tracking-widest text-black/70">
-            {text.teamLabel}
+        <div className="border-b border-black/15 px-6 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-8 bg-accent" />
+            <span className="text-xs font-bold uppercase tracking-widest text-black/70">{text.teamLabel}</span>
           </div>
-          <h2 className="font-serif text-3xl leading-[1.1] tracking-tight sm:text-4xl md:text-5xl">
+          <h2 className="max-w-3xl font-serif text-3xl leading-[1.12] tracking-tight sm:text-4xl md:text-5xl">
             {text.teamTitle}
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 border-t border-black/15 md:grid-cols-2">
-          {localizedServiceHighlights.map((service, index) => {
+        <div className="grid grid-cols-1 sm:grid-cols-2">
+          {localizedServiceHighlights.map((member, index) => {
+            const [nome, oab] = member.title.split(/\s+[-–—]\s+/);
             return (
-              <div
-                key={service.title}
-                className={`p-6 transition-colors hover:bg-neutral-50 sm:p-8 md:p-10 ${
-                  index === 0 ? "border-b border-black/15 md:border-r md:border-b-0" : ""
-                } ${index === 2 ? "border-t border-black/15 md:border-r" : ""} ${
-                  index === 3 ? "border-t border-black/15" : ""
+              <article
+                key={member.title}
+                className={`group flex flex-col border-b border-black/15 p-6 transition-colors hover:bg-neutral-50 sm:p-8 md:p-10 ${
+                  index % 2 === 0 ? "sm:border-r sm:border-black/15" : ""
                 }`}
               >
-                <div className="mb-8 flex items-center gap-3 border-b border-black/15 pb-4">
-                  <h3 className="font-serif text-xl sm:text-2xl">{service.title}</h3>
+                <div className="mb-6 flex items-baseline justify-between gap-4 border-b border-black/15 pb-4">
+                  <span className="font-serif text-3xl text-black/15">{String(index + 1).padStart(2, "0")}</span>
+                  {oab && (
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-accent">{oab}</span>
+                  )}
                 </div>
-                <p className="text-sm leading-relaxed text-black/70 md:text-base">{service.description}</p>
-              </div>
+                <h3 className="mb-4 font-serif text-xl leading-snug sm:text-2xl">{nome}</h3>
+                <p className="text-sm leading-7 text-black/70 md:text-base">{member.description}</p>
+              </article>
             );
           })}
         </div>
@@ -1193,47 +1197,48 @@ export default async function Home({ params }: HomePageProps) {
       <div className="h-16 w-full border-b border-black/15 bg-grid-pattern-small" />
 
       <section id={homeSectionHashes.firm} className="scroll-mt-24 border-b border-black/15 sm:scroll-mt-28">
-        <div className="px-4 py-16 text-center sm:px-6 sm:py-20">
-          <div className="mb-4 text-xs font-bold uppercase tracking-widest text-black/70">
-            {text.studioLabel}
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          {/* Texto + pilares */}
+          <div className="flex flex-col justify-center border-b border-black/15 px-6 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20 lg:border-r lg:border-b-0">
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-8 bg-accent" />
+              <span className="text-xs font-bold uppercase tracking-widest text-black/70">{text.studioLabel}</span>
+            </div>
+            <h2 className="font-serif text-3xl leading-[1.12] tracking-tight sm:text-4xl md:text-5xl">
+              {text.studioTitle}
+            </h2>
+            <p className="mt-6 max-w-xl text-sm leading-7 text-black/70 sm:text-base">
+              {text.studioDescription}
+            </p>
+            <div className="mt-10 grid grid-cols-1 border-t border-l border-black/15 text-sm font-medium sm:grid-cols-2">
+              {text.studioPillars.map(pilar => (
+                <div key={pilar} className="border-r border-b border-black/15 px-4 py-3">{pilar}</div>
+              ))}
+            </div>
           </div>
-          <h2 className="font-serif text-3xl leading-[1.1] tracking-tight sm:text-4xl md:text-5xl">
-            {text.studioTitle}
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-black/70 sm:text-base">
-            {text.studioDescription}
-          </p>
-        </div>
 
-        <div className="relative mx-auto w-full max-w-2xl px-4 pb-8 sm:px-6 sm:pb-10">
-          <div className="relative aspect-[4/3] w-full overflow-hidden border border-black/10">
+          {/* Imagem (lounge) preenchendo a coluna */}
+          <div className="relative min-h-[320px] sm:min-h-[420px] lg:min-h-full">
             <Image
               src="/office-lounge.jpg"
               alt={text.studioImageAlt}
               fill
-              sizes="(max-width: 768px) 100vw, 672px"
+              sizes="(max-width: 1024px) 100vw, 672px"
               className="object-cover object-center"
             />
           </div>
-        </div>
-
-        <div className="grid w-full grid-cols-2 border-t border-black/15 text-center text-sm font-medium sm:grid-cols-3 md:grid-cols-5 md:text-base">
-          <div className="border-r border-b border-black/15 py-4 md:border-b-0">{text.studioPillars[0]}</div>
-          <div className="border-b border-black/15 py-4 sm:border-r md:border-b-0">{text.studioPillars[1]}</div>
-          <div className="border-r border-b border-black/15 py-4 md:border-r md:border-b-0">{text.studioPillars[2]}</div>
-          <div className="border-b border-black/15 py-4 sm:border-r sm:border-b-0 md:border-r">{text.studioPillars[3]}</div>
-          <div className="col-span-2 py-4 sm:col-span-1">{text.studioPillars[4]}</div>
         </div>
       </section>
 
       <div className="h-16 w-full border-b border-black/15 bg-grid-pattern-small" />
 
       <section id={homeSectionHashes.process} className="scroll-mt-24 border-b border-black/15 sm:scroll-mt-28">
-        <div className="border-b border-black/15 px-4 py-16 text-center sm:px-6 sm:py-20">
-          <div className="mb-4 text-xs font-bold uppercase tracking-widest text-black/70">
-            {text.processLabel}
+        <div className="border-b border-black/15 px-6 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-8 bg-accent" />
+            <span className="text-xs font-bold uppercase tracking-widest text-black/70">{text.processLabel}</span>
           </div>
-          <h2 className="font-serif text-3xl leading-[1.1] tracking-tight sm:text-4xl md:text-5xl">
+          <h2 className="max-w-3xl font-serif text-3xl leading-[1.12] tracking-tight sm:text-4xl md:text-5xl">
             {text.processTitle}
           </h2>
         </div>
@@ -1298,11 +1303,12 @@ export default async function Home({ params }: HomePageProps) {
       <div className="h-16 w-full border-b border-black/15 bg-grid-pattern-small" />
 
       <section id={homeSectionHashes.sectors} className="scroll-mt-24 border-b border-black/15 sm:scroll-mt-28">
-        <div className="border-b border-black/15 px-4 py-16 text-center sm:px-6 sm:py-20">
-          <div className="mb-4 text-xs font-bold uppercase tracking-widest text-black/70">
-            {text.sectorsLabel}
+        <div className="border-b border-black/15 px-6 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-8 bg-accent" />
+            <span className="text-xs font-bold uppercase tracking-widest text-black/70">{text.sectorsLabel}</span>
           </div>
-          <h2 className="mx-auto max-w-2xl font-serif text-3xl leading-[1.1] tracking-tight sm:text-4xl md:text-5xl">
+          <h2 className="max-w-3xl font-serif text-3xl leading-[1.12] tracking-tight sm:text-4xl md:text-5xl">
             {text.sectorsTitle}
           </h2>
         </div>
@@ -1363,14 +1369,15 @@ export default async function Home({ params }: HomePageProps) {
       </section>
 
       <section id="specific-services" className="scroll-mt-24 border-b border-black/15 sm:scroll-mt-28">
-        <div className="border-b border-black/15 px-4 py-16 text-center sm:px-6 sm:py-20">
-          <div className="mb-4 text-xs font-bold uppercase tracking-widest text-black/70">
-            {text.specificServicesLabel}
+        <div className="border-b border-black/15 px-6 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-8 bg-accent" />
+            <span className="text-xs font-bold uppercase tracking-widest text-black/70">{text.specificServicesLabel}</span>
           </div>
-          <h2 className="mx-auto max-w-3xl font-serif text-3xl leading-[1.1] tracking-tight sm:text-4xl md:text-5xl">
+          <h2 className="max-w-3xl font-serif text-3xl leading-[1.12] tracking-tight sm:text-4xl md:text-5xl">
             {text.specificServicesTitle}
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-black/70 sm:text-base">
+          <p className="mt-6 max-w-2xl text-sm leading-7 text-black/70 sm:text-base">
             {text.specificServicesDescription}
           </p>
         </div>
