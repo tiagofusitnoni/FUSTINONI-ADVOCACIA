@@ -40,8 +40,8 @@
   --color-ring: 198 38% 37%;               /* foco no teal */
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
-  --font-serif: var(--font-cormorant), Georgia, serif;
-  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
   /* Radius editorial — cantos quase retos (sobriedade de banca grande) */
@@ -344,5 +344,32 @@
   .uppercase.tracking-widest.text-black\/70 {
     color: hsl(var(--color-muted-foreground));
     letter-spacing: 0.2em;
+  }
+}
+
+/*
+  S72 — Micro-animação de revelar ao rolar (scroll-driven, CSS puro).
+  Guardada por @supports + prefers-reduced-motion: só anima onde HÁ suporte a
+  animation-timeline (Chrome/Edge atuais). Em navegadores sem suporte, o conteúdo
+  aparece normal (opacity 1) — NUNCA fica escondido. O hero (1ª section) já está
+  em viewport no load, então renderiza no estado final.
+*/
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    main > section {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 32%;
+    }
+    @keyframes reveal-up {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 }

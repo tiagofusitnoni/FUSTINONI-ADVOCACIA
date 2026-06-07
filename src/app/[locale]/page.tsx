@@ -716,7 +716,7 @@ type HomeTextCopy = {
 
 const HOME_TEXT_BY_LOCALE: Record<AppLocale, HomeTextCopy> = {
   pt: {
-    heroTitle: "Assessoria jurídica com estratégia, discrição e precisão técnica",
+    heroTitle: "Estratégia, discrição e precisão técnica para questões de alta complexidade",
     heroDescription:
       "Atuação consultiva e contenciosa para pessoas físicas e jurídicas, com foco em proteção patrimonial, mitigação de riscos e defesa qualificada de interesses relevantes.",
     heroCta: "Agendar Consulta",
@@ -725,7 +725,7 @@ const HOME_TEXT_BY_LOCALE: Record<AppLocale, HomeTextCopy> = {
     teamTitle: "Advogados com formação sólida e atuação multidisciplinar",
     studioLabel: "Escritório",
     studioTitle:
-      "Excelência técnica com visão estratégica para decisões de alta relevância",
+      "Rigor técnico e visão estratégica para questões sensíveis",
     studioDescription:
       "Nossa atuação combina rigor jurídico, discrição absoluta e atendimento personalizado para transformar complexidade em soluções seguras, eficazes e sustentáveis.",
     studioImageAlt: "Posicionamento institucional do escritório",
@@ -774,7 +774,7 @@ const HOME_TEXT_BY_LOCALE: Record<AppLocale, HomeTextCopy> = {
       "Conheça frentes específicas de atuação com escopo claro, abordagem técnica e acompanhamento estratégico.",
     faqTitle: "Perguntas frequentes antes do início da atuação jurídica",
     finalLabel: "Agende Sua Consulta",
-    finalTitle: "Fale com uma equipe preparada para decisões jurídicas estratégicas",
+    finalTitle: "Converse com uma equipe preparada para suas decisões mais sensíveis",
     finalDescription:
       "Se você precisa de consultoria preventiva ou representação contenciosa, estruturamos a atuação ideal para proteger seus interesses com segurança jurídica.",
   },
