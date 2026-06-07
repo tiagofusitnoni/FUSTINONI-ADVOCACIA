@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Fraunces, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
 import "streamdown/styles.css";
 import "./globals.css";
 
@@ -39,16 +39,6 @@ const cormorant = Cormorant_Garamond({
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
-  display: "swap",
-});
-
-// Fraunces — serifa editorial moderna (old-style com personalidade), o display
-// principal do redesign S72. Mais marcante que a Cormorant, mantém gravidade.
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -93,7 +83,7 @@ export default function RootLayout({
         <GoogleAdsTag />
       </head>
       <body
-        className={`${inter.variable} ${cormorant.variable} ${fraunces.variable} ${playfair.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${cormorant.variable} ${playfair.variable} ${geistMono.variable} antialiased`}
       >
         {children}
         <Analytics />

@@ -1116,7 +1116,7 @@ export default async function Home({ params }: HomePageProps) {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0c2636]/55 via-[#0c2636]/62 to-[#0c2636]/88" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#16181d]/52 via-[#16181d]/60 to-[#16181d]/85" />
 
         {/* Cores em hex arbitrário (NÃO text-white/bg-white): o hero é sempre escuro
             nos dois temas, e o overlay de compat remapeia .text-white → primary-
@@ -1137,7 +1137,7 @@ export default async function Home({ params }: HomePageProps) {
           <WhatsAppCTAButton origem="pagina_principal"
             whatsappPhone={whatsappPhone}
             whatsappBaseMessage={msgConsulta}
-            className="z-10 w-full max-w-xs rounded-none border border-[#f7fafc]/50 bg-transparent px-8 py-5 text-sm uppercase tracking-wider text-[#f7fafc] backdrop-blur-sm transition-colors hover:bg-[#f7fafc] hover:text-[#0c2636] sm:w-auto sm:py-6"
+            className="z-10 w-full max-w-xs rounded-none border border-[#f7fafc]/50 bg-transparent px-8 py-5 text-sm uppercase tracking-wider text-[#f7fafc] backdrop-blur-sm transition-colors hover:bg-[#f7fafc] hover:text-[#16181d] sm:w-auto sm:py-6"
           >
             {text.heroCta}
           </WhatsAppCTAButton>
