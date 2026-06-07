@@ -1105,7 +1105,7 @@ export default async function Home({ params }: HomePageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <section className="relative flex flex-col items-center overflow-hidden border-b border-black/15 px-4 pt-16 pb-10 text-center sm:px-6 sm:pt-20 sm:pb-12 md:px-10 md:pt-24">
+      <section className="relative flex flex-col items-center overflow-hidden border-b border-black/15 px-4 pt-20 pb-14 text-center sm:px-6 sm:pt-28 sm:pb-16 md:px-10 md:pt-36 md:pb-20">
         <div className="mb-6 text-xs font-bold uppercase tracking-widest text-black/70">
           FUSTINONI ADVOCACIA
         </div>
@@ -1126,17 +1126,10 @@ export default async function Home({ params }: HomePageProps) {
           {text.heroCta}
         </WhatsAppCTAButton>
 
-        <div className="relative z-0 mx-auto mt-4 w-full max-w-4xl">
-          <Image
-            src="/hero-courthouse-notext.png"
-            alt={text.heroImageAlt}
-            width={1600}
-            height={900}
-            priority
-            sizes="(max-width: 768px) 100vw, 1024px"
-            className="h-auto w-full object-contain mix-blend-multiply contrast-125"
-          />
-        </div>
+        {/* Redesign editorial (S72): a arte do fórum usava mix-blend-multiply e
+            sumia no fundo frio, virando espaço morto. Hero agora é tipográfico
+            limpo (estilo banca grande). Um hero fotográfico real pode entrar aqui
+            depois, se o Tiago quiser. */}
       </section>
 
       <div className="grid grid-cols-2 border-b border-black/15 md:grid-cols-6">

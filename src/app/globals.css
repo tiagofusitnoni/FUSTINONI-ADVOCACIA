@@ -18,38 +18,38 @@
 */
 
 @theme inline {
-  /* Light — papel e tinta */
-  --color-background: 48 33% 97%;          /* #faf8f3 off-white quente */
-  --color-foreground: 220 18% 14%;         /* #1d2330 grafite suave */
+  /* Light — editorial frio (S72: navy/ardósia, sem creme nem dourado) */
+  --color-background: 210 20% 98%;         /* #f8f9fb branco-frio sóbrio (papel) */
+  --color-foreground: 207 35% 16%;         /* #1a2a36 ardósia profunda (texto/títulos) */
   --color-card: 0 0% 100%;                 /* branco puro pra cards destacarem */
-  --color-card-foreground: 220 18% 14%;
+  --color-card-foreground: 207 35% 16%;
   --color-popover: 0 0% 100%;
-  --color-popover-foreground: 220 18% 14%;
-  --color-primary: 213 51% 22%;            /* #1c3759 azul-marinho institucional */
-  --color-primary-foreground: 42 47% 88%;  /* dourado claro sobre marinho */
-  --color-secondary: 42 28% 92%;           /* #ece5d4 creme suave */
-  --color-secondary-foreground: 213 51% 22%;
-  --color-muted: 42 22% 94%;               /* #efebde fundo de seções alternadas */
-  --color-muted-foreground: 220 10% 38%;   /* #555e6d cinza-azulado pra texto secundário */
-  --color-accent: 38 50% 56%;              /* #c9a86a dourado fosco */
-  --color-accent-foreground: 220 18% 14%;
-  --color-destructive: 0 65% 42%;          /* vinho ao invés de vermelho puro */
-  --color-destructive-foreground: 48 33% 97%;
-  --color-border: 40 18% 84%;              /* #dcd5c5 borda quente sutil */
-  --color-input: 40 18% 84%;
-  --color-ring: 38 50% 56%;                /* foco no dourado */
+  --color-popover-foreground: 207 35% 16%;
+  --color-primary: 202 60% 15%;            /* #0f3040 teal-navy institucional */
+  --color-primary-foreground: 210 20% 98%; /* branco-frio sobre o navy */
+  --color-secondary: 210 16% 94%;          /* #edf0f3 cinza-frio claro */
+  --color-secondary-foreground: 202 60% 15%;
+  --color-muted: 210 17% 95%;              /* #eff1f4 fundo de seções alternadas */
+  --color-muted-foreground: 206 14% 42%;   /* #5b6a77 ardósia média (texto secundário) */
+  --color-accent: 198 38% 37%;             /* #3a6f82 teal frio (acento discreto, links/regras) */
+  --color-accent-foreground: 0 0% 100%;
+  --color-destructive: 0 60% 42%;          /* vinho ao invés de vermelho puro */
+  --color-destructive-foreground: 210 20% 98%;
+  --color-border: 210 16% 88%;             /* #dbe0e5 hairline fria sutil */
+  --color-input: 210 16% 88%;
+  --color-ring: 198 38% 37%;               /* foco no teal */
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-serif: var(--font-cormorant), Georgia, serif;
   --font-display: var(--font-cormorant), Georgia, serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
-  /* Radius sóbrio — humaniza sem perder a seriedade */
-  --radius-sm: 2px;
-  --radius-md: 3px;
-  --radius-lg: 4px;
-  --radius-xl: 6px;
-  --radius: 3px;
+  /* Radius editorial — cantos quase retos (sobriedade de banca grande) */
+  --radius-sm: 0px;
+  --radius-md: 2px;
+  --radius-lg: 3px;
+  --radius-xl: 4px;
+  --radius: 2px;
 
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
@@ -71,27 +71,27 @@
   }
 }
 
-/* Dark — couro azul-noite com dourado vivo */
+/* Dark — noite ardósia/teal (S72: editorial frio, sem dourado) */
 .dark {
-  --color-background: 215 30% 8%;          /* #0f1620 azul-noite profundo */
-  --color-foreground: 42 35% 88%;          /* #ece1c8 dourado claro pra texto */
-  --color-card: 215 28% 11%;               /* #141d2a card um tom acima */
-  --color-card-foreground: 42 35% 88%;
-  --color-popover: 215 28% 11%;
-  --color-popover-foreground: 42 35% 88%;
-  --color-primary: 38 38% 56%;             /* dourado fosco (S72: dessaturado, mais sóbrio) */
-  --color-primary-foreground: 215 30% 8%;
-  --color-secondary: 215 22% 16%;          /* #1f2733 secundário escuro */
-  --color-secondary-foreground: 42 35% 88%;
-  --color-muted: 215 22% 14%;
-  --color-muted-foreground: 42 18% 65%;    /* dourado dessaturado */
-  --color-accent: 38 44% 56%;              /* dourado fosco no escuro (S72: menos saturado) */
-  --color-accent-foreground: 215 30% 8%;
-  --color-destructive: 0 55% 45%;
-  --color-destructive-foreground: 42 35% 88%;
-  --color-border: 215 18% 22%;             /* #2d3540 borda discreta */
-  --color-input: 215 18% 22%;
-  --color-ring: 38 44% 56%;
+  --color-background: 205 38% 8%;          /* #0c1b25 noite teal-navy profunda */
+  --color-foreground: 205 16% 86%;         /* #d4dbe0 cinza-frio claro (texto) */
+  --color-card: 205 32% 11%;               /* #131f29 card um tom acima */
+  --color-card-foreground: 205 16% 86%;
+  --color-popover: 205 32% 11%;
+  --color-popover-foreground: 205 16% 86%;
+  --color-primary: 199 40% 62%;            /* #79abbe teal-aço (primário no dark) */
+  --color-primary-foreground: 205 38% 8%;
+  --color-secondary: 205 24% 16%;          /* #1f2c34 secundário escuro */
+  --color-secondary-foreground: 205 16% 86%;
+  --color-muted: 205 24% 14%;
+  --color-muted-foreground: 205 14% 62%;   /* ardósia clara dessaturada */
+  --color-accent: 199 38% 58%;             /* teal-aço acento no escuro */
+  --color-accent-foreground: 205 38% 8%;
+  --color-destructive: 0 55% 52%;
+  --color-destructive-foreground: 205 16% 86%;
+  --color-border: 205 20% 22%;             /* #2b3a44 borda discreta */
+  --color-input: 205 20% 22%;
+  --color-ring: 199 38% 58%;
 }
 
 @layer base {
@@ -335,16 +335,14 @@
 }
 
 /*
-  S72 — Refino editorial (claro + escuro)
-  Os "olhos" de seção (eyebrows: text-xs font-bold uppercase tracking-widest
-  text-black/70) passam a dourado, com mais respiro entre letras — toque
-  clássico/editorial. Escopo no .text-black/70 evita os eyebrows de faixas
-  escuras (text-white/8x), que ficariam dourado-sobre-dourado. Especificidade
-  (3 classes) + ordem posterior vencem o overlay de compatibilidade.
+  S72 — Eyebrows editoriais (estilo banca grande)
+  Os "olhos" de seção (text-xs font-bold uppercase tracking-widest text-black/70)
+  ficam em ardósia média, bem espaçados — rótulo discreto e sóbrio (sem cor
+  quente). Especificidade (3 classes) + ordem posterior vencem o overlay.
 */
 @layer utilities {
   .uppercase.tracking-widest.text-black\/70 {
-    color: hsl(var(--color-accent));
-    letter-spacing: 0.16em;
+    color: hsl(var(--color-muted-foreground));
+    letter-spacing: 0.2em;
   }
 }
