@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Lock, Menu, X } from "lucide-react";
 import { type MouseEvent, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -9,6 +9,7 @@ import { LanguageToggle } from "@/components/language-toggle";
 import { LeadCaptureDialog } from "@/components/lead-capture-dialog";
 import { Link, usePathname } from "@/i18n/navigation";
 import { type AppLocale } from "@/i18n/routing";
+import { INTERNAL_ACCESS_URL } from "@/lib/site";
 import {
   ANALISE_CREDITO_NAV_ITEMS,
   FATOR_K_NAV_ITEMS,
@@ -180,6 +181,17 @@ export function SiteHeader({
             )}
           </Button>
 
+          <Button
+            asChild
+            variant="outline"
+            className="hidden h-10 shrink-0 gap-1.5 rounded-none border-black/25 bg-white px-3 text-[10px] uppercase tracking-wide text-black hover:bg-neutral-100 sm:px-4 sm:text-[11px] xl:inline-flex"
+          >
+            <a href={INTERNAL_ACCESS_URL} target="_blank" rel="noopener noreferrer">
+              <Lock className="h-3 w-3" aria-hidden="true" />
+              {t("internalAccess")}
+            </a>
+          </Button>
+
           <LeadCaptureDialog whatsappPhone={whatsappPhone} origem="cabecalho">
             <Button className="hidden h-10 shrink-0 rounded-none bg-black px-3 text-[10px] uppercase tracking-wide text-white hover:bg-black/80 sm:px-4 sm:text-[11px] xl:inline-flex">
               {ctaLabel}
@@ -273,7 +285,22 @@ export function SiteHeader({
                 )}
             </div>
 
-            <div className="p-4">
+            <div className="flex flex-col gap-2 p-4">
+              <Button
+                asChild
+                variant="outline"
+                className="w-full gap-1.5 rounded-none border-black/25 text-xs uppercase tracking-wider text-black"
+              >
+                <a
+                  href={INTERNAL_ACCESS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeMobileMenu}
+                >
+                  <Lock className="h-3.5 w-3.5" aria-hidden="true" />
+                  {t("internalAccess")}
+                </a>
+              </Button>
               <LeadCaptureDialog whatsappPhone={whatsappPhone} origem="cabecalho">
                 <Button
                   className="w-full rounded-none bg-black text-xs tracking-wider uppercase text-white"
