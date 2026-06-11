@@ -1,17 +1,22 @@
 /**
  * Fetch helpers pra publicações geradas pelo cockpit Fidelitas.
  *
- * O cockpit (chefe-agent) expõe via Tailscale Funnel:
- *   GET https://escritorio.tail02559d.ts.net/api/site/publicacoes
- *   GET https://escritorio.tail02559d.ts.net/api/site/publicacoes/<slug>
+ * S85 (2026-06-11): o Tailscale Funnel foi desativado na S81 — o cockpit agora
+ * é servido pelo Cloudflare Tunnel em sistema.escritoriofustinoni.com.br.
+ * Os endpoints públicos /api/site/* dependem de uma policy BYPASS no
+ * Cloudflare Access escopada nesse path (Access → Applications → app
+ * "API pública do site" com Action=Bypass / Everyone):
+ *   GET https://sistema.escritoriofustinoni.com.br/api/site/publicacoes
+ *   GET https://sistema.escritoriofustinoni.com.br/api/site/publicacoes/<slug>
  *
  * Cada notícia que o Tiago aprova no cockpit aparece aqui. ISR no Next.js
  * com revalidate=60 garante que mudanças apareçam em até 60s sem rebuild.
+ * Se a API estiver inacessível (sem o Bypass), a página degrada pra lista vazia.
  *
  * Override via env COCKPIT_API_BASE_URL (sem trailing slash).
  */
 
-const FALLBACK_COCKPIT_URL = "https://escritorio.tail02559d.ts.net";
+const FALLBACK_COCKPIT_URL = "https://sistema.escritoriofustinoni.com.br";
 
 export function getCockpitApiBase(): string {
   const raw = process.env.COCKPIT_API_BASE_URL?.trim() || FALLBACK_COCKPIT_URL;
