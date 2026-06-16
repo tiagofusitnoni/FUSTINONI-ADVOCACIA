@@ -41,6 +41,13 @@ export const routing = defineRouting({
       es: "/publicaciones/[slug]",
       it: "/pubblicazioni/[slug]",
     },
+    // S101: Serviços específicos (geridos no cockpit, servidos via /api/site/servicos)
+    "/servicos/[slug]": {
+      pt: "/servicos/[slug]",
+      en: "/services/[slug]",
+      es: "/servicios/[slug]",
+      it: "/servizi/[slug]",
+    },
     "/newsletter/obrigado": {
       pt: "/newsletter/obrigado",
       en: "/newsletter/thank-you",
