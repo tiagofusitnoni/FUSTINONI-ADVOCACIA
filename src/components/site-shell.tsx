@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
 
 import { PRODUCT_NAV_ITEMS, HOME_NAV_ITEMS } from "@/lib/navigation";
+import { listarServicos } from "@/lib/servicos";
 import { type AppLocale } from "@/i18n/routing";
 import { buildWhatsAppUrl, getChatWhatsAppPrefillMessage } from "@/lib/whatsapp";
 
@@ -17,6 +18,7 @@ type SiteShellProps = {
 export async function SiteShell({ children, locale }: SiteShellProps) {
   const t = await getTranslations("siteShell");
   const whatsappPhone = process.env.WHATSAPP_PHONE_NUMBER ?? "";
+  const dynamicServices = await listarServicos(locale);
   const whatsappUrl = buildWhatsAppUrl();
   const whatsappUrlChat = buildWhatsAppUrl(
     undefined,
@@ -36,6 +38,7 @@ export async function SiteShell({ children, locale }: SiteShellProps) {
         <SiteHeader
           homeNavItems={HOME_NAV_ITEMS}
           productNavItems={PRODUCT_NAV_ITEMS}
+          dynamicServices={dynamicServices}
           whatsappPhone={whatsappPhone}
         />
         <main id="main-content" className="flex-1">

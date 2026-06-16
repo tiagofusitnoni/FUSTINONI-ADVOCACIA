@@ -17,6 +17,7 @@ import {
   type HomeNavItem,
   type ProductNavItem,
 } from "@/lib/navigation";
+import { type ServicoItem } from "@/lib/servicos";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -28,12 +29,14 @@ import {
 type SiteHeaderProps = {
   homeNavItems: HomeNavItem[];
   productNavItems: ProductNavItem[];
+  dynamicServices?: ServicoItem[];
   whatsappPhone: string;
 };
 
 export function SiteHeader({
   homeNavItems,
   productNavItems,
+  dynamicServices,
   whatsappPhone,
 }: SiteHeaderProps) {
   const t = useTranslations("siteHeader");
@@ -44,6 +47,7 @@ export function SiteHeader({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
   const safeProductNavItems = productNavItems ?? [];
+  const safeServices = dynamicServices ?? [];
   const activeNavItems =
     pathname === "/analise-credito"
       ? ANALISE_CREDITO_NAV_ITEMS
@@ -149,6 +153,16 @@ export function SiteHeader({
                         </li>
                       ),
                     )}
+                    {safeServices.map(sv => (
+                      <li key={sv.slug}>
+                        <Link
+                          href={{ pathname: "/servicos/[slug]", params: { slug: sv.slug } }}
+                          className="block whitespace-nowrap px-3 py-2 text-xs font-medium uppercase tracking-wider text-black/70 transition-colors hover:bg-neutral-100 hover:text-black"
+                        >
+                          {sv.titulo || sv.nome}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -283,6 +297,17 @@ export function SiteHeader({
                     </div>
                   ),
                 )}
+              {isMobileProductsOpen &&
+                safeServices.map(sv => (
+                  <Link
+                    key={sv.slug}
+                    href={{ pathname: "/servicos/[slug]", params: { slug: sv.slug } }}
+                    className="block w-full border-b border-black/15 bg-neutral-50 px-6 py-3 text-xs font-medium tracking-wider uppercase transition-colors hover:bg-neutral-100"
+                    onClick={closeMobileMenu}
+                  >
+                    {sv.titulo || sv.nome}
+                  </Link>
+                ))}
             </div>
 
             <div className="flex flex-col gap-2 p-4">
