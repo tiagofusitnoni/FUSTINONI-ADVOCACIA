@@ -8,6 +8,12 @@ export const routing = defineRouting({
   alternateLinks: false,
   pathnames: {
     "/": "/",
+    "/privacidade": {
+      pt: "/privacidade",
+      en: "/privacy-policy",
+      es: "/politica-de-privacidad",
+      it: "/informativa-privacy",
+    },
     "/analise-credito": {
       pt: "/analise-credito",
       en: "/credit-record-review",

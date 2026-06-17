@@ -6,7 +6,7 @@ import { getSiteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl();
-  const internalRoutes = ["/", "/analise-credito", "/fator-k"] as const;
+  const internalRoutes = ["/", "/analise-credito", "/fator-k", "/privacidade"] as const;
 
   return internalRoutes.flatMap(route =>
     routing.locales.map(locale => {

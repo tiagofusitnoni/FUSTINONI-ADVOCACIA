@@ -92,6 +92,15 @@ export async function SiteFooter({ locale }: SiteFooterProps) {
             </a>
           </div>
         </div>
+
+        <div className="border-t border-black/15 bg-white px-6 py-4 text-xs sm:px-8">
+          <Link
+            href="/privacidade"
+            className="font-medium uppercase tracking-wider text-black/55 underline-offset-4 transition-colors hover:text-black hover:underline"
+          >
+            {t("links.privacy")}
+          </Link>
+        </div>
       </footer>
     </>
   );

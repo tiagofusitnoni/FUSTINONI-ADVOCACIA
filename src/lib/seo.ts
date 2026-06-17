@@ -4,7 +4,7 @@ import { getSiteUrl } from "@/lib/site";
 
 const siteUrl = getSiteUrl();
 
-type LocalizedPathname = "/" | "/analise-credito" | "/fator-k" | "/email-confirmado" | "/publicacoes";
+type LocalizedPathname = "/" | "/privacidade" | "/analise-credito" | "/fator-k" | "/email-confirmado" | "/publicacoes";
 
 export function getLocalizedUrl(pathname: LocalizedPathname, locale: AppLocale) {
   const localizedPath = getPathname({ href: pathname, locale });
