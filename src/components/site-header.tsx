@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown, Lock, Menu, X } from "lucide-react";
+import { ChevronDown, Instagram, Lock, Menu, X } from "lucide-react";
 import { type MouseEvent, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -9,7 +9,7 @@ import { LanguageToggle } from "@/components/language-toggle";
 import { LeadCaptureDialog } from "@/components/lead-capture-dialog";
 import { Link, usePathname } from "@/i18n/navigation";
 import { type AppLocale } from "@/i18n/routing";
-import { INTERNAL_ACCESS_URL } from "@/lib/site";
+import { INSTAGRAM_URL, INTERNAL_ACCESS_URL } from "@/lib/site";
 import {
   ANALISE_CREDITO_NAV_ITEMS,
   FATOR_K_NAV_ITEMS,
@@ -171,6 +171,17 @@ export function SiteHeader({
         </nav>
 
         <div className="flex items-center gap-2">
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            title="Instagram"
+            className="flex h-9 w-9 items-center justify-center text-black/70 transition-colors hover:text-black"
+          >
+            <Instagram className="h-5 w-5" aria-hidden="true" />
+          </a>
+
           <div className="hidden xl:block">
             <LanguageToggle />
           </div>

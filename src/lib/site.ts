@@ -11,6 +11,11 @@ export const INTERNAL_ACCESS_URL =
   process.env.NEXT_PUBLIC_INTERNAL_ACCESS_URL?.trim() ||
   "https://sistema.escritoriofustinoni.com.br";
 
+// Instagram oficial do escritório (S86: @fustinoniadvocacia). Configurável por env.
+export const INSTAGRAM_URL =
+  process.env.NEXT_PUBLIC_INSTAGRAM_URL?.trim() ||
+  "https://www.instagram.com/fustinoniadvocacia";
+
 export function getSiteUrl(): string {
   const rawUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || FALLBACK_SITE_URL;
   return rawUrl.replace(/\/+$/, "");
