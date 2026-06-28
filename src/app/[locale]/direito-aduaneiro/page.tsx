@@ -20,7 +20,9 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Marquee } from "@/components/ui/marquee";
 import { WhatsAppCTAButton } from "@/components/whatsapp-cta-button";
-import { AduaneiroAutoCta, type AutoCtaCopy } from "@/components/aduaneiro/aduaneiro-auto-cta";
+import { type AutoCtaCopy } from "@/components/aduaneiro/aduaneiro-auto-cta";
+// NOTE: <AduaneiroAutoCta> (ferramenta upload+IA) temporariamente oculta até os
+// ajustes de OAB/LGPD + teste. Reativar reinserindo o import e o componente no JSX.
 import { OG_LOCALE_BY_APP_LOCALE } from "@/lib/i18n";
 import { getAlternatesLanguages, getLocalizedUrl } from "@/lib/seo";
 import { SITE_NAME, SITE_OG_IMAGE } from "@/lib/site";
@@ -845,8 +847,7 @@ export default async function DireitoAduaneiroPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Ferramenta-isca: leitura do auto de infração (upload + IA) */}
-      <AduaneiroAutoCta copy={c.autoTool} whatsappPhone={whatsappPhone} />
+      {/* Ferramenta-isca (upload+IA) oculta até os ajustes de OAB/LGPD + teste — c.autoTool guardado */}
 
       <div className={sectionStripe} />
 
