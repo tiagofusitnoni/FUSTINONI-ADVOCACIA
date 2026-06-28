@@ -116,9 +116,9 @@ const COPY: Record<PageLocale, Copy> = {
     heroEyebrow: "Direito Minerário · Commodities · Exportação de Minério",
     heroTitle: "No comércio de minério, a margem mora nas cláusulas.",
     introP1:
-      "O preço de capa de uma tonelada de minério diz pouco. O que define quanto se recebe — e quanto se perde — são o teor, o índice de cotação, o período de precificação e o relógio do navio, escritos em cláusulas que poucos leem com atenção até o primeiro litígio.",
+      "Operações de minério se decidem no contrato, não na cotação. Preço-base, índice de referência, tolerâncias de teor e umidade, penalidades, regras de amostragem e prazos de pagamento definem quanto cada parte efetivamente recebe ou paga. Seja você o exportador brasileiro ou o comprador no exterior, a margem mora nas cláusulas — e é nelas que se ganha ou se perde silenciosamente.",
     introP2:
-      "O escritório estrutura e revisa contratos de fornecimento, financiamento e exportação de minério, com atenção à regulação mineral, tributária e ambiental — e a um caminho de disputa que se sustente também fora do país.",
+      "Nosso trabalho é desenhar e negociar esse contrato a partir do seu interesse específico: do lado do vendedor, proteger o recebível e limitar deduções; do lado do comprador, assegurar a qualidade contratada e o equilíbrio das penalidades. Em ambos, o objetivo é o mesmo — critérios de medição claros, liquidação previsível e mecanismos de disputa que funcionem antes que o desentendimento vire prejuízo.",
     ctaPrimary: "Falar com o escritório",
     ctaSecondary: "Ver áreas de atuação",
     heroTags: ["Atendimento empresarial", "Contratos de exportação", "Atuação consultiva e contenciosa"],
@@ -168,17 +168,20 @@ const COPY: Record<PageLocale, Copy> = {
       },
     ],
 
-    qualidadeEyebrow: "Qualidade, teor e preço",
-    qualidadeTitle: "Como o número vira dinheiro",
+    qualidadeEyebrow: "Qualidade, análise e rejeição",
+    qualidadeTitle: "A qualidade se prova duas vezes",
     qualidadeIntro:
-      "É no encontro entre a especificação de qualidade e o mecanismo de preço que a margem se define. Cada cláusula técnica tem efeito direto sobre o valor recebido por tonelada.",
+      "Em operações de minério, o preço é função do teor — e o teor é uma afirmação que precisa ser provada, no embarque e na descarga. Um contrato bem construído protege os dois lados: o vendedor, contra rejeição ou penalidade indevida; o comprador, contra a carga que chega fora da especificação.",
     qualidadeItems: [
-      "Especificação de qualidade: teor de ferro (Fe), sílica, alumina, fósforo e demais contaminantes",
-      "Ajuste de preço por teor e penalidades (price adjustment) sobre a base contratada",
-      "Umidade e conversão entre tonelada úmida e tonelada seca (WMT / DMT)",
-      "Índices de referência (Platts e congêneres) e a formação do preço",
-      "Preço provisório e preço definitivo (provisional / final pricing) e o período de cotação (QP)",
-      "Amostragem, análise e o laudo dirimente (umpire) em caso de divergência de teor",
+      "Especificação vinculante: teor mínimo do metal, limites de contaminantes e teto de umidade como obrigação contratual, não como expectativa comercial",
+      "Escala de preço por teor (prêmios e descontos) com faixa, fórmula e arredondamento inequívocos — a ambiguidade da escala é a origem mais comum de disputa de fatura",
+      "Patamar de rejeição como linha distinta da escala: a coerência entre onde a escala termina e onde a recusa começa evita a zona cinzenta",
+      "Rejeição ≠ ajuste de preço: entre os patamares, ajusta-se pela escala; abaixo do patamar de rejeição, faculta-se recusar a carga e exigir restituição, mais perdas e danos",
+      "Análise no embarque (load) e na descarga (discharge), idealmente com amostragem conjunta acompanhada pelas duas partes",
+      "A distinção crítica: o laudo de pesagem/amostragem não é o certificado de análise química do teor (assay) — o assay costuma ser a peça-chave de uma disputa de teor",
+      "Laudo dirimente (umpire): divergindo os laudos além da tolerância, prevalece a análise de um terceiro laboratório, escolhido de comum acordo, que vincula as partes",
+      "Qual laudo governa o preço e a qualidade — embarque ou descarga — definido expressamente no contrato",
+      "Retenção de parte do preço até o certificado de análise na descarga; garantias por carta de crédito documentário e performance bond (Incoterms 2020)",
     ],
 
     navioEyebrow: "Logística e afretamento",
@@ -214,7 +217,7 @@ const COPY: Record<PageLocale, Copy> = {
         index: "03",
         label: "Imunidade de ICMS na exportação",
         description:
-          "A imunidade constitucional do ICMS na exportação (CF, art. 155, § 2º, X, 'a'), regulada pela Lei Kandir (LC 87/96), e a não incidência na venda à trading com fim específico de exportação (Súmula 536/STJ).",
+          "A imunidade constitucional do ICMS na exportação (CF, art. 155, § 2º, X, 'a'), regulada pela Lei Kandir (LC 87/96), e a não incidência na venda à trading com fim específico de exportação (art. 3º, parágrafo único, da Lei Kandir).",
       },
       {
         index: "04",
@@ -261,28 +264,32 @@ const COPY: Record<PageLocale, Copy> = {
       },
     ],
 
-    disputasEyebrow: "Disputas internacionais",
-    disputasTitle: "Quando a disputa cruza a fronteira",
+    disputasEyebrow: "Foro, lei e arbitragem",
+    disputasTitle: "A pergunta certa: onde estão os ativos?",
     disputasIntro:
-      "Contratos de minério costumam ser regidos por lei estrangeira e resolvidos por arbitragem fora do país. Estruturar isso desde o início evita surpresas no momento do conflito.",
+      "Em operações internacionais de minério, a cláusula que define onde e como o conflito se resolve vale tanto quanto o preço. Atuamos para qualquer lado — exportador brasileiro ou comprador estrangeiro — partindo da mesma pergunta: onde estão os ativos da contraparte? É a exequibilidade que converte uma decisão favorável em recuperação real, observada sempre a aferição da validade da cláusula caso a caso.",
     disputasItems: [
-      "Cláusula compromissória e a escolha da sede da arbitragem (Londres, Paris, Singapura)",
-      "Câmaras e regras aplicáveis (LCIA, ICC, SIAC) e o idioma do procedimento",
-      "Homologação da sentença arbitral estrangeira pelo STJ, via que opera o seu reconhecimento (Convenção de Nova York; Lei 9.307/96, arts. 34-40)",
-      "Medidas de urgência e a coordenação entre arbitragem e tutela cautelar perante o Judiciário",
+      "Arbitragem não é eleição de foro: a cláusula compromissória (Lei 9.307/96 + Convenção de Nova York) e a eleição de foro estatal estrangeiro seguem regimes distintos",
+      "Foro estrangeiro exclusivo: a Justiça brasileira só é afastada se o réu arguir a eleição (art. 25 do CPC) — e o art. 25 não alcança a arbitragem",
+      "Competência internacional concorrente (art. 21 do CPC): a Justiça brasileira é competente quando o réu é domiciliado no Brasil ou a obrigação aqui se cumpre",
+      "Cláusula clara × patológica: em regra o árbitro decide sobre a validade (art. 8 da Lei 9.307/96), mas a cláusula manifestamente defeituosa — sede sem instituição, regras ou número de árbitros, referências contraditórias — pode ser afastada de plano pelo Judiciário (Convenção de Nova York, art. II,3)",
+      "Renúncia à arbitragem: a convenção arbitral não é conhecida de ofício; o silêncio do réu na contestação implica aceitação da jurisdição estatal (art. 337, § 6º, do CPC)",
+      "Tutela cautelar pré-arbitral (art. 22-A da Lei 9.307/96): arresto de bens antes da arbitragem, com prazo de 30 dias para instaurá-la",
+      "Execução, o ponto decisivo: a sentença arbitral estrangeira só alcança bens no Brasil após homologação pelo STJ, ao passo que a decisão nacional age de imediato sobre o patrimônio que aqui se encontra",
+      "Lei aplicável e a CISG (em vigor no Brasil desde 2014); e a cláusula clara — instituição, sede, regras, idioma e lei — como a primeira proteção dos dois lados",
     ],
 
     publicoEyebrow: "Para quem é",
-    publicoTitle: "Mineradoras, tradings e exportadores de minério",
+    publicoTitle: "Vendedores e compradores de minério, no Brasil e no exterior",
     publicoIntro:
-      "A atuação é pensada para quem produz, comercializa ou financia minério — e para o comprador internacional que contrata fornecimento de origem brasileira.",
+      "Atendemos qualquer ponta da operação de minério — quem vende e quem compra, dentro ou fora do Brasil — sempre a partir do interesse de quem nos contrata.",
     publicoCards: [
-      "Mineradoras de pequeno e médio porte (juniores) em contratos de venda e financiamento",
-      "Tradings e comercializadoras de commodities minerais",
-      "Exportadores que negociam preço, teor e logística com compradores no exterior",
-      "Empresas em estruturação de pré-pagamento e trade finance",
-      "Operações que enfrentam disputa de teor, demurrage ou força maior",
-      "Compradores internacionais que contratam fornecimento de origem brasileira",
+      "Mineradoras e tradings exportadoras brasileiras que negociam volume com contrapartes no exterior",
+      "Compradores e importadores estrangeiros — siderúrgicas, tradings e off-takers — que adquirem minério de origem brasileira",
+      "Vendedores que precisam blindar o recebível contra deduções de teor, umidade e penalidades",
+      "Compradores que querem assegurar a qualidade contratada e equilibrar cláusulas de amostragem e ajuste de preço",
+      "Partes em qualquer lado diante de divergência de medição, laudo ou liquidação",
+      "Empresas estruturando contratos de fornecimento de longo prazo (off-take) e suas garantias",
     ],
     disclaimerNote:
       "Não há fórmula única nem promessa de resultado: cada operação depende do contrato, da regulação aplicável e dos elementos técnicos do caso concreto.",
@@ -302,7 +309,7 @@ const COPY: Record<PageLocale, Copy> = {
       {
         question: "Quais tributos incidem sobre a exportação de minério?",
         answer:
-          "A exportação é favorecida por imunidades e não incidências: o ICMS não incide sobre operações que destinem mercadorias ao exterior — imunidade constitucional regulada pela Lei Kandir (LC 87/96) —, inclusive na venda à trading com fim específico de exportação (Súmula 536/STJ); e há não incidência de PIS/COFINS sobre a receita de exportação, alcançando também a exportação indireta (STF, Tema 674). Permanece a CFEM sobre a exploração mineral. A correta estruturação tributária depende da cadeia adotada.",
+          "A exportação é favorecida por imunidades e não incidências: o ICMS não incide sobre operações que destinem mercadorias ao exterior — imunidade constitucional regulada pela Lei Kandir (LC 87/96) —, inclusive na venda à trading com fim específico de exportação (art. 3º, parágrafo único, da Lei Kandir); e há não incidência de PIS/COFINS sobre a receita de exportação, alcançando também a exportação indireta (STF, Tema 674). Permanece a CFEM sobre a exploração mineral. A correta estruturação tributária depende da cadeia adotada.",
       },
       {
         question: "Como funciona o ajuste de preço por teor e o período de cotação em contratos de minério?",
@@ -345,9 +352,9 @@ const COPY: Record<PageLocale, Copy> = {
     heroEyebrow: "Mining Law · Commodities · Mineral Export",
     heroTitle: "In the mineral trade, the margin lives in the clauses.",
     introP1:
-      "The headline price of a tonne of ore says little. What defines how much is received — and how much is lost — is the grade, the price index, the quotation period and the ship's clock, written into clauses few read closely until the first dispute.",
+      "Iron ore deals are settled in the contract, not on the price screen. Base price, reference index, grade and moisture tolerances, penalties, sampling rules and payment terms determine how much each side actually receives or pays. Whether you are the Brazilian exporter or the buyer abroad, the margin lives in the clauses — and that is where it is quietly won or lost.",
     introP2:
-      "The firm structures and reviews mineral supply, financing and export contracts, with attention to mineral, tax and environmental regulation — and to a dispute path that holds up abroad as well.",
+      "Our role is to structure and negotiate that contract from your specific position: on the seller's side, protecting the receivable and containing deductions; on the buyer's side, securing the contracted quality and keeping penalties balanced. In either case the aim is the same — clear measurement criteria, predictable settlement, and dispute mechanisms that work before a disagreement turns into a loss.",
     ctaPrimary: "Talk to the firm",
     ctaSecondary: "See practice areas",
     heroTags: ["Corporate clients", "Export contracts", "Advisory and litigation practice"],
@@ -397,17 +404,20 @@ const COPY: Record<PageLocale, Copy> = {
       },
     ],
 
-    qualidadeEyebrow: "Quality, grade and price",
-    qualidadeTitle: "How the number becomes money",
+    qualidadeEyebrow: "Quality, analysis and rejection",
+    qualidadeTitle: "Quality is proven twice",
     qualidadeIntro:
-      "It is at the meeting of quality specification and pricing mechanism that the margin is set. Each technical clause has a direct effect on the value received per tonne.",
+      "In ore transactions, price is a function of grade — and grade is a claim that must be proven, at loading and at discharge. A well-built contract protects both sides: the seller, against undue rejection or penalty; the buyer, against cargo that arrives off-specification.",
     qualidadeItems: [
-      "Quality specification: iron (Fe) grade, silica, alumina, phosphorus and other contaminants",
-      "Grade-based price adjustment and penalties over the contracted basis",
-      "Moisture and conversion between wet and dry metric tonnes (WMT / DMT)",
-      "Reference indices (Platts and the like) and price formation",
-      "Provisional and final pricing and the quotation period (QP)",
-      "Sampling, assaying and the umpire's report in case of a grade dispute",
+      "Binding specification: minimum metal grade, contaminant limits and maximum moisture as a contractual obligation, not a commercial expectation",
+      "Price scale by grade (premiums and deductions) with an unambiguous bracket, formula and rounding — scale ambiguity is the most common origin of an invoice dispute",
+      "The rejection threshold as a line distinct from the scale: coherence between where the scale ends and where refusal begins avoids the grey zone",
+      "Rejection is not a price adjustment: between thresholds, price moves along the scale; below the rejection threshold, the buyer may refuse the cargo and demand restitution plus damages",
+      "Analysis at loading and at discharge, ideally with joint sampling witnessed by both parties",
+      "The critical distinction: the weighing/sampling report is not the chemical assay certificate of grade — the assay is typically the key piece in a grade dispute",
+      "Umpire analysis: where the assays diverge beyond tolerance, a third laboratory, chosen by mutual agreement, prevails and binds the parties",
+      "Which certificate governs price and quality — loading or discharge — stated expressly in the contract",
+      "Retention of part of the price until the discharge assay certificate; security through a documentary letter of credit and a performance bond (Incoterms 2020)",
     ],
 
     navioEyebrow: "Logistics and chartering",
@@ -443,7 +453,7 @@ const COPY: Record<PageLocale, Copy> = {
         index: "03",
         label: "ICMS export immunity",
         description:
-          "Constitutional ICMS immunity on exports (Federal Constitution, art. 155), as regulated by the Kandir Law (LC 87/96), and non-incidence on sales to an export trading company (STJ Precedent 536).",
+          "Constitutional ICMS immunity on exports (Federal Constitution, art. 155), as regulated by the Kandir Law (LC 87/96), and non-incidence on sales to an export trading company (art. 3, sole paragraph, of the Kandir Law).",
       },
       {
         index: "04",
@@ -490,28 +500,32 @@ const COPY: Record<PageLocale, Copy> = {
       },
     ],
 
-    disputasEyebrow: "International disputes",
-    disputasTitle: "When the dispute crosses the border",
+    disputasEyebrow: "Forum, law and arbitration",
+    disputasTitle: "The right question: where are the assets?",
     disputasIntro:
-      "Mineral contracts are often governed by foreign law and resolved by arbitration abroad. Structuring this from the outset avoids surprises at the moment of conflict.",
+      "In cross-border mineral trade, the clause that sets where and how a conflict is resolved is worth as much as the price. We act for either side — the Brazilian exporter or the foreign buyer — starting from the same question: where are the counterparty's assets? Enforceability is what turns a favourable ruling into actual recovery, the clause's validity always being assessed on the facts of each case.",
     disputasItems: [
-      "Arbitration clause and choice of the seat of arbitration (London, Paris, Singapore)",
-      "Institutions and rules (LCIA, ICC, SIAC) and the language of the proceedings",
-      "Recognition and enforcement of a foreign arbitral award through homologation proceedings before the STJ (New York Convention; Law 9,307/96)",
-      "Interim measures and coordination between arbitration and urgent court relief",
+      "Arbitration is not a choice-of-court clause: the arbitration clause (Law 9,307/96 + the New York Convention) and a foreign state-court election follow distinct regimes",
+      "Exclusive foreign forum: the Brazilian courts stand aside only if the defendant raises the election (art. 25 of the CPC) — and art. 25 does not reach arbitration",
+      "Concurrent international jurisdiction (art. 21 of the CPC): Brazilian courts have jurisdiction where the defendant is domiciled in Brazil or the obligation is performed here",
+      "Clear vs. pathological clause: as a rule the arbitrator decides on validity (art. 8 of Law 9,307/96), but a manifestly defective clause — a seat with no institution, rules or number of arbitrators, contradictory cross-references — may be set aside outright by the courts (New York Convention, art. II,3)",
+      "Waiver of arbitration: the arbitration agreement is not raised by the court on its own motion; the defendant's silence in the defence amounts to acceptance of state jurisdiction (art. 337, § 6, of the CPC)",
+      "Pre-arbitral interim relief (art. 22-A of Law 9,307/96): attachment of assets before arbitration, with a 30-day window to commence it",
+      "Enforcement, the decisive point: a foreign arbitral award reaches assets in Brazil only after recognition by the STJ, whereas a domestic ruling acts at once on the property located here",
+      "Governing law and the CISG (in force in Brazil since 2014); and the clear clause — institution, seat, rules, language and law — as the first protection for both sides",
     ],
 
     publicoEyebrow: "Who it is for",
-    publicoTitle: "Mining companies, traders and mineral exporters",
+    publicoTitle: "Sellers and buyers of ore, in Brazil and abroad",
     publicoIntro:
-      "The practice is designed for those who produce, trade or finance ore — and for the international buyer contracting Brazilian-origin supply.",
+      "We act for either side of an ore deal — those who sell and those who buy, inside or outside Brazil — always from the standpoint of the party who retains us.",
     publicoCards: [
-      "Junior and mid-size mining companies in sale and financing contracts",
-      "Trading and commodity-marketing companies",
-      "Exporters negotiating price, grade and logistics with buyers abroad",
-      "Operations structuring pre-payment and trade finance",
-      "Operations facing grade, demurrage or force-majeure disputes",
-      "International buyers contracting Brazilian-origin supply",
+      "Brazilian mining companies and exporting trading houses negotiating volume with counterparties abroad",
+      "Foreign buyers and importers — steelmakers, traders and off-takers — sourcing ore of Brazilian origin",
+      "Sellers seeking to shield the receivable against grade, moisture and penalty deductions",
+      "Buyers wanting to secure the contracted quality and balance sampling and price-adjustment clauses",
+      "Parties on either side facing a measurement, assay or settlement dispute",
+      "Companies structuring long-term supply (off-take) agreements and their guarantees",
     ],
     disclaimerNote:
       "There is no single formula or guaranteed result: each operation depends on the contract, the applicable regulation and the technical elements of the concrete case.",
@@ -531,7 +545,7 @@ const COPY: Record<PageLocale, Copy> = {
       {
         question: "Which taxes apply to the export of ore?",
         answer:
-          "Exports benefit from immunities and non-incidence: ICMS does not apply to operations sending goods abroad — a constitutional immunity regulated by the Kandir Law (LC 87/96) — including sales to a trading company for the specific purpose of export (STJ Precedent 536); and PIS/COFINS do not apply to export revenue, reaching indirect export as well (Supreme Court, Theme 674). CFEM on mineral exploration remains due. Proper tax structuring depends on the chain adopted.",
+          "Exports benefit from immunities and non-incidence: ICMS does not apply to operations sending goods abroad — a constitutional immunity regulated by the Kandir Law (LC 87/96) — including sales to a trading company for the specific purpose of export (art. 3, sole paragraph, of the Kandir Law); and PIS/COFINS do not apply to export revenue, reaching indirect export as well (Supreme Court, Theme 674). CFEM on mineral exploration remains due. Proper tax structuring depends on the chain adopted.",
       },
       {
         question: "How do grade-based price adjustment and the quotation period work in mineral contracts?",

@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Marquee } from "@/components/ui/marquee";
 import { WhatsAppCTAButton } from "@/components/whatsapp-cta-button";
+import { AduaneiroAutoCta, type AutoCtaCopy } from "@/components/aduaneiro/aduaneiro-auto-cta";
 import { OG_LOCALE_BY_APP_LOCALE } from "@/lib/i18n";
 import { getAlternatesLanguages, getLocalizedUrl } from "@/lib/seo";
 import { SITE_NAME, SITE_OG_IMAGE } from "@/lib/site";
@@ -96,6 +97,8 @@ type Copy = {
   ctaDescription: string;
   ctaButton: string;
   ctaBadges: string[];
+
+  autoTool: AutoCtaCopy;
 };
 
 const COPY: Record<PageLocale, Copy> = {
@@ -113,7 +116,7 @@ const COPY: Record<PageLocale, Copy> = {
     introP1:
       "Entre o embarque e o desembaraço, diversos fatores definem o custo e o risco de cada operação: a classificação fiscal da mercadoria, a base de cálculo dos tributos, os termos do contrato internacional e a cláusula do conhecimento de embarque.",
     introP2:
-      "O escritório atua no momento crítico da carga retida ou autuada e na estruturação que evita o próximo problema — da defesa em processo administrativo na Receita Federal à revisão dos contratos de importação, exportação e transporte marítimo.",
+      "O escritório atua no momento crítico da carga retida ou autuada e na estruturação que evita o próximo problema — da defesa em processo administrativo na Receita Federal à revisão dos contratos de importação, exportação e transporte marítimo. Atuamos nos dois sentidos do comércio exterior: para o importador brasileiro e para o exportador ou a contraparte estrangeira do outro lado da operação — sempre a partir do interesse de quem nos contrata.",
     ctaPrimary: "Falar com o escritório",
     ctaSecondary: "Ver áreas de atuação",
     heroTags: [
@@ -345,6 +348,48 @@ const COPY: Record<PageLocale, Copy> = {
       "A análise jurídica prévia da operação permite avaliar, com critério técnico, a consistência de eventuais exigências fiscais, a adequação do regime aduaneiro e a alocação de riscos entre as partes.",
     ctaButton: "Falar com o escritório",
     ctaBadges: ["Atendimento por agendamento", "Análise individualizada", "Atuação nacional"],
+
+    autoTool: {
+      sectionEyebrow: "Ferramenta · Leitura preliminar",
+      sectionTitle: "Leitura do seu auto de infração aduaneiro",
+      sectionIntro:
+        "Suba o PDF do auto de infração, termo de retenção ou intimação. Uma leitura automática e orientativa aponta o tipo de medida, os dispositivos citados, o prazo e os pontos que costumam merecer atenção em defesas dessa natureza. O documento não é armazenado.",
+      steps: [
+        { title: "Suba o documento", detail: "O PDF do auto, termo ou intimação — escaneado ou digital." },
+        { title: "Leitura automática", detail: "A análise identifica o tipo, os dispositivos, o prazo e a natureza da medida." },
+        { title: "Pontos de atenção", detail: "Você recebe uma orientação preliminar e pode falar com o escritório." },
+      ],
+      uploadTitle: "Arraste o PDF aqui ou clique para enviar",
+      uploadSubtitle: "Auto de infração, termo de retenção ou intimação (PDF, até 10 MB)",
+      dropHint: "Solte o arquivo para enviar",
+      modifiedPrefix: "Selecionado",
+      progressLabels: ["Enviando o documento…", "Lendo o conteúdo…", "Identificando dispositivos e prazos…"],
+      resultTitle: "Leitura preliminar do documento",
+      labelTipo: "Tipo de documento",
+      labelNatureza: "Natureza da medida",
+      labelDispositivos: "Dispositivos citados",
+      labelPrazo: "Prazo mencionado",
+      labelPontos: "Pontos que costumam merecer atenção",
+      naturezaLabels: {
+        perdimento: "Pena de perdimento",
+        multa: "Multa / infração",
+        reclassificacao: "Reclassificação fiscal (NCM)",
+        valoracao: "Valoração aduaneira",
+        outro: "Outra",
+        indefinido: "A confirmar",
+      },
+      notAduaneiroTitle: "Não identificamos um documento aduaneiro",
+      notAduaneiroBody:
+        "O arquivo enviado não parece ser um auto de infração, termo ou intimação aduaneira. Tente outro documento — ou fale com o escritório.",
+      disclaimer:
+        "Esta é uma leitura automática e orientativa, gerada por inteligência artificial, e NÃO constitui parecer jurídico nem análise do caso concreto. Cada caso depende dos documentos da operação. O arquivo enviado não é armazenado.",
+      ctaLabel: "Falar com o escritório",
+      whatsappMessage:
+        "Olá! Fiz a leitura preliminar de um auto de infração aduaneiro no site e gostaria de conversar sobre o caso.",
+      tryAgain: "Analisar outro",
+      errorAnalyze: "Não foi possível ler o documento agora. Tente novamente em instantes.",
+      needsPdf: "Envie o documento em PDF.",
+    },
   },
 
   en: {
@@ -361,7 +406,7 @@ const COPY: Record<PageLocale, Copy> = {
     introP1:
       "Between shipment and clearance, several factors define the cost and the risk of every operation: the tariff classification of the goods, the tax base, the terms of the international contract and the bill of lading clause.",
     introP2:
-      "The firm acts at the critical moment of held or assessed cargo, and in the structuring that prevents the next problem — from defense in administrative proceedings before the Federal Revenue Service to the review of import, export and maritime transport contracts.",
+      "The firm acts at the critical moment of held or assessed cargo, and in the structuring that prevents the next problem — from defense in administrative proceedings before the Federal Revenue Service to the review of import, export and maritime transport contracts. We work both directions of cross-border trade: for the Brazilian importer and for the exporter or foreign counterparty on the other side of the deal — always from the standpoint of the party who retains us.",
     ctaPrimary: "Talk to the firm",
     ctaSecondary: "See practice areas",
     heroTags: [
@@ -557,7 +602,7 @@ const COPY: Record<PageLocale, Copy> = {
       {
         question: "How does defense in administrative customs proceedings work (forfeiture, fines, infractions)?",
         answer:
-          "Defense unfolds in administrative proceedings, with a challenge to the assessment notice or to the act applying the measure, followed by appeals to the competent levels. Each stage has its own deadline, and the strategy depends on the operation's documents and the basis of the demand. Where viable or more efficient, the discussion may also be taken to court.",
+          "Defense unfolds in administrative proceedings, but the procedure varies with the measure. Tax-related fines and assessment notices are decided by the Judgment Office (DRJ) and, on appeal, by CARF. The forfeiture penalty follows the specific procedure of Decree-Law 1.455/76, now decided in two instances by the Customs Penalties Judgment Center (CEJUL), under Law 14.651/2023. Each route has its own deadlines, and the matter may also be taken to court where appropriate or more efficient.",
       },
       {
         question: "In which situations can goods be held or seized at customs?",
@@ -592,6 +637,48 @@ const COPY: Record<PageLocale, Copy> = {
       "Early legal review of the operation makes it possible to assess, with technical criteria, the consistency of any fiscal demands, the suitability of the customs regime and the allocation of risk between the parties.",
     ctaButton: "Talk to the firm",
     ctaBadges: ["Service by appointment", "Individual review", "Nationwide practice"],
+
+    autoTool: {
+      sectionEyebrow: "Tool · Preliminary review",
+      sectionTitle: "Read your customs assessment notice",
+      sectionIntro:
+        "Upload the PDF of the assessment notice, hold notice or summons. An automated, orientative reading points out the type of measure, the provisions cited, the deadline and the points that usually deserve attention in defenses of this nature. The document is not stored.",
+      steps: [
+        { title: "Upload the document", detail: "The PDF of the notice, hold or summons — scanned or digital." },
+        { title: "Automated reading", detail: "The analysis identifies the type, the provisions, the deadline and the nature of the measure." },
+        { title: "Points of attention", detail: "You get a preliminary orientation and can talk to the firm." },
+      ],
+      uploadTitle: "Drag the PDF here or click to upload",
+      uploadSubtitle: "Assessment notice, hold notice or summons (PDF, up to 10 MB)",
+      dropHint: "Drop the file to upload",
+      modifiedPrefix: "Selected",
+      progressLabels: ["Uploading the document…", "Reading the content…", "Identifying provisions and deadlines…"],
+      resultTitle: "Preliminary reading of the document",
+      labelTipo: "Document type",
+      labelNatureza: "Nature of the measure",
+      labelDispositivos: "Provisions cited",
+      labelPrazo: "Deadline mentioned",
+      labelPontos: "Points that usually deserve attention",
+      naturezaLabels: {
+        perdimento: "Forfeiture penalty",
+        multa: "Fine / infraction",
+        reclassificacao: "Tariff reclassification (NCM)",
+        valoracao: "Customs valuation",
+        outro: "Other",
+        indefinido: "To be confirmed",
+      },
+      notAduaneiroTitle: "We could not identify a customs document",
+      notAduaneiroBody:
+        "The uploaded file does not appear to be a customs assessment, hold notice or summons. Try another document — or talk to the firm.",
+      disclaimer:
+        "This is an automated, orientative reading generated by artificial intelligence, and does NOT constitute legal advice or an analysis of the concrete case. Each case depends on the operation's documents. The uploaded file is not stored.",
+      ctaLabel: "Talk to the firm",
+      whatsappMessage:
+        "Hello! I did a preliminary reading of a customs assessment notice on the website and would like to discuss the case.",
+      tryAgain: "Analyze another",
+      errorAnalyze: "We couldn't read the document right now. Please try again shortly.",
+      needsPdf: "Please upload the document as a PDF.",
+    },
   },
 };
 
@@ -757,6 +844,9 @@ export default async function DireitoAduaneiroPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Ferramenta-isca: leitura do auto de infração (upload + IA) */}
+      <AduaneiroAutoCta copy={c.autoTool} whatsappPhone={whatsappPhone} />
 
       <div className={sectionStripe} />
 
