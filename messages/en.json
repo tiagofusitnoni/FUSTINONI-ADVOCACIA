@@ -35,7 +35,9 @@
       },
       "products": {
         "creditReview": "Improper listing review",
-        "factorKReview": "Factor K review"
+        "factorKReview": "Factor K review",
+        "customsTrade": "Customs & International Trade Law",
+        "miningLaw": "Mining Law & Mineral Export"
       },
       "sections": {
         "publications": "Publications"

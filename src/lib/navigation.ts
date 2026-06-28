@@ -9,9 +9,10 @@ export type HomeNavItem = {
 };
 
 export type ProductNavItem = {
-  href: "/analise-credito" | "/fator-k";
+  href: "/analise-credito" | "/fator-k" | "/direito-aduaneiro" | "/direito-minerario";
   labelKey: string;
   status: "active" | "coming_soon";
+  locales?: AppLocale[];
 };
 
 export const HOME_NAV_ITEMS: HomeNavItem[] = [
@@ -75,6 +76,18 @@ export const PRODUCT_NAV_ITEMS: ProductNavItem[] = [
     status: "active",
   },
   { href: "/fator-k", labelKey: "products.factorKReview", status: "active" },
+  {
+    href: "/direito-aduaneiro",
+    labelKey: "products.customsTrade",
+    status: "active",
+    locales: ["pt", "en"],
+  },
+  {
+    href: "/direito-minerario",
+    labelKey: "products.miningLaw",
+    status: "active",
+    locales: ["pt", "en"],
+  },
 ];
 
 const LOCALIZED_HASHES = {

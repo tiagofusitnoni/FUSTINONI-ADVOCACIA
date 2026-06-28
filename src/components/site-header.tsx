@@ -46,7 +46,9 @@ export function SiteHeader({
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
-  const safeProductNavItems = productNavItems ?? [];
+  const safeProductNavItems = (productNavItems ?? []).filter(
+    p => !p.locales || p.locales.includes(locale),
+  );
   const safeServices = dynamicServices ?? [];
   const activeNavItems =
     pathname === "/analise-credito"

@@ -35,7 +35,9 @@
       },
       "products": {
         "creditReview": "Análise de apontamentos indevidos",
-        "factorKReview": "Revisão de Fator K"
+        "factorKReview": "Revisão de Fator K",
+        "customsTrade": "Direito Aduaneiro & Comércio Exterior",
+        "miningLaw": "Direito Minerário & Exportação de Minério"
       },
       "sections": {
         "publications": "Publicações"

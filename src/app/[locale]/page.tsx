@@ -216,6 +216,24 @@ const specificServices = [
     disabled: false,
     layoutType: "card" as const,
   },
+  {
+    title: "Direito Aduaneiro & Comércio Exterior",
+    description:
+      "Defesa em autuações e perdimento, tributação na importação, regimes especiais (drawback, RECOF) e contratos internacionais e marítimos — para importadores, exportadores e tradings.",
+    href: "/direito-aduaneiro",
+    ctaLabel: "Conhecer a área",
+    disabled: false,
+    layoutType: "card" as const,
+  },
+  {
+    title: "Direito Minerário & Exportação de Minério",
+    description:
+      "Contratos de fornecimento, qualidade e teor, CFEM, logística portuária e arbitragem internacional — para mineradoras, tradings e compradores de minério.",
+    href: "/direito-minerario",
+    ctaLabel: "Conhecer a área",
+    disabled: false,
+    layoutType: "card" as const,
+  },
 ];
 
 type NonDefaultLocale = Exclude<AppLocale, "pt">;
@@ -553,6 +571,24 @@ const SPECIFIC_SERVICES_BY_LOCALE: Record<
         "Legal and technical review of SABESP invoices for companies charged with Factor K, including administrative or judicial challenge strategy and reimbursement claims when applicable.",
       href: "/fator-k",
       ctaLabel: "Access Service",
+      disabled: false,
+      layoutType: "card" as const,
+    },
+    {
+      title: "Customs & International Trade Law",
+      description:
+        "Defense in assessments and forfeiture, import taxation, special regimes (drawback, RECOF) and international and maritime contracts — for importers, exporters and trading companies.",
+      href: "/direito-aduaneiro",
+      ctaLabel: "Explore the area",
+      disabled: false,
+      layoutType: "card" as const,
+    },
+    {
+      title: "Mining Law & Mineral Export",
+      description:
+        "Supply contracts, quality and grade, royalties (CFEM), port logistics and international arbitration — for mining companies, traders and ore buyers.",
+      href: "/direito-minerario",
+      ctaLabel: "Explore the area",
       disabled: false,
       layoutType: "card" as const,
     },
