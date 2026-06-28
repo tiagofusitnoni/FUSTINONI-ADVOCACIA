@@ -666,9 +666,9 @@ export default async function DireitoAduaneiroPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Hero fotográfico — placeholder (cityscape); arte de porto/contêineres a definir */}
+      {/* Hero fotográfico — porto/terminal de contêineres (Pexels, uso comercial livre) */}
       <section className="relative flex min-h-[48vh] flex-col justify-end overflow-hidden border-b border-black/15 px-4 py-14 sm:px-6 sm:py-16 md:px-10 md:py-20">
-        <Image src="/hero-saopaulo.jpg" alt="" fill priority sizes="100vw" className="object-cover object-center" />
+        <Image src="/hero-aduaneiro.jpg" alt="" fill priority sizes="100vw" className="object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#16181d]/55 via-[#16181d]/62 to-[#16181d]/88" />
         <div className="relative z-10 w-full max-w-4xl">
           <div className="mb-5 flex items-center gap-3">
