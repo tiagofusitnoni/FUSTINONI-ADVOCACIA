@@ -4,20 +4,37 @@ import { getSiteUrl } from "@/lib/site";
 
 const siteUrl = getSiteUrl();
 
-type LocalizedPathname = "/" | "/privacidade" | "/analise-credito" | "/fator-k" | "/email-confirmado" | "/publicacoes";
+type LocalizedPathname =
+  | "/"
+  | "/privacidade"
+  | "/analise-credito"
+  | "/fator-k"
+  | "/direito-aduaneiro"
+  | "/direito-minerario"
+  | "/email-confirmado"
+  | "/publicacoes";
 
 export function getLocalizedUrl(pathname: LocalizedPathname, locale: AppLocale) {
   const localizedPath = getPathname({ href: pathname, locale });
   return `${siteUrl}${localizedPath}`;
 }
 
-export function getAlternatesLanguages(pathname: LocalizedPathname) {
+// `locales` permite restringir o hreflang aos idiomas realmente publicados na
+// página (ex.: páginas pt+en, com es/it pendentes de tradução). Por padrão, todos.
+export function getAlternatesLanguages(
+  pathname: LocalizedPathname,
+  locales: readonly AppLocale[] = routing.locales,
+) {
   const languages = Object.fromEntries(
-    routing.locales.map(locale => [locale, getLocalizedUrl(pathname, locale)]),
+    locales.map(locale => [locale, getLocalizedUrl(pathname, locale)]),
   );
+
+  const xDefaultLocale = locales.includes(routing.defaultLocale)
+    ? routing.defaultLocale
+    : locales[0];
 
   return {
     ...languages,
-    "x-default": getLocalizedUrl(pathname, routing.defaultLocale),
+    "x-default": getLocalizedUrl(pathname, xDefaultLocale),
   };
 }

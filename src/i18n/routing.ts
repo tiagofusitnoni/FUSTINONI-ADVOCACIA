@@ -26,6 +26,20 @@ export const routing = defineRouting({
       es: "/revision-factor-k-sabesp",
       it: "/revisione-fattore-k-sabesp",
     },
+    // Páginas de área (pt+en publicadas; es/it fazem notFound() no page.tsx até
+    // serem traduzidas — slugs espelhados só pra atender a tipagem do next-intl).
+    "/direito-aduaneiro": {
+      pt: "/direito-aduaneiro",
+      en: "/customs-trade-law",
+      es: "/derecho-aduanero",
+      it: "/diritto-doganale",
+    },
+    "/direito-minerario": {
+      pt: "/direito-minerario",
+      en: "/mining-law",
+      es: "/derecho-minero",
+      it: "/diritto-minerario",
+    },
     "/email-confirmado": {
       pt: "/email-confirmado",
       en: "/email-confirmed",
