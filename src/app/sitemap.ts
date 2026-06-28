@@ -16,6 +16,7 @@ const internalRoutes: SitemapRoute[] = [
   { path: "/analise-credito", locales: ALL },
   { path: "/fator-k", locales: ALL },
   { path: "/direito-aduaneiro", locales: ["pt", "en"] },
+  { path: "/direito-minerario", locales: ["pt", "en"] },
   { path: "/privacidade", locales: ALL },
 ];
 
