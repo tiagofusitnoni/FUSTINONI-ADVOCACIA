@@ -9,7 +9,11 @@ import { LanguageToggle } from "@/components/language-toggle";
 import { LeadCaptureDialog } from "@/components/lead-capture-dialog";
 import { Link, usePathname } from "@/i18n/navigation";
 import { type AppLocale } from "@/i18n/routing";
-import { INSTAGRAM_URL, INTERNAL_ACCESS_URL } from "@/lib/site";
+import {
+  INSTAGRAM_URL,
+  INTERNAL_ACCESS_URL,
+  PLATAFORMA_DD_URL,
+} from "@/lib/site";
 import {
   ANALISE_CREDITO_NAV_ITEMS,
   FATOR_K_NAV_ITEMS,
@@ -127,6 +131,15 @@ export function SiteHeader({
               {t("nav.sections.publications")}
             </Link>
           )}
+
+          <a
+            href={PLATAFORMA_DD_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-black"
+          >
+            {t("nav.sections.dueDiligence")}
+          </a>
 
           <NavigationMenu viewport={false}>
             <NavigationMenuList>
@@ -275,6 +288,16 @@ export function SiteHeader({
                 {t("nav.sections.publications")}
               </Link>
             )}
+
+            <a
+              href={PLATAFORMA_DD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-b border-black/15 px-4 py-3 text-xs font-medium tracking-wider uppercase transition-colors hover:bg-neutral-50"
+              onClick={closeMobileMenu}
+            >
+              {t("nav.sections.dueDiligence")}
+            </a>
 
             <button
               type="button"

@@ -11,6 +11,12 @@ export const INTERNAL_ACCESS_URL =
   process.env.NEXT_PUBLIC_INTERNAL_ACCESS_URL?.trim() ||
   "https://sistema.escritoriofustinoni.com.br";
 
+// Plataforma interna de Due Diligence — protegida por Cloudflare Access (OTP).
+// Configurável por env caso o subdomínio mude.
+export const PLATAFORMA_DD_URL =
+  process.env.NEXT_PUBLIC_PLATAFORMA_DD_URL?.trim() ||
+  "https://dd.escritoriofustinoni.com.br";
+
 // Instagram oficial do escritório (S86: @fustinoniadvocacia). Configurável por env.
 export const INSTAGRAM_URL =
   process.env.NEXT_PUBLIC_INSTAGRAM_URL?.trim() ||
