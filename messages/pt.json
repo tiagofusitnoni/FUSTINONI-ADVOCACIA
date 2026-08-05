@@ -12,6 +12,7 @@
   "siteHeader": {
     "scheduleConsultation": "Agendar consulta",
     "internalAccess": "Acesso Interno",
+    "dueDiligenceAccess": "Acesso Interno Due Diligence",
     "specificServices": "Serviços específicos",
     "openMenuAria": "Abrir menu",
     "closeMenuAria": "Fechar menu",
@@ -40,8 +41,7 @@
         "miningLaw": "Direito Minerário & Exportação de Minério"
       },
       "sections": {
-        "publications": "Publicações",
-        "dueDiligence": "Due Diligence"
+        "publications": "Publicações"
       }
     }
   },

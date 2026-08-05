@@ -12,6 +12,7 @@
   "siteHeader": {
     "scheduleConsultation": "Agendar consulta",
     "internalAccess": "Acceso Interno",
+    "dueDiligenceAccess": "Acceso Interno Due Diligence",
     "specificServices": "Servicios específicos",
     "openMenuAria": "Abrir menú",
     "closeMenuAria": "Cerrar menú",
@@ -38,8 +39,7 @@
         "factorKReview": "Revisión de Factor K"
       },
       "sections": {
-        "publications": "Publicaciones",
-        "dueDiligence": "Due Diligence"
+        "publications": "Publicaciones"
       }
     }
   },
