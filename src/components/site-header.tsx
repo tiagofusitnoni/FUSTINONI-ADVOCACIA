@@ -12,7 +12,6 @@ import { type AppLocale } from "@/i18n/routing";
 import {
   INSTAGRAM_URL,
   INTERNAL_ACCESS_URL,
-  PLATAFORMA_DD_URL,
 } from "@/lib/site";
 import {
   ANALISE_CREDITO_NAV_ITEMS,
@@ -223,17 +222,6 @@ export function SiteHeader({
             </a>
           </Button>
 
-          <Button
-            asChild
-            variant="outline"
-            className="hidden h-10 shrink-0 gap-1.5 rounded-none border-black/25 bg-white px-3 text-[10px] uppercase tracking-wide text-black hover:bg-neutral-100 sm:px-4 sm:text-[11px] xl:inline-flex"
-          >
-            <a href={PLATAFORMA_DD_URL} target="_blank" rel="noopener noreferrer">
-              <Lock className="h-3 w-3" aria-hidden="true" />
-              {t("dueDiligenceAccess")}
-            </a>
-          </Button>
-
           <LeadCaptureDialog whatsappPhone={whatsappPhone} origem="cabecalho">
             <Button className="hidden h-10 shrink-0 rounded-none bg-black px-3 text-[10px] uppercase tracking-wide text-white hover:bg-black/80 sm:px-4 sm:text-[11px] xl:inline-flex">
               {ctaLabel}
@@ -352,21 +340,6 @@ export function SiteHeader({
                 >
                   <Lock className="h-3.5 w-3.5" aria-hidden="true" />
                   {t("internalAccess")}
-                </a>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="w-full gap-1.5 rounded-none border-black/25 text-xs uppercase tracking-wider text-black"
-              >
-                <a
-                  href={PLATAFORMA_DD_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={closeMobileMenu}
-                >
-                  <Lock className="h-3.5 w-3.5" aria-hidden="true" />
-                  {t("dueDiligenceAccess")}
                 </a>
               </Button>
               <LeadCaptureDialog whatsappPhone={whatsappPhone} origem="cabecalho">
