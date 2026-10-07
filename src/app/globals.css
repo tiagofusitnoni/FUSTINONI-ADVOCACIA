@@ -364,6 +364,12 @@
   /* Fundo e tinta explícitos: os tokens do @theme guardam só os números do HSL, então
      classes como bg-background/text-accent saíam sem cor. Estas devolvem a cor certa. */
   body { background-color: #F6F3EE; color: #14231D; }
+
+  /* Telas grandes: a base tipográfica cresce com a largura (16px em 1600px, ~19px em 2560px, teto 21px),
+     e como textos, espaços e larguras estão em rem, a página inteira acompanha a tela. */
+  @media (min-width: 1600px) {
+    html { font-size: clamp(16px, calc(11px + 0.3125vw), 21px); }
+  }
   .bg-background { background-color: #F6F3EE; }
   .bg-card { background-color: #FFFDF9; }
   .bg-accent { background-color: #B08D46; }

@@ -34,7 +34,7 @@ export async function SiteShell({ children, locale }: SiteShellProps) {
         {t("skipToContent")}
       </a>
 
-      <div className="mx-auto flex min-h-screen w-full max-w-[120rem] flex-col bg-background">
+      <div className="flex min-h-screen w-full flex-col bg-background">
         <SiteHeader
           homeNavItems={HOME_NAV_ITEMS}
           productNavItems={PRODUCT_NAV_ITEMS}

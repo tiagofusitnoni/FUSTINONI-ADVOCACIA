@@ -219,7 +219,7 @@ export function SiteHeader({
           <Button
             asChild
             variant="outline"
-            className="hidden h-10 shrink-0 gap-1.5 rounded-none border-black/25 bg-white px-3 text-[10px] uppercase tracking-wide text-black hover:bg-neutral-100 sm:px-4 sm:text-[11px] xl:inline-flex"
+            className="hidden h-10 shrink-0 gap-1.5 rounded-none border-black/25 bg-white px-3 text-[0.625rem] uppercase tracking-wide text-black hover:bg-neutral-100 sm:px-4 sm:text-[0.6875rem] xl:inline-flex"
           >
             <a href={INTERNAL_ACCESS_URL} target="_blank" rel="noopener noreferrer">
               <Lock className="h-3 w-3" aria-hidden="true" />
@@ -228,7 +228,7 @@ export function SiteHeader({
           </Button>
 
           <LeadCaptureDialog whatsappPhone={whatsappPhone} origem="cabecalho">
-            <Button className="hidden h-10 shrink-0 rounded-none bg-black px-3 text-[10px] uppercase tracking-wide text-white hover:bg-black/80 sm:px-4 sm:text-[11px] xl:inline-flex">
+            <Button className="hidden h-10 shrink-0 rounded-none bg-black px-3 text-[0.625rem] uppercase tracking-wide text-white hover:bg-black/80 sm:px-4 sm:text-[0.6875rem] xl:inline-flex">
               {ctaLabel}
             </Button>
           </LeadCaptureDialog>

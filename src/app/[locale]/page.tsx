@@ -1041,20 +1041,20 @@ const SCHEMA_LANGUAGE_LABEL_BY_LOCALE: Record<AppLocale, string> = {
 };
 
 /* Identidade oficial (07/10/2026): medidas e acabamentos da página inicial. */
-const WRAP = "mx-auto w-full max-w-[1200px] px-6 sm:px-10";
+const WRAP = "mx-auto w-full max-w-[min(88vw,96rem)] px-6 sm:px-10";
 const SECAO = "py-24 sm:py-28 lg:py-36";
 const TITULO = "text-balance font-serif text-[2rem] leading-[1.15] tracking-[-0.012em] text-[#14231D] sm:text-[2.5rem] lg:text-[2.85rem]";
 const TEXTO = "text-[0.95rem] leading-7 text-[#4F5A54] sm:text-base sm:leading-8";
-const BTN_BASE = "inline-flex h-auto items-center justify-center rounded-none px-10 py-5 text-[11px] font-medium uppercase tracking-[0.24em] shadow-none transition-colors duration-300";
+const BTN_BASE = "inline-flex h-auto items-center justify-center rounded-none px-10 py-5 text-[0.6875rem] font-medium uppercase tracking-[0.24em] shadow-none transition-colors duration-300";
 const BTN_LINHA = `${BTN_BASE} border border-[#0F2A22]/60 bg-transparent text-[#0F2A22] hover:border-[#0F2A22] hover:bg-[#0F2A22] hover:text-[#F6F3EE]`;
 const BTN_OURO = `${BTN_BASE} border border-[#B08D46] bg-transparent text-[#F6F3EE] hover:bg-[#B08D46] hover:text-[#0B1A16]`;
-const LINK_SETA = "inline-flex items-center gap-3 self-start text-[11px] font-medium uppercase tracking-[0.24em] text-[#0F2A22]";
+const LINK_SETA = "inline-flex items-center gap-3 self-start text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-[#0F2A22]";
 
 function Rotulo({ children, claro = false, centro = false }: { children: React.ReactNode; claro?: boolean; centro?: boolean }) {
   return (
     <div className={`mb-7 flex items-center gap-4 ${centro ? "justify-center" : ""}`}>
       <span className="h-px w-10 bg-[#B08D46]" aria-hidden="true" />
-      <span className={`text-[11px] font-medium uppercase tracking-[0.32em] ${claro ? "text-[#C9A86A]" : "text-[#9A7A3A]"}`}>
+      <span className={`text-[0.6875rem] font-medium uppercase tracking-[0.32em] ${claro ? "text-[#C9A86A]" : "text-[#9A7A3A]"}`}>
         {children}
       </span>
       {centro && <span className="h-px w-10 bg-[#B08D46]" aria-hidden="true" />}
@@ -1178,7 +1178,7 @@ export default async function Home({ params }: HomePageProps) {
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#0B1A16]" />
 
         <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center">
-          <div className="mb-7 text-[11px] font-medium uppercase tracking-[0.42em] text-[#C9A86A]">
+          <div className="mb-7 text-[0.6875rem] font-medium uppercase tracking-[0.42em] text-[#C9A86A]">
             Fustinoni Advocacia
           </div>
           <div className="mb-10 h-px w-14 bg-[#B08D46]" aria-hidden="true" />
@@ -1233,7 +1233,7 @@ export default async function Home({ params }: HomePageProps) {
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     {oab && (
-                      <span className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#4F5A54]">{oab}</span>
+                      <span className="text-[0.625rem] font-medium uppercase tracking-[0.22em] text-[#4F5A54]">{oab}</span>
                     )}
                   </div>
                   <h3 className="mb-4 font-serif text-[1.45rem] leading-snug text-[#14231D] sm:text-[1.6rem]">{nome}</h3>
@@ -1269,7 +1269,7 @@ export default async function Home({ params }: HomePageProps) {
                 src="/office-lounge.jpg"
                 alt={text.studioImageAlt}
                 fill
-                sizes="(max-width: 1024px) 100vw, 560px"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
               />
             </div>
@@ -1389,7 +1389,7 @@ export default async function Home({ params }: HomePageProps) {
                       <span className="text-[#B08D46] transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
                     </Link>
                   ) : (
-                    <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-[#4F5A54]/60">
+                    <span className="text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-[#4F5A54]/60">
                       {service.ctaLabel}
                     </span>
                   )}

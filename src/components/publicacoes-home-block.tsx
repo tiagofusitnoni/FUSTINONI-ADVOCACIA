@@ -24,12 +24,12 @@ export async function PublicacoesHomeBlock() {
 
   return (
     <section id="publicacoes" className="scroll-mt-24 bg-[#FFFDF9] sm:scroll-mt-28">
-      <div className="mx-auto w-full max-w-[1200px] px-6 py-24 sm:px-10 sm:py-28 lg:py-36">
+      <div className="mx-auto w-full max-w-[min(88vw,96rem)] px-6 py-24 sm:px-10 sm:py-28 lg:py-36">
         <div className="mb-16 flex flex-col items-start justify-between gap-8 sm:mb-20 sm:flex-row sm:items-end">
           <div>
             <div className="mb-7 flex items-center gap-4">
               <span className="h-px w-10 bg-[#B08D46]" aria-hidden="true" />
-              <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-[#9A7A3A]">Publicações</span>
+              <span className="text-[0.6875rem] font-medium uppercase tracking-[0.32em] text-[#9A7A3A]">Publicações</span>
             </div>
             <h2 className="font-serif text-[2rem] leading-[1.15] tracking-[-0.012em] text-[#14231D] sm:text-[2.5rem] lg:text-[2.85rem]">
               O que estamos
@@ -39,7 +39,7 @@ export async function PublicacoesHomeBlock() {
           </div>
           <Link
             href="/publicacoes"
-            className="group inline-flex items-center gap-3 whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.24em] text-[#0F2A22]"
+            className="group inline-flex items-center gap-3 whitespace-nowrap text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-[#0F2A22]"
           >
             <span className="border-b border-[#B08D46] pb-1">Ver todas as publicações</span>
             <span className="text-[#B08D46] transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
@@ -53,7 +53,7 @@ export async function PublicacoesHomeBlock() {
               href={{ pathname: "/publicacoes/[slug]", params: { slug: p.slug } }}
               className="group flex flex-col border border-[#E3DDD1] bg-[#F6F3EE] p-8 transition-colors duration-300 hover:border-[#B08D46]/60"
             >
-              <div className="mb-6 flex flex-wrap items-center gap-2 text-[10px] font-medium uppercase tracking-[0.18em] text-[#4F5A54]">
+              <div className="mb-6 flex flex-wrap items-center gap-2 text-[0.625rem] font-medium uppercase tracking-[0.18em] text-[#4F5A54]">
                 <span>{formatarDataPublicacao(p.publicada_em)}</span>
                 {p.tribunal && p.tribunal.toLowerCase() !== "nenhum" && (
                   <>
@@ -70,7 +70,7 @@ export async function PublicacoesHomeBlock() {
               <p className="mb-8 line-clamp-3 flex-1 text-[0.9rem] leading-7 text-[#4F5A54]">
                 {p.lead}
               </p>
-              <div className="flex items-center gap-3 border-t border-[#E3DDD1] pt-5 text-[11px] font-medium uppercase tracking-[0.24em] text-[#0F2A22]">
+              <div className="flex items-center gap-3 border-t border-[#E3DDD1] pt-5 text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-[#0F2A22]">
                 Ler publicação
                 <span className="text-[#B08D46] transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
               </div>
