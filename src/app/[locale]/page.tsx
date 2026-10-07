@@ -1150,7 +1150,7 @@ export default async function Home({ params }: HomePageProps) {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[74%_50%] md:object-center"
+          className="object-cover object-[93%_50%] md:object-center"
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(11,26,22,0.78)_0%,rgba(11,26,22,0.55)_50%,rgba(11,26,22,0.35)_100%)]" />
 
@@ -1261,7 +1261,7 @@ export default async function Home({ params }: HomePageProps) {
               alt={text.studioImageAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 672px"
-              className="object-cover object-[74%_50%] md:object-center"
+              className="object-cover object-center"
             />
           </div>
         </div>
