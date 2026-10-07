@@ -12,101 +12,76 @@ type SiteFooterProps = {
 export async function SiteFooter({ locale }: SiteFooterProps) {
   const t = await getTranslations("siteFooter");
 
+  const linkCls = "text-[#F6F3EE]/75 transition-colors hover:text-[#C9A86A]";
   return (
-    <>
-      <div className="h-16 w-full border-b border-black/15 bg-grid-pattern-small" />
-
-      <footer className="border-b border-black/15 text-sm">
-        <div className="grid grid-cols-1 border-t border-black/15 bg-white sm:grid-cols-2 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.85fr)_minmax(0,1.1fr)]">
-          <div className="p-6 sm:border-r sm:border-black/15 sm:p-8">
-            <div className="marca mb-10 sm:mb-14" aria-label="Fustinoni Advocacia">
-              <span className="marca-f" aria-hidden="true">F</span>
-              <span className="marca-sep" aria-hidden="true" />
-              <span className="marca-txt">
-                <span className="marca-nome">Fustinoni</span>
-                <span className="marca-sub">ADVOCACIA</span>
-              </span>
-            </div>
-            <p className="text-xs text-black/60">{t("rightsReserved")}</p>
-            <div className="mt-10 flex flex-wrap gap-4 text-xs font-medium uppercase tracking-wider text-black/70 sm:mt-12">
-              <span>{t("badges.confidential")}</span>
-              <span>{t("badges.scheduled")}</span>
-              <span>{t("badges.national")}</span>
-            </div>
+    <footer className="border-t border-[#B08D46]/25 bg-[#0B1A16] text-sm text-[#F6F3EE]">
+      <div className="mx-auto grid w-full max-w-[1200px] grid-cols-1 gap-14 px-6 py-20 sm:grid-cols-2 sm:px-10 lg:grid-cols-12 lg:gap-10 lg:py-24">
+        <div className="sm:col-span-2 lg:col-span-5">
+          <div className="marca marca-clara" aria-label="Fustinoni Advocacia">
+            <span className="marca-f" aria-hidden="true">F</span>
+            <span className="marca-sep" aria-hidden="true" />
+            <span className="marca-txt">
+              <span className="marca-nome">Fustinoni</span>
+              <span className="marca-sub">ADVOCACIA</span>
+            </span>
           </div>
-
-          <div className="border-t border-black/15 p-6 sm:border-t-0 sm:p-8 lg:border-r lg:border-black/15">
-            <div className="mb-6 text-xs font-bold uppercase tracking-widest text-black/70">
-              {t("navigationTitle")}
-            </div>
-            <ul className="space-y-3 font-medium">
-              <li>
-                <Link
-                  href={{
-                    pathname: "/",
-                    hash: getLocalizedHash("/", "services", locale),
-                  }}
-                  className="transition-colors hover:text-black/70"
-                >
-                  {t("links.team")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={{
-                    pathname: "/",
-                    hash: getLocalizedHash("/", "process", locale),
-                  }}
-                  className="transition-colors hover:text-black/70"
-                >
-                  {t("links.workModels")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/analise-credito"
-                  className="transition-colors hover:text-black/70"
-                >
-                  {t("links.creditReview")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={{
-                    pathname: "/",
-                    hash: getLocalizedHash("/", "faq", locale),
-                  }}
-                  className="transition-colors hover:text-black/70"
-                >
-                  {t("links.faq")}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="border-t border-black/15 p-6 sm:col-span-2 sm:p-8 lg:col-span-1 lg:border-t-0">
-            <div className="mb-6 text-xs font-bold uppercase tracking-widest text-black/70">
-              {t("contactTitle")}
-            </div>
-            <a
-              href="mailto:contato@fustinoni.adv.br"
-              className="inline-flex items-center gap-2 text-sm font-medium text-black/80 transition-colors hover:text-black"
-            >
-              <Mail className="h-4 w-4" />
-              contato@fustinoni.adv.br
-            </a>
+          <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-[10px] font-medium uppercase tracking-[0.24em] text-[#F6F3EE]/50">
+            <span>{t("badges.confidential")}</span>
+            <span>{t("badges.scheduled")}</span>
+            <span>{t("badges.national")}</span>
           </div>
         </div>
 
-        <div className="border-t border-black/15 bg-white px-6 py-4 text-xs sm:px-8">
+        <div className="lg:col-span-3">
+          <div className="mb-7 text-[11px] font-medium uppercase tracking-[0.32em] text-[#C9A86A]">
+            {t("navigationTitle")}
+          </div>
+          <ul className="space-y-4">
+            <li>
+              <Link href={{ pathname: "/", hash: getLocalizedHash("/", "services", locale) }} className={linkCls}>
+                {t("links.team")}
+              </Link>
+            </li>
+            <li>
+              <Link href={{ pathname: "/", hash: getLocalizedHash("/", "process", locale) }} className={linkCls}>
+                {t("links.workModels")}
+              </Link>
+            </li>
+            <li>
+              <Link href="/analise-credito" className={linkCls}>
+                {t("links.creditReview")}
+              </Link>
+            </li>
+            <li>
+              <Link href={{ pathname: "/", hash: getLocalizedHash("/", "faq", locale) }} className={linkCls}>
+                {t("links.faq")}
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="lg:col-span-4">
+          <div className="mb-7 text-[11px] font-medium uppercase tracking-[0.32em] text-[#C9A86A]">
+            {t("contactTitle")}
+          </div>
+          <a href="mailto:contato@fustinoni.adv.br" className={`inline-flex items-center gap-3 ${linkCls}`}>
+            <Mail className="h-4 w-4 text-[#B08D46]" strokeWidth={1.5} />
+            contato@fustinoni.adv.br
+          </a>
+        </div>
+      </div>
+
+      <div className="border-t border-[#F6F3EE]/10">
+        <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-3 px-6 py-6 text-[11px] text-[#F6F3EE]/45 sm:flex-row sm:items-center sm:justify-between sm:px-10">
+          <p>{t("rightsReserved")}</p>
           <Link
             href="/privacidade"
-            className="font-medium uppercase tracking-wider text-black/55 underline-offset-4 transition-colors hover:text-black hover:underline"
+            className="uppercase tracking-[0.2em] transition-colors hover:text-[#C9A86A]"
           >
             {t("links.privacy")}
           </Link>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }

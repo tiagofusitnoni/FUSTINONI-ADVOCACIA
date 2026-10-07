@@ -359,6 +359,23 @@
   .marca-txt { display: flex; flex-direction: column; line-height: 1; }
   .marca-nome { font-family: var(--font-baskerville), Georgia, serif; font-size: 1.2rem; letter-spacing: .01em; color: hsl(var(--color-foreground)); }
   .marca-sub { font-family: var(--font-inter), sans-serif; font-size: .56rem; letter-spacing: .42em; color: #B08D46; margin-top: .35rem; font-weight: 500; }
+  .marca-clara .marca-nome { color: #F6F3EE; }
+
+  /* Fundo e tinta explícitos: os tokens do @theme guardam só os números do HSL, então
+     classes como bg-background/text-accent saíam sem cor. Estas devolvem a cor certa. */
+  body { background-color: #F6F3EE; color: #14231D; }
+  .bg-background { background-color: #F6F3EE; }
+  .bg-card { background-color: #FFFDF9; }
+  .bg-accent { background-color: #B08D46; }
+  .text-accent { color: #9A7A3A; }
+  .border-accent { border-color: #B08D46; }
+  .text-foreground { color: #14231D; }
+  .text-muted-foreground { color: #4F5A54; }
+  .border-border { border-color: #E3DDD1; }
+
+  /* Faixas quadriculadas entre seções (páginas internas): viram um respiro com filete de ouro */
+  .bg-grid-pattern-small { background-image: none; position: relative; border-bottom-color: transparent !important; height: 5rem; }
+  .bg-grid-pattern-small::after { content: ""; position: absolute; left: 50%; top: 50%; width: 3.5rem; height: 1px; background: #B08D46; transform: translateX(-50%); }
 }
 
 /*

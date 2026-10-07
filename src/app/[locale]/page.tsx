@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Plus, X } from "lucide-react";
+import { Check, Minus } from "lucide-react";
 
 import { Link } from "@/i18n/navigation";
 import { type AppLocale } from "@/i18n/routing";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import { PublicacoesHomeBlock } from "@/components/publicacoes-home-block";
 import { WhatsAppCTAButton } from "@/components/whatsapp-cta-button";
 import { OG_LOCALE_BY_APP_LOCALE } from "@/lib/i18n";
@@ -1041,6 +1040,28 @@ const SCHEMA_LANGUAGE_LABEL_BY_LOCALE: Record<AppLocale, string> = {
   it: "Italian",
 };
 
+/* Identidade oficial (07/10/2026): medidas e acabamentos da página inicial. */
+const WRAP = "mx-auto w-full max-w-[1200px] px-6 sm:px-10";
+const SECAO = "py-24 sm:py-28 lg:py-36";
+const TITULO = "text-balance font-serif text-[2rem] leading-[1.15] tracking-[-0.012em] text-[#14231D] sm:text-[2.5rem] lg:text-[2.85rem]";
+const TEXTO = "text-[0.95rem] leading-7 text-[#4F5A54] sm:text-base sm:leading-8";
+const BTN_BASE = "inline-flex h-auto items-center justify-center rounded-none px-10 py-5 text-[11px] font-medium uppercase tracking-[0.24em] shadow-none transition-colors duration-300";
+const BTN_LINHA = `${BTN_BASE} border border-[#0F2A22]/60 bg-transparent text-[#0F2A22] hover:border-[#0F2A22] hover:bg-[#0F2A22] hover:text-[#F6F3EE]`;
+const BTN_OURO = `${BTN_BASE} border border-[#B08D46] bg-transparent text-[#F6F3EE] hover:bg-[#B08D46] hover:text-[#0B1A16]`;
+const LINK_SETA = "inline-flex items-center gap-3 self-start text-[11px] font-medium uppercase tracking-[0.24em] text-[#0F2A22]";
+
+function Rotulo({ children, claro = false, centro = false }: { children: React.ReactNode; claro?: boolean; centro?: boolean }) {
+  return (
+    <div className={`mb-7 flex items-center gap-4 ${centro ? "justify-center" : ""}`}>
+      <span className="h-px w-10 bg-[#B08D46]" aria-hidden="true" />
+      <span className={`text-[11px] font-medium uppercase tracking-[0.32em] ${claro ? "text-[#C9A86A]" : "text-[#9A7A3A]"}`}>
+        {children}
+      </span>
+      {centro && <span className="h-px w-10 bg-[#B08D46]" aria-hidden="true" />}
+    </div>
+  );
+}
+
 export default async function Home({ params }: HomePageProps) {
   const { locale } = await params;
   const msgConsulta = MSG_CONSULTA_BY_LOCALE[locale] ?? MSG_CONSULTA_BY_LOCALE.pt;
@@ -1141,9 +1162,10 @@ export default async function Home({ params }: HomePageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Hero fotográfico (S72): aérea de São Paulo + overlay navy frio + texto
-          claro por cima. Estilo editorial de banca grande. */}
-      <section className="relative flex min-h-[92vh] flex-col items-center justify-center overflow-hidden border-b border-black/15 px-4 py-24 text-center sm:px-6 sm:py-28 md:px-10 md:py-40">
+      {/* Hero (identidade oficial, 07/10/2026): Ponte Estaiada ao entardecer + véu verde.
+          Cores em hex arbitrário: o hero é sempre escuro e o overlay de compat remapeia
+          text-white/bg-white. */}
+      <section className="relative flex min-h-[calc(100svh-5rem)] flex-col items-center justify-center overflow-hidden px-6 py-28 text-center sm:py-32">
         <Image
           src="/hero-ponte-estaiada.jpg"
           alt={text.heroImageAlt}
@@ -1152,362 +1174,321 @@ export default async function Home({ params }: HomePageProps) {
           sizes="100vw"
           className="object-cover object-[93%_50%] md:object-center"
         />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(11,26,22,0.78)_0%,rgba(11,26,22,0.55)_50%,rgba(11,26,22,0.35)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(11,26,22,0.8)_0%,rgba(11,26,22,0.58)_52%,rgba(11,26,22,0.4)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#0B1A16]" />
 
-        {/* Cores em hex arbitrário (NÃO text-white/bg-white): o hero é sempre escuro
-            nos dois temas, e o overlay de compat remapeia .text-white → primary-
-            foreground (que fica navy no dark). Hex arbitrário escapa do overlay. */}
-        <div className="relative z-10 flex flex-col items-center">
-          <div className="mb-6 text-xs font-medium uppercase tracking-[0.42em] text-[#C9A86A]">
+        <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center">
+          <div className="mb-7 text-[11px] font-medium uppercase tracking-[0.42em] text-[#C9A86A]">
             Fustinoni Advocacia
           </div>
-          <div className="mb-8 h-px w-16 bg-[#B08D46]" aria-hidden="true" />
+          <div className="mb-10 h-px w-14 bg-[#B08D46]" aria-hidden="true" />
 
-          <h1 className="mb-8 max-w-5xl text-balance font-serif text-4xl leading-[1.05] tracking-tight text-[#F6F3EE] sm:mb-10 sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="mb-9 text-balance font-serif text-[2.1rem] leading-[1.12] tracking-[-0.015em] text-[#F6F3EE] sm:text-[3.4rem] md:text-[4rem] lg:text-[4.5rem]">
             {text.heroTitle}
           </h1>
 
-          <p className="mb-10 max-w-2xl text-base leading-7 text-[#F6F3EE]/80 sm:text-lg">
+          <p className="mx-auto mb-12 max-w-xl text-[0.975rem] leading-8 text-[#F6F3EE]/75 sm:text-[1.0625rem]">
             {text.heroDescription}
           </p>
 
           <WhatsAppCTAButton origem="pagina_principal"
             whatsappPhone={whatsappPhone}
             whatsappBaseMessage={msgConsulta}
-            className="z-10 w-full max-w-xs rounded-none border border-[#B08D46] bg-[#0B1A16]/30 px-8 py-5 text-sm uppercase tracking-wider text-[#F6F3EE] backdrop-blur-sm transition-colors hover:bg-[#B08D46] hover:text-[#0B1A16] sm:w-auto sm:py-6"
+            className={`${BTN_OURO} w-full max-w-xs sm:w-auto`}
           >
             {text.heroCta}
           </WhatsAppCTAButton>
         </div>
+
+        <div className="absolute bottom-8 left-1/2 hidden h-16 w-px -translate-x-1/2 bg-gradient-to-b from-[#B08D46] to-transparent md:block" aria-hidden="true" />
       </section>
 
-      <div className="grid grid-cols-2 border-b border-black/15 md:grid-cols-6">
-        {localizedPracticeAreas.map((area, index) => (
-          <div
-            key={area}
-            className={`flex items-center justify-center border-black/15 py-5 text-center font-serif text-sm font-semibold md:text-base ${
-              index !== localizedPracticeAreas.length - 1 ? "border-r" : ""
-            } ${index % 2 !== 0 ? "border-r-0 md:border-r" : ""}`}
-          >
-            {area}
-          </div>
-        ))}
+      {/* Faixa das frentes principais */}
+      <div className="bg-[#0B1A16]">
+        <ul className={`${WRAP} grid grid-cols-2 py-4 md:grid-cols-3 md:py-2 lg:grid-cols-6 lg:py-0`}>
+          {localizedPracticeAreas.map(area => (
+            <li
+              key={area}
+              className="flex items-center justify-center px-3 py-3 text-center font-serif text-[0.9rem] leading-snug text-[#F6F3EE]/80 lg:border-l lg:border-[#B08D46]/20 lg:py-7 lg:first:border-l-0"
+            >
+              {area}
+            </li>
+          ))}
+        </ul>
       </div>
 
-      <div className="h-16 w-full border-b border-black/15 bg-grid-pattern-small" />
+      {/* Equipe */}
+      <section id={homeSectionHashes.services} className="scroll-mt-24 bg-[#F6F3EE] sm:scroll-mt-28">
+        <div className={`${WRAP} ${SECAO}`}>
+          <Rotulo>{text.teamLabel}</Rotulo>
+          <h2 className={`${TITULO} max-w-3xl`}>{text.teamTitle}</h2>
 
-      <section id={homeSectionHashes.services} className="scroll-mt-24 border-b border-black/15 sm:scroll-mt-28">
-        <div className="border-b border-black/15 px-6 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20">
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-8 bg-accent" />
-            <span className="text-xs font-bold uppercase tracking-widest text-black/70">{text.teamLabel}</span>
+          <div className="mt-16 grid grid-cols-1 border-t border-[#E3DDD1] sm:mt-20 sm:grid-cols-2 sm:gap-x-16 lg:gap-x-24">
+            {localizedServiceHighlights.map((member, index) => {
+              const [nome, oab] = member.title.split(/\s+[-–—]\s+/);
+              return (
+                <article key={member.title} className="border-b border-[#E3DDD1] py-10 sm:py-12">
+                  <div className="mb-6 flex items-baseline justify-between gap-4">
+                    <span className="font-serif text-sm tracking-[0.2em] text-[#B08D46]">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    {oab && (
+                      <span className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#4F5A54]">{oab}</span>
+                    )}
+                  </div>
+                  <h3 className="mb-4 font-serif text-[1.45rem] leading-snug text-[#14231D] sm:text-[1.6rem]">{nome}</h3>
+                  <p className={TEXTO}>{member.description}</p>
+                </article>
+              );
+            })}
           </div>
-          <h2 className="max-w-3xl font-serif text-3xl leading-[1.12] tracking-tight sm:text-4xl md:text-5xl">
-            {text.teamTitle}
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2">
-          {localizedServiceHighlights.map((member, index) => {
-            const [nome, oab] = member.title.split(/\s+[-–—]\s+/);
-            return (
-              <article
-                key={member.title}
-                className={`group flex flex-col border-b border-black/15 p-6 transition-colors hover:bg-neutral-50 sm:p-8 md:p-10 ${
-                  index % 2 === 0 ? "sm:border-r sm:border-black/15" : ""
-                }`}
-              >
-                <div className="mb-6 flex items-baseline justify-between gap-4 border-b border-black/15 pb-4">
-                  <span className="font-serif text-3xl text-foreground/30">{String(index + 1).padStart(2, "0")}</span>
-                  {oab && (
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-accent">{oab}</span>
-                  )}
-                </div>
-                <h3 className="mb-4 font-serif text-xl leading-snug sm:text-2xl">{nome}</h3>
-                <p className="text-sm leading-7 text-black/70 md:text-base">{member.description}</p>
-              </article>
-            );
-          })}
         </div>
       </section>
 
-      <div className="h-16 w-full border-b border-black/15 bg-grid-pattern-small" />
-
-      <section id={homeSectionHashes.firm} className="scroll-mt-24 border-b border-black/15 sm:scroll-mt-28">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          {/* Texto + pilares */}
-          <div className="flex flex-col justify-center border-b border-black/15 px-6 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20 lg:border-r lg:border-b-0">
-            <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-8 bg-accent" />
-              <span className="text-xs font-bold uppercase tracking-widest text-black/70">{text.studioLabel}</span>
-            </div>
-            <h2 className="font-serif text-3xl leading-[1.12] tracking-tight sm:text-4xl md:text-5xl">
-              {text.studioTitle}
-            </h2>
-            <p className="mt-6 max-w-xl text-sm leading-7 text-black/70 sm:text-base">
-              {text.studioDescription}
-            </p>
-            <div className="mt-10 grid grid-cols-1 border-t border-l border-black/15 text-sm font-medium sm:grid-cols-2">
+      {/* Escritório */}
+      <section id={homeSectionHashes.firm} className="scroll-mt-24 bg-[#FFFDF9] sm:scroll-mt-28">
+        <div className={`${WRAP} ${SECAO} grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-24`}>
+          <div>
+            <Rotulo>{text.studioLabel}</Rotulo>
+            <h2 className={TITULO}>{text.studioTitle}</h2>
+            <p className={`${TEXTO} mt-8 max-w-lg`}>{text.studioDescription}</p>
+            <ul className="mt-12 max-w-lg border-t border-[#E3DDD1]">
               {text.studioPillars.map(pilar => (
-                <div key={pilar} className="border-r border-b border-black/15 px-4 py-3">{pilar}</div>
+                <li key={pilar} className="flex items-center gap-4 border-b border-[#E3DDD1] py-4 text-[0.95rem] text-[#14231D]">
+                  <span className="h-px w-5 shrink-0 bg-[#B08D46]" aria-hidden="true" />
+                  {pilar}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          {/* Imagem (lounge) preenchendo a coluna */}
-          <div className="relative min-h-[320px] sm:min-h-[420px] lg:min-h-full">
-            <Image
-              src="/office-lounge.jpg"
-              alt={text.studioImageAlt}
-              fill
-              sizes="(max-width: 1024px) 100vw, 672px"
-              className="object-cover object-center"
-            />
-          </div>
-        </div>
-      </section>
-
-      <div className="h-16 w-full border-b border-black/15 bg-grid-pattern-small" />
-
-      <section id={homeSectionHashes.process} className="scroll-mt-24 border-b border-black/15 sm:scroll-mt-28">
-        <div className="border-b border-black/15 px-6 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20">
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-8 bg-accent" />
-            <span className="text-xs font-bold uppercase tracking-widest text-black/70">{text.processLabel}</span>
-          </div>
-          <h2 className="max-w-3xl font-serif text-3xl leading-[1.12] tracking-tight sm:text-4xl md:text-5xl">
-            {text.processTitle}
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="flex flex-col border-b border-black/15 md:border-r md:border-b-0">
-            <div className="flex-1 p-6 sm:p-8 lg:p-12">
-              <h3 className="mb-4 font-serif text-2xl">{text.consultingTitle}</h3>
-              <p className="mb-8 leading-relaxed text-black/70">
-                {text.consultingDescription}
-              </p>
-              <WhatsAppCTAButton origem="pagina_principal"
-                whatsappPhone={whatsappPhone}
-                whatsappBaseMessage={msgConsultoria}
-                className="w-full rounded-none bg-black py-6 text-xs uppercase tracking-wider text-white hover:bg-black/80"
-              >
-                {text.consultingCta}
-              </WhatsAppCTAButton>
-            </div>
-
-            <div className="border-t border-black/15">
-              {localizedProcessRows.map((label, index) => (
-                <div key={label} className="grid grid-cols-[1fr_2.75rem] border-b border-black/15 last:border-b-0 sm:grid-cols-[1fr_4rem]">
-                  <div className="border-r border-black/15 p-3 text-sm leading-relaxed text-black/70 sm:p-4">{label}</div>
-                  <div className="flex items-center justify-center bg-neutral-50 p-3 sm:p-4">
-                    {index < 5 ? <Plus className="h-4 w-4 text-black/60" /> : <X className="h-4 w-4 text-black/60" />}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex flex-col">
-            <div className="flex-1 p-6 sm:p-8 lg:p-12">
-              <h3 className="mb-4 font-serif text-2xl">{text.fullActingTitle}</h3>
-              <p className="mb-8 leading-relaxed text-black/70">
-                {text.fullActingDescription}
-              </p>
-              <WhatsAppCTAButton origem="pagina_principal"
-                whatsappPhone={whatsappPhone}
-                whatsappBaseMessage={msgConsulta}
-                className="w-full rounded-none bg-black py-6 text-xs uppercase tracking-wider text-white hover:bg-black/80"
-              >
-                {text.fullActingCta}
-              </WhatsAppCTAButton>
-            </div>
-
-            <div className="border-t border-black/15">
-              {localizedProcessRows.map(label => (
-                <div key={label} className="grid grid-cols-[1fr_2.75rem] border-b border-black/15 last:border-b-0 sm:grid-cols-[1fr_4rem]">
-                  <div className="border-r border-black/15 p-3 text-sm leading-relaxed text-black/70 sm:p-4">{label}</div>
-                  <div className="flex items-center justify-center bg-neutral-50 p-3 sm:p-4">
-                    <Plus className="h-4 w-4 text-black/60" />
-                  </div>
-                </div>
-              ))}
+          <div className="relative mr-4 mb-4 sm:mr-6 sm:mb-6">
+            <div className="absolute inset-0 translate-x-4 translate-y-4 border border-[#B08D46]/50 sm:translate-x-6 sm:translate-y-6" aria-hidden="true" />
+            <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[5/6]">
+              <Image
+                src="/office-lounge.jpg"
+                alt={text.studioImageAlt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 560px"
+                className="object-cover object-center"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <div className="h-16 w-full border-b border-black/15 bg-grid-pattern-small" />
+      {/* Modelos de atuação */}
+      <section id={homeSectionHashes.process} className="scroll-mt-24 bg-[#F6F3EE] sm:scroll-mt-28">
+        <div className={`${WRAP} ${SECAO}`}>
+          <Rotulo>{text.processLabel}</Rotulo>
+          <h2 className={`${TITULO} max-w-3xl`}>{text.processTitle}</h2>
 
-      <section id={homeSectionHashes.sectors} className="scroll-mt-24 border-b border-black/15 sm:scroll-mt-28">
-        <div className="border-b border-black/15 px-6 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20">
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-8 bg-accent" />
-            <span className="text-xs font-bold uppercase tracking-widest text-black/70">{text.sectorsLabel}</span>
-          </div>
-          <h2 className="max-w-3xl font-serif text-3xl leading-[1.12] tracking-tight sm:text-4xl md:text-5xl">
-            {text.sectorsTitle}
-          </h2>
-        </div>
-
-        {/* Grade numerada e uniforme das 12 áreas (repaginação S72) — limpa, com hover */}
-        <div className="grid grid-cols-2 border-l border-black/15 md:grid-cols-3 lg:grid-cols-4">
-          {localizedLegalAreas.map((area, index) => (
-            <div
-              key={area}
-              className="group flex min-h-[8.5rem] flex-col justify-between border-b border-r border-black/15 p-5 transition-colors hover:bg-neutral-50 sm:min-h-[10rem] sm:p-6"
-            >
-              <span className="font-serif text-lg text-foreground/30 transition-colors group-hover:text-accent">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <span className="font-serif text-base leading-snug sm:text-lg">{area}</span>
+          <div className="mt-16 grid grid-cols-1 gap-6 sm:mt-20 md:grid-cols-2 lg:gap-8">
+            <div className="flex flex-col border border-[#E3DDD1] bg-[#FFFDF9]">
+              <div className="p-8 sm:p-10 lg:p-12">
+                <h3 className="mb-4 font-serif text-[1.6rem] leading-snug text-[#14231D]">{text.consultingTitle}</h3>
+                <p className={`${TEXTO} mb-10`}>{text.consultingDescription}</p>
+                <WhatsAppCTAButton origem="pagina_principal"
+                  whatsappPhone={whatsappPhone}
+                  whatsappBaseMessage={msgConsultoria}
+                  className={`${BTN_LINHA} w-full`}
+                >
+                  {text.consultingCta}
+                </WhatsAppCTAButton>
+              </div>
+              <ul className="mt-auto border-t border-[#E3DDD1] px-8 sm:px-10 lg:px-12">
+                {localizedProcessRows.map((label, index) => (
+                  <li key={label} className="flex items-center justify-between gap-6 border-b border-[#E3DDD1] py-4 text-[0.9rem] last:border-b-0">
+                    <span className={index < 5 ? "text-[#14231D]" : "text-[#4F5A54]/60"}>{label}</span>
+                    {index < 5
+                      ? <Check className="h-4 w-4 shrink-0 text-[#B08D46]" strokeWidth={1.5} />
+                      : <Minus className="h-4 w-4 shrink-0 text-[#4F5A54]/40" strokeWidth={1.5} />}
+                  </li>
+                ))}
+              </ul>
             </div>
-          ))}
+
+            <div className="flex flex-col border border-[#0F2A22] bg-[#0F2A22]">
+              <div className="p-8 sm:p-10 lg:p-12">
+                <h3 className="mb-4 font-serif text-[1.6rem] leading-snug text-[#F6F3EE]">{text.fullActingTitle}</h3>
+                <p className="mb-10 text-[0.95rem] leading-7 text-[#F6F3EE]/70">{text.fullActingDescription}</p>
+                <WhatsAppCTAButton origem="pagina_principal"
+                  whatsappPhone={whatsappPhone}
+                  whatsappBaseMessage={msgConsulta}
+                  className={`${BTN_OURO} w-full`}
+                >
+                  {text.fullActingCta}
+                </WhatsAppCTAButton>
+              </div>
+              <ul className="mt-auto border-t border-[#F6F3EE]/10 px-8 sm:px-10 lg:px-12">
+                {localizedProcessRows.map(label => (
+                  <li key={label} className="flex items-center justify-between gap-6 border-b border-[#F6F3EE]/10 py-4 text-[0.9rem] text-[#F6F3EE]/85 last:border-b-0">
+                    <span>{label}</span>
+                    <Check className="h-4 w-4 shrink-0 text-[#C9A86A]" strokeWidth={1.5} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="specific-services" className="scroll-mt-24 border-b border-black/15 sm:scroll-mt-28">
-        <div className="border-b border-black/15 px-6 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20">
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-8 bg-accent" />
-            <span className="text-xs font-bold uppercase tracking-widest text-black/70">{text.specificServicesLabel}</span>
-          </div>
-          <h2 className="max-w-3xl font-serif text-3xl leading-[1.12] tracking-tight sm:text-4xl md:text-5xl">
-            {text.specificServicesTitle}
-          </h2>
-          <p className="mt-6 max-w-2xl text-sm leading-7 text-black/70 sm:text-base">
-            {text.specificServicesDescription}
-          </p>
-        </div>
+      {/* Áreas de atuação (bloco escuro) */}
+      <section id={homeSectionHashes.sectors} className="scroll-mt-24 bg-[#0F2A22] sm:scroll-mt-28">
+        <div className={`${WRAP} ${SECAO}`}>
+          <Rotulo claro>{text.sectorsLabel}</Rotulo>
+          <h2 className={`${TITULO} max-w-3xl text-[#F6F3EE]`}>{text.sectorsTitle}</h2>
 
-        <div className="grid grid-cols-1 border-b border-black/15 md:grid-cols-2">
-          {localizedSpecificServices
-            .filter(service => service.layoutType === "card")
-            .map((service, index) => (
-              <article
-                key={service.title}
-                className={`flex flex-col p-6 sm:p-8 ${index === 0 ? "border-b border-black/15 md:border-r md:border-b-0" : ""}`}
+          <div className="mt-16 grid grid-cols-2 border-t border-l border-[#F6F3EE]/10 sm:mt-20 md:grid-cols-3 lg:grid-cols-4">
+            {localizedLegalAreas.map((area, index) => (
+              <div
+                key={area}
+                className="group flex min-h-[8.5rem] flex-col justify-between border-r border-b border-[#F6F3EE]/10 p-5 transition-colors duration-300 hover:bg-[#F6F3EE]/[0.04] sm:min-h-[10.5rem] sm:p-7"
               >
-                <div className="flex-1">
-                  <h3 className="mb-4 font-serif text-2xl leading-tight">{service.title}</h3>
-                  <p className="mb-8 text-sm leading-7 text-black/70 sm:text-base">{service.description}</p>
+                <span className="font-serif text-sm tracking-[0.2em] text-[#B08D46]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <span className="mb-4 block h-px w-6 bg-[#B08D46]/70 transition-all duration-300 group-hover:w-12" aria-hidden="true" />
+                  <span className="font-serif text-[1.05rem] leading-snug text-[#F6F3EE] sm:text-[1.15rem]">{area}</span>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                {service.href && !service.disabled ? (
-                  <Button asChild className="w-full rounded-none bg-black py-6 text-xs uppercase tracking-wider text-white hover:bg-black/80">
-                    <Link href={service.href as "/analise-credito" | "/fator-k"}>
-                      {service.ctaLabel}
+      {/* Serviços específicos */}
+      <section id="specific-services" className="scroll-mt-24 bg-[#F6F3EE] sm:scroll-mt-28">
+        <div className={`${WRAP} ${SECAO}`}>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end lg:gap-16">
+            <div className="lg:col-span-7">
+              <Rotulo>{text.specificServicesLabel}</Rotulo>
+              <h2 className={TITULO}>{text.specificServicesTitle}</h2>
+            </div>
+            <p className={`${TEXTO} lg:col-span-5 lg:pb-2`}>{text.specificServicesDescription}</p>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 gap-6 sm:mt-20 md:grid-cols-2 lg:gap-8">
+            {localizedSpecificServices
+              .filter(service => service.layoutType === "card")
+              .map((service, index) => (
+                <article
+                  key={service.title}
+                  className="group flex flex-col border border-[#E3DDD1] bg-[#FFFDF9] p-8 transition-colors duration-300 hover:border-[#B08D46]/60 sm:p-10"
+                >
+                  <span className="mb-8 font-serif text-sm tracking-[0.2em] text-[#B08D46]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mb-4 font-serif text-[1.45rem] leading-snug text-[#14231D] sm:text-[1.55rem]">{service.title}</h3>
+                  <p className={`${TEXTO} mb-10 flex-1`}>{service.description}</p>
+
+                  {service.href && !service.disabled ? (
+                    <Link href={service.href as "/analise-credito" | "/fator-k"} className={LINK_SETA}>
+                      <span className="border-b border-[#B08D46] pb-1">{service.ctaLabel}</span>
+                      <span className="text-[#B08D46] transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
                     </Link>
-                  </Button>
-                ) : (
-                  <Button
-                    disabled
-                    className="w-full rounded-none border border-black/20 bg-neutral-200 py-6 text-xs uppercase tracking-wider text-black/60 hover:bg-neutral-200"
-                  >
-                    {service.ctaLabel}
-                  </Button>
+                  ) : (
+                    <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-[#4F5A54]/60">
+                      {service.ctaLabel}
+                    </span>
+                  )}
+                </article>
+              ))}
+          </div>
+
+          {localizedSpecificServices
+            .filter(service => service.layoutType === "full_text")
+            .map(service => (
+              <article key={service.title} className="mt-24 border-t border-[#E3DDD1] pt-24 text-center sm:mt-28 sm:pt-28">
+                <div className="mx-auto mb-8 h-px w-14 bg-[#B08D46]" aria-hidden="true" />
+                <h3 className="mb-6 font-serif text-[1.9rem] leading-tight text-[#14231D] sm:text-[2.25rem]">{service.title}</h3>
+                <p className={`${TEXTO} mx-auto max-w-2xl`}>{service.description}</p>
+                {"subCards" in service && service.subCards && (
+                  <div className="mt-14 grid grid-cols-1 gap-6 text-left md:grid-cols-2 lg:gap-8">
+                    {service.subCards.map(sub => (
+                      <div key={sub.title} className="flex flex-col justify-between border border-[#E3DDD1] bg-[#FFFDF9] p-8 sm:p-10">
+                        <div>
+                          <h4 className="mb-6 font-serif text-[1.35rem] leading-snug text-[#14231D]">{sub.title}</h4>
+                          <ul className="mb-10 space-y-3">
+                            {sub.bullets.map(bullet => (
+                              <li key={bullet} className="flex items-start gap-3 text-[0.925rem] leading-7 text-[#4F5A54]">
+                                <span className="mt-[0.85rem] h-px w-3 shrink-0 bg-[#B08D46]" aria-hidden="true" />
+                                {bullet}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <WhatsAppCTAButton origem="pagina_principal"
+                          whatsappPhone={whatsappPhone}
+                          whatsappBaseMessage={msgSaude}
+                          className={`${BTN_LINHA} w-full`}
+                        >
+                          {sub.ctaLabel}
+                        </WhatsAppCTAButton>
+                      </div>
+                    ))}
+                  </div>
                 )}
               </article>
-
             ))}
         </div>
-
-        {localizedSpecificServices
-          .filter(service => service.layoutType === "full_text")
-          .map(service => (
-            <article key={service.title} className="border-t border-black/15 px-6 py-12 text-center sm:px-8 sm:py-16 md:px-10">
-              <h3 className="mb-4 font-serif text-2xl leading-tight sm:text-3xl">{service.title}</h3>
-              <p className="mx-auto mb-10 max-w-2xl text-sm leading-7 text-black/70 sm:text-base">{service.description}</p>
-              {"subCards" in service && service.subCards && (
-                <div className="grid grid-cols-1 gap-4 text-left sm:grid-cols-2">
-                  {service.subCards.map(sub => (
-                    <div key={sub.title} className="flex flex-col justify-between border border-black/15 p-5 sm:p-6">
-                      <div>
-                        <h4 className="mb-3 font-serif text-xl leading-snug">{sub.title}</h4>
-                        <ul className="mb-6 space-y-2">
-                          {sub.bullets.map(bullet => (
-                            <li key={bullet} className="flex items-start gap-2 text-sm leading-6 text-black/70">
-                              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-black/30" />
-                              {bullet}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <WhatsAppCTAButton origem="pagina_principal"
-                        whatsappPhone={whatsappPhone}
-                        whatsappBaseMessage={msgSaude}
-                        className="w-full rounded-none bg-black py-5 text-xs uppercase tracking-wider text-white hover:bg-black/80"
-                      >
-                        {sub.ctaLabel}
-                      </WhatsAppCTAButton>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </article>
-          ))}
       </section>
-
-      <div className="h-16 w-full border-b border-black/15 bg-grid-pattern-small" />
 
       {/* === Bloco Publicações (S33+) — só em pt === */}
       {locale === "pt" && <PublicacoesHomeBlock />}
 
-      <section id={homeSectionHashes.faq} className="scroll-mt-24 grid grid-cols-1 border-b border-black/15 sm:scroll-mt-28 lg:grid-cols-2">
-        <div className="flex flex-col justify-center border-b border-black/15 p-8 sm:p-12 lg:border-r lg:border-b-0 lg:p-20">
-          <div className="mb-6 text-xs font-bold uppercase tracking-widest text-black/70">FAQ</div>
-          <h2 className="max-w-sm font-serif text-3xl leading-[1.1] tracking-tight sm:text-4xl md:text-5xl">
-            {text.faqTitle}
-          </h2>
-        </div>
+      {/* Perguntas frequentes */}
+      <section id={homeSectionHashes.faq} className="scroll-mt-24 bg-[#F6F3EE] sm:scroll-mt-28">
+        <div className={`${WRAP} ${SECAO} grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20`}>
+          <div className="lg:sticky lg:top-32 lg:col-span-5 lg:self-start">
+            <Rotulo>FAQ</Rotulo>
+            <h2 className={`${TITULO} max-w-md`}>{text.faqTitle}</h2>
+          </div>
 
-        <div className="flex flex-col">
-          <Accordion type="single" collapsible className="w-full">
-            {localizedFaqs.map((item, index) => (
-              <AccordionItem key={item.question} value={`item-${index}`} className="border-b border-black/15 px-5 py-2 last:border-b-0 sm:px-8">
-                <AccordionTrigger className="py-6 text-left text-sm font-medium hover:no-underline md:text-base">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="pb-6 leading-relaxed text-black/70">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <div className="lg:col-span-7">
+            <Accordion type="single" collapsible className="w-full border-t border-[#E3DDD1]">
+              {localizedFaqs.map((item, index) => (
+                <AccordionItem key={item.question} value={`item-${index}`} className="border-b border-[#E3DDD1]">
+                  <AccordionTrigger className="py-7 text-left font-serif text-[1.1rem] font-normal leading-snug text-[#14231D] hover:no-underline sm:text-[1.2rem]">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="pr-8 pb-7 text-[0.95rem] leading-7 text-[#4F5A54]">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </section>
 
-      <div className="h-16 w-full border-b border-black/15 bg-grid-pattern-small" />
+      {/* Convite final (bloco escuro sobre a foto do escritório) */}
+      <section className="relative overflow-hidden bg-[#0B1A16]">
+        <Image
+          src="/office-corredor.jpg"
+          alt={text.heroImageAlt}
+          fill
+          sizes="100vw"
+          className="object-cover object-center opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1A16]/70 via-[#0B1A16]/55 to-[#0B1A16]/90" />
 
-      <section className="flex flex-col items-center overflow-hidden border-b border-black/15 px-4 pt-16 text-center sm:px-6 sm:pt-20 md:pt-24">
-        <div className="mb-6 text-xs font-bold uppercase tracking-widest text-black/70">
-          {text.finalLabel}
-        </div>
-
-        <h2 className="mx-auto mb-10 max-w-2xl font-serif text-3xl leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-          {text.finalTitle}
-        </h2>
-
-        <p className="mb-10 max-w-2xl text-sm leading-7 text-black/70 sm:text-base">
-          {text.finalDescription}
-        </p>
-
-        <WhatsAppCTAButton origem="pagina_principal"
-          whatsappPhone={whatsappPhone}
-          whatsappBaseMessage={msgConsulta}
-          className="z-10 mb-10 w-full max-w-xs rounded-none bg-black px-8 py-5 text-sm uppercase tracking-wider text-white hover:bg-black/80 sm:w-auto sm:py-6"
-        >
-          {text.heroCta}
-        </WhatsAppCTAButton>
-
-        <div className="relative top-1 mt-auto w-full">
-          <Image
-            src="/office-corredor.jpg"
-            alt={text.heroImageAlt}
-            width={2000}
-            height={1335}
-            className="h-auto max-h-[400px] w-full object-cover object-center"
-          />
+        <div className={`${WRAP} relative py-28 text-center sm:py-36`}>
+          <Rotulo claro centro>{text.finalLabel}</Rotulo>
+          <h2 className="mx-auto max-w-3xl text-balance font-serif text-[2.1rem] leading-[1.15] tracking-[-0.012em] text-[#F6F3EE] sm:text-[2.75rem] lg:text-[3.25rem]">
+            {text.finalTitle}
+          </h2>
+          <p className="mx-auto mt-8 mb-12 max-w-xl text-[0.975rem] leading-8 text-[#F6F3EE]/70">
+            {text.finalDescription}
+          </p>
+          <WhatsAppCTAButton origem="pagina_principal"
+            whatsappPhone={whatsappPhone}
+            whatsappBaseMessage={msgConsulta}
+            className={`${BTN_OURO} w-full max-w-xs sm:w-auto`}
+          >
+            {text.heroCta}
+          </WhatsAppCTAButton>
         </div>
       </section>
     </>

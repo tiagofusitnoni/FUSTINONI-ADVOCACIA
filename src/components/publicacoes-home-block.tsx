@@ -23,18 +23,15 @@ export async function PublicacoesHomeBlock() {
   }
 
   return (
-    <section
-      id="publicacoes"
-      className="scroll-mt-24 border-b border-black/15 bg-neutral-50/60 px-4 py-16 sm:px-6 sm:py-20 sm:scroll-mt-28 md:px-10 md:py-24"
-    >
-      <div className="mx-auto max-w-6xl">
-        {/* Header do bloco */}
-        <div className="mb-12 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+    <section id="publicacoes" className="scroll-mt-24 bg-[#FFFDF9] sm:scroll-mt-28">
+      <div className="mx-auto w-full max-w-[1200px] px-6 py-24 sm:px-10 sm:py-28 lg:py-36">
+        <div className="mb-16 flex flex-col items-start justify-between gap-8 sm:mb-20 sm:flex-row sm:items-end">
           <div>
-            <div className="text-[11px] tracking-[0.16em] uppercase font-semibold text-black/50 mb-3">
-              ◆ Publicações
+            <div className="mb-7 flex items-center gap-4">
+              <span className="h-px w-10 bg-[#B08D46]" aria-hidden="true" />
+              <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-[#9A7A3A]">Publicações</span>
             </div>
-            <h2 className="font-serif text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
+            <h2 className="font-serif text-[2rem] leading-[1.15] tracking-[-0.012em] text-[#14231D] sm:text-[2.5rem] lg:text-[2.85rem]">
               O que estamos
               <br />
               acompanhando agora
@@ -42,35 +39,40 @@ export async function PublicacoesHomeBlock() {
           </div>
           <Link
             href="/publicacoes"
-            className="text-xs uppercase tracking-[0.06em] font-semibold text-black/80 border-b border-black/40 pb-1 hover:text-black hover:border-black whitespace-nowrap"
+            className="group inline-flex items-center gap-3 whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.24em] text-[#0F2A22]"
           >
-            Ver todas as publicações →
+            <span className="border-b border-[#B08D46] pb-1">Ver todas as publicações</span>
+            <span className="text-[#B08D46] transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
           </Link>
         </div>
 
-        {/* Grid 3 cards */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8">
           {publicacoes.map((p) => (
             <Link
               key={p.id}
               href={{ pathname: "/publicacoes/[slug]", params: { slug: p.slug } }}
-              className="group flex flex-col border border-black/15 bg-white p-7 transition-all hover:border-black/40 hover:-translate-y-0.5"
+              className="group flex flex-col border border-[#E3DDD1] bg-[#F6F3EE] p-8 transition-colors duration-300 hover:border-[#B08D46]/60"
             >
-              <div className="mb-4 flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-[0.12em] font-medium text-black/50">
+              <div className="mb-6 flex flex-wrap items-center gap-2 text-[10px] font-medium uppercase tracking-[0.18em] text-[#4F5A54]">
                 <span>{formatarDataPublicacao(p.publicada_em)}</span>
-                <span className="text-black/30">◆</span>
-                <span className="font-semibold text-black/80">{p.tribunal}</span>
-                <span className="text-black/30">·</span>
+                {p.tribunal && p.tribunal.toLowerCase() !== "nenhum" && (
+                  <>
+                    <span className="text-[#B08D46]">·</span>
+                    <span className="text-[#14231D]">{p.tribunal}</span>
+                  </>
+                )}
+                <span className="text-[#B08D46]">·</span>
                 <span>{formatarArea(p.area_direito)}</span>
               </div>
-              <h3 className="font-serif text-xl leading-snug font-medium text-black mb-3 group-hover:text-black/80">
+              <h3 className="mb-4 font-serif text-[1.25rem] leading-snug text-[#14231D]">
                 {p.titulo}
               </h3>
-              <p className="flex-1 text-sm leading-relaxed text-black/65 mb-5 line-clamp-3">
+              <p className="mb-8 line-clamp-3 flex-1 text-[0.9rem] leading-7 text-[#4F5A54]">
                 {p.lead}
               </p>
-              <div className="border-t border-black/10 pt-3 text-[11px] uppercase tracking-[0.08em] font-semibold text-black/70">
-                Ler publicação <span className="text-black/40">→</span>
+              <div className="flex items-center gap-3 border-t border-[#E3DDD1] pt-5 text-[11px] font-medium uppercase tracking-[0.24em] text-[#0F2A22]">
+                Ler publicação
+                <span className="text-[#B08D46] transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
               </div>
             </Link>
           ))}
