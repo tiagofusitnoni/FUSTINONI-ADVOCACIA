@@ -651,19 +651,19 @@ export default async function DireitoMinerarioPage({ params }: PageProps) {
       {/* Hero fotográfico — mineração a céu aberto / escavadeiras (Pexels, uso comercial livre) */}
       <section className="relative flex min-h-[48vh] flex-col justify-end overflow-hidden border-b border-black/15 px-4 py-14 sm:px-6 sm:py-16 md:px-10 md:py-20">
         <Image src="/hero-minerario.jpg" alt="" fill priority sizes="100vw" className="object-cover object-center" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#16181d]/60 via-[#16181d]/66 to-[#16181d]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1A16]/60 via-[#0B1A16]/66 to-[#0B1A16]/90" />
         <div className="relative z-10 w-full max-w-4xl">
           <Link
             href={{ pathname: "/direito-aduaneiro" }}
-            className="mb-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#c3d2dc] hover:text-white"
+            className="mb-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C9A86A] hover:text-white"
           >
             <span aria-hidden>↑</span> {c.breadcrumb}
           </Link>
           <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-8 bg-[#9aa3b0]" />
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#c3d2dc]">{c.heroEyebrow}</span>
+            <span className="h-px w-8 bg-[#B7B1A3]" />
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#C9A86A]">{c.heroEyebrow}</span>
           </div>
-          <h1 className="max-w-3xl font-serif text-4xl leading-[1.03] tracking-tight text-[#f7fafc] sm:text-5xl md:text-6xl">
+          <h1 className="max-w-3xl font-serif text-4xl leading-[1.03] tracking-tight text-[#F6F3EE] sm:text-5xl md:text-6xl">
             {c.heroTitle}
           </h1>
         </div>

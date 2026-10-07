@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, Geist_Mono, Inter, Libre_Baskerville, Playfair_Display } from "next/font/google";
 import "streamdown/styles.css";
 import "./globals.css";
 
@@ -31,6 +31,15 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+// Identidade oficial (07/10/2026): Libre Baskerville nos títulos.
+const baskerville = Libre_Baskerville({
+  variable: "--font-baskerville",
+  subsets: ["latin"],
+  weight: ["400", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -76,7 +85,7 @@ export default function RootLayout({
         <GoogleAdsTag />
       </head>
       <body
-        className={`${inter.variable} ${cormorant.variable} ${playfair.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${baskerville.variable} ${cormorant.variable} ${playfair.variable} ${geistMono.variable} antialiased`}
       >
         {children}
         <Analytics />

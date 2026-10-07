@@ -19,8 +19,13 @@ export async function SiteFooter({ locale }: SiteFooterProps) {
       <footer className="border-b border-black/15 text-sm">
         <div className="grid grid-cols-1 border-t border-black/15 bg-white sm:grid-cols-2 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.85fr)_minmax(0,1.1fr)]">
           <div className="p-6 sm:border-r sm:border-black/15 sm:p-8">
-            <div className="mb-10 font-serif text-lg font-semibold uppercase tracking-widest sm:mb-14">
-              FUSTINONI ADVOCACIA
+            <div className="marca mb-10 sm:mb-14" aria-label="Fustinoni Advocacia">
+              <span className="marca-f" aria-hidden="true">F</span>
+              <span className="marca-sep" aria-hidden="true" />
+              <span className="marca-txt">
+                <span className="marca-nome">Fustinoni</span>
+                <span className="marca-sub">ADVOCACIA</span>
+              </span>
             </div>
             <p className="text-xs text-black/60">{t("rightsReserved")}</p>
             <div className="mt-10 flex flex-wrap gap-4 text-xs font-medium uppercase tracking-wider text-black/70 sm:mt-12">

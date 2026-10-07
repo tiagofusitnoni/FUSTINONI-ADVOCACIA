@@ -88,11 +88,16 @@ export function SiteHeader({
       <div className="flex items-center justify-between gap-3">
         <Link
           href="/"
-          className="font-serif text-base leading-[1.05] font-semibold tracking-[0.22em] uppercase sm:text-lg"
+          className="marca"
+          aria-label="Fustinoni Advocacia"
           onClick={handleLogoClick}
         >
-          <span className="block">FUSTINONI</span>
-          <span className="block">ADVOCACIA</span>
+          <span className="marca-f" aria-hidden="true">F</span>
+          <span className="marca-sep" aria-hidden="true" />
+          <span className="marca-txt">
+            <span className="marca-nome">Fustinoni</span>
+            <span className="marca-sub">ADVOCACIA</span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 text-xs font-medium uppercase tracking-wider text-black/70 xl:flex">

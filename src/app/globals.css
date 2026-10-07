@@ -7,6 +7,10 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
+  Identidade oficial (07/10/2026): verde floresta #0F2A22, verde escuro #0B1A16, marfim #F6F3EE,
+  cinza claro #C8C3B7, ouro antigo #B08D46; Libre Baskerville (títulos) + Inter (texto).
+  Mesmo padrão do sistema interno (cockpit). Abaixo, o comentário histórico do tema anterior.
+
   Tema Clássico — Fustinoni Advocacia
   Paleta inspirada em encadernação jurídica clássica:
   - Azul-marinho profundo como cor institucional (toga, sobriedade)
@@ -19,29 +23,29 @@
 
 @theme inline {
   /* Light — Ônix (S72: carvão/aço monocromático, foto em destaque) */
-  --color-background: 220 14% 97%;         /* #f5f6f8 neutro quase-branco */
-  --color-foreground: 225 13% 10%;         /* #16181d tinta quase-preta (texto/títulos) */
-  --color-card: 0 0% 100%;                 /* branco puro pra cards destacarem */
-  --color-card-foreground: 225 13% 10%;
-  --color-popover: 0 0% 100%;
-  --color-popover-foreground: 225 13% 10%;
-  --color-primary: 225 13% 11%;            /* #16181d tinta (botões/blocos escuros) */
-  --color-primary-foreground: 220 14% 97%; /* quase-branco sobre a tinta */
-  --color-secondary: 220 13% 94%;          /* #ebedf0 cinza claro */
-  --color-secondary-foreground: 225 13% 11%;
-  --color-muted: 220 13% 95%;              /* #eef0f2 fundo de seções alternadas */
-  --color-muted-foreground: 216 8% 40%;    /* #5e636b cinza médio (texto secundário) */
-  --color-accent: 217 20% 30%;             /* #3d495c aço-ardósia (acento discreto) */
-  --color-accent-foreground: 0 0% 100%;
+  --color-background: 37 33% 95%;          /* #F6F3EE marfim */
+  --color-foreground: 155 27% 11%;         /* #14231D tinta verde-escura (texto/títulos) */
+  --color-card: 40 100% 99%;               /* #FFFDF9 cartão quase-branco quente */
+  --color-card-foreground: 155 27% 11%;
+  --color-popover: 40 100% 99%;
+  --color-popover-foreground: 155 27% 11%;
+  --color-primary: 162 47% 11%;            /* #0F2A22 verde floresta (botões/blocos escuros) */
+  --color-primary-foreground: 37 33% 95%;  /* marfim sobre o verde */
+  --color-secondary: 40 27% 91%;           /* #EFEBE3 */
+  --color-secondary-foreground: 162 47% 11%;
+  --color-muted: 40 28% 92%;               /* fundo de seções alternadas */
+  --color-muted-foreground: 147 6% 33%;    /* #4F5A54 texto secundário */
+  --color-accent: 40 43% 48%;              /* #B08D46 ouro antigo */
+  --color-accent-foreground: 162 47% 11%;
   --color-destructive: 0 60% 42%;
-  --color-destructive-foreground: 220 14% 97%;
-  --color-border: 216 13% 89%;             /* #dfe1e5 hairline neutra */
-  --color-input: 216 13% 89%;
-  --color-ring: 217 20% 30%;
+  --color-destructive-foreground: 37 33% 95%;
+  --color-border: 40 23% 85%;              /* #E3DDD1 filete quente */
+  --color-input: 40 23% 85%;
+  --color-ring: 40 43% 48%;
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
-  --font-serif: var(--font-playfair), Georgia, serif;
-  --font-display: var(--font-playfair), Georgia, serif;
+  --font-serif: var(--font-baskerville), Georgia, serif;
+  --font-display: var(--font-baskerville), Georgia, serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
   /* Radius editorial — cantos quase retos (sobriedade de banca grande) */
@@ -73,25 +77,26 @@
 
 /* Dark — Ônix noturno (S72, REVAMPADO: texto crisp + hierarquia clara + acento com vida) */
 .dark {
-  --color-background: 222 16% 11%;         /* #181b22 carvão refinado (não um preto chapado) */
-  --color-foreground: 210 22% 96%;         /* #f0f3f6 branco-frio CRISP (texto) */
-  --color-card: 222 14% 16%;               /* #232733 card claramente ACIMA do fundo */
-  --color-card-foreground: 210 22% 96%;
-  --color-popover: 222 14% 16%;
-  --color-popover-foreground: 210 22% 96%;
-  --color-primary: 210 22% 95%;            /* quase-branco (botões invertidos) */
-  --color-primary-foreground: 222 16% 11%;
-  --color-secondary: 222 13% 20%;          /* #2b303c secundário, distinto do card */
-  --color-secondary-foreground: 210 22% 96%;
-  --color-muted: 222 13% 17%;
-  --color-muted-foreground: 215 16% 74%;   /* #aab4c2 secundário CLARO e legível (era cinza apagado) */
-  --color-accent: 208 45% 68%;             /* #7aa7cf aço-azulado com vida — respiro de cor no escuro */
-  --color-accent-foreground: 222 16% 11%;
+  /* Identidade oficial — verde escuro + ouro (o site segue light-only; mantido coerente) */
+  --color-background: 163 39% 7%;          /* #0B1A16 */
+  --color-foreground: 39 33% 92%;          /* #F1ECE2 */
+  --color-card: 154 35% 12%;               /* #132820 */
+  --color-card-foreground: 39 33% 92%;
+  --color-popover: 154 35% 12%;
+  --color-popover-foreground: 39 33% 92%;
+  --color-primary: 40 47% 56%;             /* ouro como botão no escuro */
+  --color-primary-foreground: 163 39% 7%;
+  --color-secondary: 155 31% 16%;
+  --color-secondary-foreground: 39 33% 92%;
+  --color-muted: 155 33% 10%;
+  --color-muted-foreground: 41 13% 68%;    /* #B7B1A3 */
+  --color-accent: 40 47% 56%;              /* #C4A05A */
+  --color-accent-foreground: 163 39% 7%;
   --color-destructive: 0 62% 60%;
-  --color-destructive-foreground: 210 22% 96%;
-  --color-border: 220 13% 30%;             /* #424a59 borda nitidamente visível */
-  --color-input: 220 13% 30%;
-  --color-ring: 208 45% 68%;
+  --color-destructive-foreground: 39 33% 92%;
+  --color-border: 155 25% 18%;
+  --color-input: 155 25% 18%;
+  --color-ring: 40 47% 56%;
 }
 
 @layer base {
@@ -273,9 +278,9 @@
 
   /* S33+ — Tipografia editorial do artigo de publicação */
   .publicacao-prose article h1 {
-    font-family: var(--font-cormorant), Georgia, serif;
-    font-size: 2.5rem;
-    font-weight: 500;
+    font-family: var(--font-baskerville), Georgia, serif;
+    font-size: 2.1rem;
+    font-weight: 400;
     line-height: 1.2;
     letter-spacing: -0.01em;
     text-align: center;
@@ -286,21 +291,21 @@
     display: block;
     width: 5rem;
     height: 1px;
-    background: rgba(0, 0, 0, 0.4);
+    background: #B08D46;
     margin: 1.5rem auto 0;
   }
   .publicacao-prose article p {
-    font-family: var(--font-cormorant), Georgia, serif;
-    font-size: 1.18rem;
-    line-height: 1.7;
-    color: #1d2330;
+    font-family: var(--font-baskerville), Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #14231D;
     margin-bottom: 1.35rem;
   }
   .publicacao-prose article p.lead {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     font-style: italic;
-    color: rgba(0, 0, 0, 0.72);
-    border-left: 3px solid rgba(0, 0, 0, 0.5);
+    color: #4F5A54;
+    border-left: 2px solid #B08D46;
     padding: 0.5rem 0 0.5rem 1.25rem;
     margin-bottom: 1.75rem;
   }
@@ -309,11 +314,11 @@
     font-style: normal;
   }
   .publicacao-prose article h3 {
-    font-family: var(--font-cormorant), Georgia, serif;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-family: var(--font-baskerville), Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 400;
     margin: 2.25rem 0 1rem;
-    color: #1d2330;
+    color: #0F2A22;
   }
   .publicacao-prose article footer {
     margin-top: 3rem;
@@ -342,9 +347,18 @@
 */
 @layer utilities {
   .uppercase.tracking-widest.text-black\/70 {
-    color: hsl(var(--color-muted-foreground));
-    letter-spacing: 0.2em;
+    color: hsl(var(--color-accent));
+    letter-spacing: 0.22em;
   }
+  /* Títulos em Libre Baskerville: peso regular (o 600/700 da fonte anterior pesa demais nela) */
+  h1, h2, h3 { font-weight: 400; }
+  /* Marca oficial: monograma F | Fustinoni / ADVOCACIA */
+  .marca { display: inline-flex; align-items: center; gap: 0.8rem; }
+  .marca-f { font-family: var(--font-baskerville), Georgia, serif; color: #B08D46; font-size: 1.9rem; line-height: 1; }
+  .marca-sep { width: 1px; height: 2rem; background: #B08D46; opacity: .7; }
+  .marca-txt { display: flex; flex-direction: column; line-height: 1; }
+  .marca-nome { font-family: var(--font-baskerville), Georgia, serif; font-size: 1.2rem; letter-spacing: .01em; color: hsl(var(--color-foreground)); }
+  .marca-sub { font-family: var(--font-inter), sans-serif; font-size: .56rem; letter-spacing: .42em; color: #B08D46; margin-top: .35rem; font-weight: 500; }
 }
 
 /*

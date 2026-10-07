@@ -1145,35 +1145,36 @@ export default async function Home({ params }: HomePageProps) {
           claro por cima. Estilo editorial de banca grande. */}
       <section className="relative flex min-h-[92vh] flex-col items-center justify-center overflow-hidden border-b border-black/15 px-4 py-24 text-center sm:px-6 sm:py-28 md:px-10 md:py-40">
         <Image
-          src="/hero-saopaulo.jpg"
+          src="/hero-ponte-estaiada.jpg"
           alt={text.heroImageAlt}
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[74%_50%] md:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#16181d]/42 via-[#16181d]/52 to-[#16181d]/80" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(11,26,22,0.78)_0%,rgba(11,26,22,0.55)_50%,rgba(11,26,22,0.35)_100%)]" />
 
         {/* Cores em hex arbitrário (NÃO text-white/bg-white): o hero é sempre escuro
             nos dois temas, e o overlay de compat remapeia .text-white → primary-
             foreground (que fica navy no dark). Hex arbitrário escapa do overlay. */}
         <div className="relative z-10 flex flex-col items-center">
-          <div className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-[#c3d2dc]">
-            FUSTINONI ADVOCACIA
+          <div className="mb-6 text-xs font-medium uppercase tracking-[0.42em] text-[#C9A86A]">
+            Fustinoni Advocacia
           </div>
+          <div className="mb-8 h-px w-16 bg-[#B08D46]" aria-hidden="true" />
 
-          <h1 className="mb-8 max-w-5xl text-balance font-serif text-4xl leading-[1.05] tracking-tight text-[#f7fafc] sm:mb-10 sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="mb-8 max-w-5xl text-balance font-serif text-4xl leading-[1.05] tracking-tight text-[#F6F3EE] sm:mb-10 sm:text-6xl md:text-7xl lg:text-8xl">
             {text.heroTitle}
           </h1>
 
-          <p className="mb-10 max-w-2xl text-base leading-7 text-[#f7fafc]/80 sm:text-lg">
+          <p className="mb-10 max-w-2xl text-base leading-7 text-[#F6F3EE]/80 sm:text-lg">
             {text.heroDescription}
           </p>
 
           <WhatsAppCTAButton origem="pagina_principal"
             whatsappPhone={whatsappPhone}
             whatsappBaseMessage={msgConsulta}
-            className="z-10 w-full max-w-xs rounded-none border border-[#f7fafc]/50 bg-transparent px-8 py-5 text-sm uppercase tracking-wider text-[#f7fafc] backdrop-blur-sm transition-colors hover:bg-[#f7fafc] hover:text-[#16181d] sm:w-auto sm:py-6"
+            className="z-10 w-full max-w-xs rounded-none border border-[#B08D46] bg-[#0B1A16]/30 px-8 py-5 text-sm uppercase tracking-wider text-[#F6F3EE] backdrop-blur-sm transition-colors hover:bg-[#B08D46] hover:text-[#0B1A16] sm:w-auto sm:py-6"
           >
             {text.heroCta}
           </WhatsAppCTAButton>
@@ -1260,7 +1261,7 @@ export default async function Home({ params }: HomePageProps) {
               alt={text.studioImageAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 672px"
-              className="object-cover object-center"
+              className="object-cover object-[74%_50%] md:object-center"
             />
           </div>
         </div>
