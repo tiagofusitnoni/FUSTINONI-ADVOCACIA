@@ -26,15 +26,15 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
     "title": "Política de Privacidade",
     "lastUpdated": "Última atualização: 14 de outubro de 2026",
     "intro": [
-      "O escritório FUSTINONI ADVOCACIA valoriza a privacidade e a proteção dos dados pessoais de seus visitantes, potenciais clientes e assinantes da newsletter. Esta Política de Privacidade descreve, de forma clara e transparente, quais dados pessoais coletamos por meio do site www.escritoriofustinoni.com.br, para quais finalidades os utilizamos, com quem os compartilhamos e quais direitos você possui, em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD, Lei n.º 13.709/2018), o Marco Civil da Internet (Lei n.º 12.965/2014) e, quando aplicável, o Código de Defesa do Consumidor (Lei n.º 8.078/1990). A seção 7 trata, ainda, dos dados pessoais dos clientes na prestação dos serviços advocatícios.",
-      "Ao utilizar nosso site, você reconhece que leu e compreendeu as condições aqui descritas. Caso tenha dúvidas ou queira exercer seus direitos, entre em contato pelo e-mail contato@fustinoni.adv.br."
+      "O escritório FUSTINONI ADVOCACIA valoriza a privacidade e a proteção dos dados pessoais de seus visitantes, potenciais clientes e assinantes da newsletter. Esta Política de Privacidade descreve, de forma clara e transparente, quais dados pessoais coletamos por meio do site www.escritoriofustinoni.com.br, para quais finalidades os utilizamos, com quem os compartilhamos e quais direitos você possui, em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD, Lei n.º 13.709/2018), o Marco Civil da Internet (Lei n.º 12.965/2014) e, quando aplicável, o Código de Defesa do Consumidor (Lei n.º 8.078/1990).",
+      "Ao utilizar nosso site, você reconhece que leu e compreendeu as condições aqui descritas. Caso tenha dúvidas ou queira exercer seus direitos, entre em contato pelo e-mail tiago@fustinoni.adv.br."
     ],
     "sections": [
       {
         "heading": "1. Controlador e encarregado pelo tratamento de dados",
         "paragraphs": [
           "O controlador responsável pelo tratamento dos seus dados pessoais é a T. S. FUSTINONI SOCIEDADE INDIVIDUAL DE ADVOCACIA (FUSTINONI ADVOCACIA), inscrita no CNPJ sob o n.º 54.489.975/0001-54, com sede na Rua Amaro de Morais, 233, anexo 231, Vila Sabrina, São Paulo/SP, CEP 02138-070.",
-          "Exerce a função de encarregado pelo tratamento de dados (DPO), nos termos do art. 41 da LGPD, o advogado Tiago Sales Fustinoni, inscrito na OAB/SP sob o n.º 395.178, responsável pelo atendimento de titulares e pelo cumprimento das obrigações previstas na LGPD. Para exercer seus direitos ou esclarecer dúvidas sobre o tratamento de seus dados, entre em contato com o encarregado pelo e-mail: contato@fustinoni.adv.br."
+          "Exerce a função de encarregado pelo tratamento de dados (DPO), nos termos do art. 41 da LGPD, o advogado Tiago Sales Fustinoni, inscrito na OAB/SP sob o n.º 395.178, responsável pelo atendimento de titulares e pelo cumprimento das obrigações previstas na LGPD. Para exercer seus direitos ou esclarecer dúvidas sobre o tratamento de seus dados, entre em contato com o encarregado pelo e-mail: tiago@fustinoni.adv.br."
         ],
         "items": []
       },
@@ -75,7 +75,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
       {
         "heading": "5. Compartilhamento de dados com terceiros",
         "paragraphs": [
-          "O escritório não vende, não cede e não compartilha dados pessoais para fins comerciais de terceiros. Quanto aos dados coletados pelo site, o compartilhamento ocorre exclusivamente com os operadores listados abaixo, na medida estritamente necessária para a prestação de seus serviços, e sempre sob obrigação contratual de confidencialidade e conformidade com a legislação de proteção de dados aplicável:"
+          "O escritório não vende, não cede e não compartilha dados pessoais para fins comerciais de terceiros. O compartilhamento ocorre exclusivamente com os operadores listados abaixo, na medida estritamente necessária para a prestação de seus serviços, e sempre sob obrigação contratual de confidencialidade e conformidade com a legislação de proteção de dados aplicável:"
         ],
         "items": [
           "Vercel: hospedagem e entrega do site; fornece tambem metricas de uso agregadas e anonimizadas (Vercel Analytics), sem cookies de identificacao pessoal.",
@@ -95,26 +95,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "7. Clientes do escritório e uso de inteligência artificial",
-        "paragraphs": [
-          "Além dos dados coletados pelo site, o escritório trata os dados pessoais necessários à prestação dos serviços advocatícios. Os e-mails, documentos e mensagens recebidos nessa atividade podem ser organizados e analisados com o apoio de ferramentas de inteligência artificial, sob a supervisão do advogado responsável, que confere as peças e os documentos produzidos antes de utilizá-los, com observância do sigilo profissional.",
-          "Recebem esses dados, fora do escritório, as ferramentas de inteligência artificial da Anthropic, PBC, e da OpenAI, ambas nos Estados Unidos. No sistema de gestão do escritório, a Anthropic é contratada na modalidade comercial, em cujos termos declara não utilizar os dados recebidos para treinar seus modelos; nas demais ferramentas desses fornecedores, esse uso segue os termos e as configurações da conta empregada. O acervo de documentos fica guardado em servidor contratado pelo escritório na Locaweb, no Brasil.",
-          "A relação completa dos fornecedores que participam desse atendimento, com as informações sobre as transferências internacionais correspondentes, pode ser solicitada ao encarregado; destacam-se os seguintes:"
-        ],
-        "items": [
-          "Anthropic, PBC (Estados Unidos): organização e análise de textos e documentos por inteligência artificial, com transferência internacional dos dados enviados.",
-          "OpenAI (Estados Unidos): apoio à redação, à revisão e à extração de documentos por inteligência artificial, com transferência internacional dos dados enviados.",
-          "Locaweb (Brasil): hospedagem do servidor do escritório.",
-          "Google (Google Workspace, com tratamento também nos Estados Unidos): serviço de correio eletrônico do escritório.",
-          "Resend (Estados Unidos): envio de avisos internos por e-mail, com o nome do cliente e o número do processo.",
-          "Cloudflare (Estados Unidos): conexão protegida pela qual se acessa o servidor do escritório, com trânsito dos documentos consultados.",
-          "Backblaze (União Europeia): cópia de segurança cifrada, cuja chave o fornecedor não recebe.",
-          "ZapSign (sede no Brasil, cuja política admite transferência a outros países, entre eles os Estados Unidos): assinatura eletrônica de contratos e procurações, como operadora do escritório.",
-          "WhatsApp (Meta Platforms, com tratamento também nos Estados Unidos e em outros países): aplicativo pelo qual se recebem mensagens de clientes, regido pela política de privacidade da Meta."
-        ]
-      },
-      {
-        "heading": "8. Retenção e eliminação dos dados",
+        "heading": "7. Retenção e eliminação dos dados",
         "paragraphs": [
           "Os dados pessoais são mantidos pelo tempo necessário ao cumprimento das finalidades para as quais foram coletados, observados os prazos legais aplicáveis, inclusive as obrigações de guarda documental inerentes ao exercício da advocacia.",
           "Dados do formulário de contato que não resultem em contratação de serviços são eliminados ou anonimizados quando deixam de ser necessários para as finalidades descritas. Dados da newsletter são mantidos até o descadastro pelo titular. Dados de navegação e cookies obedecem às políticas de retenção dos respectivos operadores (Google, Cloudflare e Vercel)."
@@ -122,9 +103,9 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "9. Direitos do titular de dados (art. 18 da LGPD)",
+        "heading": "8. Direitos do titular de dados (art. 18 da LGPD)",
         "paragraphs": [
-          "Você, como titular de dados pessoais, possui os seguintes direitos, que podem ser exercidos a qualquer momento mediante solicitação pelo e-mail contato@fustinoni.adv.br:"
+          "Você, como titular de dados pessoais, possui os seguintes direitos, que podem ser exercidos a qualquer momento mediante solicitação pelo e-mail tiago@fustinoni.adv.br:"
         ],
         "items": [
           "Confirmação da existência de tratamento dos seus dados pessoais.",
@@ -140,15 +121,15 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         ]
       },
       {
-        "heading": "10. Como exercer seus direitos",
+        "heading": "9. Como exercer seus direitos",
         "paragraphs": [
-          "Para exercer qualquer dos direitos listados acima, envie uma solicitação para contato@fustinoni.adv.br, identificando-se e descrevendo o direito que deseja exercer. Responderemos no prazo de até 15 (quinze) dias, conforme previsto no art. 18, § 3.º, da LGPD.",
+          "Para exercer qualquer dos direitos listados acima, envie uma solicitação para tiago@fustinoni.adv.br, identificando-se e descrevendo o direito que deseja exercer. Responderemos no prazo de até 15 (quinze) dias, conforme previsto no art. 18, § 3.º, da LGPD.",
           "Podemos solicitar informações adicionais para confirmar sua identidade antes de processar a requisição, como medida de segurança e para proteção do próprio titular."
         ],
         "items": []
       },
       {
-        "heading": "11. Segurança da informação",
+        "heading": "10. Segurança da informação",
         "paragraphs": [
           "Adotamos medidas técnicas e administrativas adequadas para proteger os dados pessoais contra acessos não autorizados, situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou difusão, em conformidade com o art. 46 da LGPD.",
           "Em caso de incidente de segurança que possa acarretar risco ou dano relevante aos titulares, comunicaremos o fato à ANPD e aos titulares afetados no prazo legal, na forma do art. 48 da LGPD e da Resolução CD/ANPD n.º 15/2024, com as informações necessárias sobre a natureza dos dados envolvidos, os riscos relacionados e as medidas adotadas para mitigação."
@@ -156,7 +137,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "12. Legislação aplicável e foro",
+        "heading": "11. Legislação aplicável e foro",
         "paragraphs": [
           "Esta Política de Privacidade é regida pela LGPD (Lei n.º 13.709/2018), pelo Marco Civil da Internet (Lei n.º 12.965/2014) e, quando aplicável, pelo Código de Defesa do Consumidor (Lei n.º 8.078/1990), sem prejuízo de demais normas regulatórias pertinentes, incluindo as resoluções e orientações da ANPD.",
           "Eventuais controvérsias serão submetidas ao foro da comarca do domicílio do escritório FUSTINONI ADVOCACIA, salvo disposição legal em contrário."
@@ -164,7 +145,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "13. Alterações nesta Política",
+        "heading": "12. Alterações nesta Política",
         "paragraphs": [
           "Esta Política de Privacidade pode ser atualizada periodicamente para refletir mudanças nos serviços oferecidos, na legislação aplicável ou nas práticas de tratamento de dados. A versão vigente é sempre a publicada nesta página, identificada pela data de última atualização indicada no início do documento.",
           "Recomendamos que você consulte esta Política regularmente. Alterações relevantes serão comunicadas de forma adequada, inclusive aos assinantes da newsletter quando o tratamento relacionado a esses dados for afetado."
@@ -180,15 +161,15 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
     "title": "Privacy Policy",
     "lastUpdated": "Last updated: October 14, 2026",
     "intro": [
-      "The law firm FUSTINONI ADVOCACIA values the privacy and protection of the personal data of its visitors, prospective clients, and newsletter subscribers. This Privacy Policy describes, in a clear and transparent manner, what personal data we collect through the website www.escritoriofustinoni.com.br, the purposes for which we use it, with whom we share it, and what rights you have, in compliance with the Brazilian General Data Protection Law (Lei Geral de Proteção de Dados Pessoais - LGPD, Law No. 13.709/2018), the Brazilian Internet Civil Framework (Marco Civil da Internet, Law No. 12.965/2014) and, where applicable, the Consumer Protection Code (Código de Defesa do Consumidor, Law No. 8.078/1990). Section 7 also addresses the personal data of the firm's clients in the provision of legal services.",
-      "By using our website, you acknowledge that you have read and understood the conditions described herein. Should you have any questions or wish to exercise your rights, please contact us at contato@fustinoni.adv.br."
+      "The law firm FUSTINONI ADVOCACIA values the privacy and protection of the personal data of its visitors, prospective clients, and newsletter subscribers. This Privacy Policy describes, in a clear and transparent manner, what personal data we collect through the website www.escritoriofustinoni.com.br, the purposes for which we use it, with whom we share it, and what rights you have, in compliance with the Brazilian General Data Protection Law (Lei Geral de Proteção de Dados Pessoais - LGPD, Law No. 13.709/2018), the Brazilian Internet Civil Framework (Marco Civil da Internet, Law No. 12.965/2014) and, where applicable, the Consumer Protection Code (Código de Defesa do Consumidor, Law No. 8.078/1990).",
+      "By using our website, you acknowledge that you have read and understood the conditions described herein. Should you have any questions or wish to exercise your rights, please contact us at tiago@fustinoni.adv.br."
     ],
     "sections": [
       {
         "heading": "1. Data controller and data protection officer",
         "paragraphs": [
           "The controller responsible for the processing of your personal data is T. S. FUSTINONI SOCIEDADE INDIVIDUAL DE ADVOCACIA (FUSTINONI ADVOCACIA), registered under CNPJ No. 54.489.975/0001-54, with its registered office at Rua Amaro de Morais, 233, anexo 231, Vila Sabrina, São Paulo/SP, CEP 02138-070.",
-          "The data protection officer (DPO), pursuant to Art. 41 of the LGPD, is attorney Tiago Sales Fustinoni, registered with the Brazilian Bar Association under OAB/SP No. 395.178, who is responsible for handling data subject requests and for ensuring compliance with the obligations set forth in the LGPD. To exercise your rights or clarify any questions about the processing of your data, please contact the data protection officer at: contato@fustinoni.adv.br."
+          "The data protection officer (DPO), pursuant to Art. 41 of the LGPD, is attorney Tiago Sales Fustinoni, registered with the Brazilian Bar Association under OAB/SP No. 395.178, who is responsible for handling data subject requests and for ensuring compliance with the obligations set forth in the LGPD. To exercise your rights or clarify any questions about the processing of your data, please contact the data protection officer at: tiago@fustinoni.adv.br."
         ],
         "items": []
       },
@@ -229,7 +210,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
       {
         "heading": "5. Data sharing with third parties",
         "paragraphs": [
-          "The firm does not sell, assign, or share personal data for the commercial purposes of third parties. With regard to the data collected through the website, sharing occurs exclusively with the processors listed below, to the extent strictly necessary for the provision of their services, and always under a contractual obligation of confidentiality and compliance with the applicable data protection legislation:"
+          "The firm does not sell, assign, or share personal data for the commercial purposes of third parties. Sharing occurs exclusively with the processors listed below, to the extent strictly necessary for the provision of their services, and always under a contractual obligation of confidentiality and compliance with the applicable data protection legislation:"
         ],
         "items": [
           "Vercel: hosting and delivery of the website; it also provides aggregated, anonymized usage metrics (Vercel Analytics) without personal-identification cookies.",
@@ -249,26 +230,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "7. Firm clients and the use of artificial intelligence",
-        "paragraphs": [
-          "In addition to the data collected through the website, the firm processes the personal data necessary to provide its legal services. Emails, documents and messages received in the course of this work may be organized and analyzed with the support of artificial intelligence tools, under the supervision of the responsible attorney, who reviews the pleadings and documents produced before using them, in observance of professional secrecy.",
-          "Outside the firm, this data is received by the artificial intelligence tools of Anthropic, PBC, and OpenAI, both in the United States. In the firm's management system, Anthropic is engaged under a commercial contract, in whose terms it states that it does not use the data it receives to train its models; in the other tools of these vendors, such use follows the terms and settings of the account used. The firm's document files are stored on a server contracted by the firm from Locaweb, in Brazil.",
-          "The complete list of the vendors involved in this work, with information on the corresponding international transfers, may be requested from the data protection officer; the main ones are the following:"
-        ],
-        "items": [
-          "Anthropic, PBC (United States): organization and analysis of texts and documents by artificial intelligence, involving the international transfer of the data sent.",
-          "OpenAI (United States): support in drafting, reviewing and extracting documents by artificial intelligence, involving the international transfer of the data sent.",
-          "Locaweb (Brazil): hosting of the firm's server.",
-          "Google (Google Workspace, with processing also in the United States): the firm's email service.",
-          "Resend (United States): sending of internal email notices, containing the client's name and the case number.",
-          "Cloudflare (United States): protected connection through which the firm's server is accessed, with transit of the documents consulted.",
-          "Backblaze (European Union): encrypted backup copy, the key to which is not provided to the vendor.",
-          "ZapSign (headquartered in Brazil, whose policy allows transfers to other countries, including the United States): electronic signature of contracts and powers of attorney, as the firm's processor.",
-          "WhatsApp (Meta Platforms, with processing also in the United States and other countries): application through which messages from clients are received, governed by Meta's privacy policy."
-        ]
-      },
-      {
-        "heading": "8. Data retention and deletion",
+        "heading": "7. Data retention and deletion",
         "paragraphs": [
           "Personal data is retained for as long as necessary to fulfill the purposes for which it was collected, subject to the applicable legal time limits, including the document retention obligations inherent to the practice of law.",
           "Contact form data that does not result in the engagement of services is deleted or anonymized when it is no longer necessary for the described purposes. Newsletter data is retained until the data subject unsubscribes. Browsing data and cookies are subject to the retention policies of the respective processors (Google, Cloudflare, and Vercel)."
@@ -276,9 +238,9 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "9. Rights of the data subject (Art. 18 of the LGPD)",
+        "heading": "8. Rights of the data subject (Art. 18 of the LGPD)",
         "paragraphs": [
-          "You, as a personal data subject, have the following rights, which may be exercised at any time by submitting a request to contato@fustinoni.adv.br:"
+          "You, as a personal data subject, have the following rights, which may be exercised at any time by submitting a request to tiago@fustinoni.adv.br:"
         ],
         "items": [
           "Confirmation of the existence of processing of your personal data.",
@@ -294,15 +256,15 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         ]
       },
       {
-        "heading": "10. How to exercise your rights",
+        "heading": "9. How to exercise your rights",
         "paragraphs": [
-          "To exercise any of the rights listed above, send a request to contato@fustinoni.adv.br, identifying yourself and describing the right you wish to exercise. We will respond within up to 15 (fifteen) days, as provided for in Art. 18, § 3, of the LGPD.",
+          "To exercise any of the rights listed above, send a request to tiago@fustinoni.adv.br, identifying yourself and describing the right you wish to exercise. We will respond within up to 15 (fifteen) days, as provided for in Art. 18, § 3, of the LGPD.",
           "We may request additional information to confirm your identity before processing the request, as a security measure and for the protection of the data subject."
         ],
         "items": []
       },
       {
-        "heading": "11. Information security",
+        "heading": "10. Information security",
         "paragraphs": [
           "We adopt appropriate technical and administrative measures to protect personal data against unauthorized access and accidental or unlawful destruction, loss, alteration, communication, or dissemination, in compliance with Art. 46 of the LGPD.",
           "In the event of a security incident that may result in significant risk or harm to data subjects, we will report the matter to the ANPD and to the affected data subjects within the legal time limit, in accordance with Art. 48 of the LGPD and ANPD Board Resolution No. 15/2024, with the necessary information regarding the nature of the data involved, the related risks, and the measures adopted for mitigation."
@@ -310,7 +272,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "12. Applicable law and jurisdiction",
+        "heading": "11. Applicable law and jurisdiction",
         "paragraphs": [
           "This Privacy Policy is governed by the LGPD (Law No. 13.709/2018), the Brazilian Internet Civil Framework (Law No. 12.965/2014) and, where applicable, the Consumer Protection Code (Law No. 8.078/1990), without prejudice to other relevant regulatory rules, including the resolutions and guidelines of the ANPD.",
           "Any disputes will be submitted to the jurisdiction of the judicial district of the domicile of the law firm FUSTINONI ADVOCACIA, unless otherwise provided by law."
@@ -318,7 +280,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "13. Changes to this Policy",
+        "heading": "12. Changes to this Policy",
         "paragraphs": [
           "This Privacy Policy may be updated periodically to reflect changes in the services offered, in the applicable legislation, or in data processing practices. The version in force is always the one published on this page, identified by the date of last update indicated at the beginning of the document.",
           "We recommend that you review this Policy regularly. Significant changes will be communicated in an appropriate manner, including to newsletter subscribers when the processing related to that data is affected."
@@ -334,15 +296,15 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
     "title": "Política de Privacidad",
     "lastUpdated": "Última actualización: 14 de octubre de 2026",
     "intro": [
-      "El despacho FUSTINONI ADVOCACIA valora la privacidad y la protección de los datos personales de sus visitantes, potenciales clientes y suscriptores del boletín informativo. Esta Política de Privacidad describe, de forma clara y transparente, qué datos personales recopilamos a través del sitio web www.escritoriofustinoni.com.br, para qué finalidades los utilizamos, con quién los compartimos y qué derechos posee usted, de conformidad con la Lei Geral de Proteção de Dados Pessoais (Ley General de Protección de Datos Personales (LGPD), Ley n.º 13.709/2018), el Marco Civil de Internet (Ley n.º 12.965/2014) y, cuando corresponda, el Código de Defensa del Consumidor (Ley n.º 8.078/1990). La sección 7 trata, además, de los datos personales de los clientes del despacho en la prestación de los servicios jurídicos.",
-      "Al utilizar nuestro sitio web, usted reconoce que ha leído y comprendido las condiciones aquí descritas. En caso de tener dudas o desear ejercer sus derechos, póngase en contacto a través del correo electrónico contato@fustinoni.adv.br."
+      "El despacho FUSTINONI ADVOCACIA valora la privacidad y la protección de los datos personales de sus visitantes, potenciales clientes y suscriptores del boletín informativo. Esta Política de Privacidad describe, de forma clara y transparente, qué datos personales recopilamos a través del sitio web www.escritoriofustinoni.com.br, para qué finalidades los utilizamos, con quién los compartimos y qué derechos posee usted, de conformidad con la Lei Geral de Proteção de Dados Pessoais (Ley General de Protección de Datos Personales (LGPD), Ley n.º 13.709/2018), el Marco Civil de Internet (Ley n.º 12.965/2014) y, cuando corresponda, el Código de Defensa del Consumidor (Ley n.º 8.078/1990).",
+      "Al utilizar nuestro sitio web, usted reconoce que ha leído y comprendido las condiciones aquí descritas. En caso de tener dudas o desear ejercer sus derechos, póngase en contacto a través del correo electrónico tiago@fustinoni.adv.br."
     ],
     "sections": [
       {
         "heading": "1. Responsable del tratamiento y delegado de protección de datos",
         "paragraphs": [
           "El responsable del tratamiento de sus datos personales es T. S. FUSTINONI SOCIEDADE INDIVIDUAL DE ADVOCACIA (FUSTINONI ADVOCACIA), inscrita en el CNPJ bajo el n.º 54.489.975/0001-54, con sede en Rua Amaro de Morais, 233, anexo 231, Vila Sabrina, São Paulo/SP, CEP 02138-070.",
-          "El delegado de protección de datos (DPO), en los términos del art. 41 de la LGPD, es el abogado Tiago Sales Fustinoni, inscrito en la OAB/SP con el n.º 395.178, responsable de la atención a los titulares y del cumplimiento de las obligaciones previstas en la LGPD. Para ejercer sus derechos o aclarar dudas sobre el tratamiento de sus datos, póngase en contacto con el delegado de protección de datos a través del correo electrónico: contato@fustinoni.adv.br."
+          "El delegado de protección de datos (DPO), en los términos del art. 41 de la LGPD, es el abogado Tiago Sales Fustinoni, inscrito en la OAB/SP con el n.º 395.178, responsable de la atención a los titulares y del cumplimiento de las obligaciones previstas en la LGPD. Para ejercer sus derechos o aclarar dudas sobre el tratamiento de sus datos, póngase en contacto con el delegado de protección de datos a través del correo electrónico: tiago@fustinoni.adv.br."
         ],
         "items": []
       },
@@ -383,7 +345,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
       {
         "heading": "5. Compartición de datos con terceros",
         "paragraphs": [
-          "El despacho no vende, no cede y no comparte datos personales con fines comerciales de terceros. En cuanto a los datos recopilados a través del sitio, la compartición se produce exclusivamente con los encargados del tratamiento enumerados a continuación, en la medida estrictamente necesaria para la prestación de sus servicios, y siempre bajo obligación contractual de confidencialidad y cumplimiento de la legislación de protección de datos aplicable:"
+          "El despacho no vende, no cede y no comparte datos personales con fines comerciales de terceros. La compartición se produce exclusivamente con los encargados del tratamiento enumerados a continuación, en la medida estrictamente necesaria para la prestación de sus servicios, y siempre bajo obligación contractual de confidencialidad y cumplimiento de la legislación de protección de datos aplicable:"
         ],
         "items": [
           "Vercel: alojamiento y entrega del sitio web; tambien proporciona metricas de uso agregadas y anonimizadas (Vercel Analytics), sin cookies de identificacion personal.",
@@ -403,26 +365,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "7. Clientes del despacho y uso de inteligencia artificial",
-        "paragraphs": [
-          "Además de los datos recopilados a través del sitio, el despacho trata los datos personales necesarios para la prestación de los servicios jurídicos. Los correos electrónicos, documentos y mensajes recibidos en esa actividad pueden organizarse y analizarse con el apoyo de herramientas de inteligencia artificial, bajo la supervisión del abogado responsable, que revisa los escritos y documentos producidos antes de utilizarlos, con observancia del secreto profesional.",
-          "Fuera del despacho, reciben esos datos las herramientas de inteligencia artificial de Anthropic, PBC, y de OpenAI, ambas en los Estados Unidos. En el sistema de gestión del despacho, Anthropic se contrata en la modalidad comercial, en cuyos términos declara no utilizar los datos recibidos para entrenar sus modelos; en las demás herramientas de estos proveedores, ese uso se rige por los términos y la configuración de la cuenta utilizada. El archivo de documentos se conserva en un servidor contratado por el despacho a Locaweb, en Brasil.",
-          "La relación completa de los proveedores que participan en esta atención, con la información sobre las transferencias internacionales correspondientes, puede solicitarse al delegado de protección de datos (DPO); entre ellos destacan los siguientes:"
-        ],
-        "items": [
-          "Anthropic, PBC (Estados Unidos): organización y análisis de textos y documentos mediante inteligencia artificial, con transferencia internacional de los datos enviados.",
-          "OpenAI (Estados Unidos): apoyo a la redacción, revisión y extracción de documentos mediante inteligencia artificial, con transferencia internacional de los datos enviados.",
-          "Locaweb (Brasil): alojamiento del servidor del despacho.",
-          "Google (Google Workspace, con tratamiento también en los Estados Unidos): servicio de correo electrónico del despacho.",
-          "Resend (Estados Unidos): envío de avisos internos por correo electrónico, con el nombre del cliente y el número del proceso.",
-          "Cloudflare (Estados Unidos): conexión protegida a través de la cual se accede al servidor del despacho, con tránsito de los documentos consultados.",
-          "Backblaze (Unión Europea): copia de seguridad cifrada, cuya clave el proveedor no recibe.",
-          "ZapSign (con sede en Brasil, cuya política admite transferencias a otros países, entre ellos los Estados Unidos): firma electrónica de contratos y poderes, como encargada del tratamiento del despacho.",
-          "WhatsApp (Meta Platforms, con tratamiento también en los Estados Unidos y en otros países): aplicación por la que se reciben mensajes de clientes, regida por la política de privacidad de Meta."
-        ]
-      },
-      {
-        "heading": "8. Conservación y eliminación de los datos",
+        "heading": "7. Conservación y eliminación de los datos",
         "paragraphs": [
           "Los datos personales se conservan durante el tiempo necesario para el cumplimiento de las finalidades para las que fueron recopilados, observados los plazos legales aplicables, incluidas las obligaciones de conservación documental inherentes al ejercicio de la abogacía.",
           "Los datos del formulario de contacto que no resulten en la contratación de servicios se eliminan o anonimizan cuando dejan de ser necesarios para las finalidades descritas. Los datos del boletín informativo se conservan hasta la baja por parte del titular. Los datos de navegación y cookies obedecen a las políticas de conservación de los respectivos encargados del tratamiento (Google, Cloudflare y Vercel)."
@@ -430,9 +373,9 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "9. Derechos del titular de datos (art. 18 de la LGPD)",
+        "heading": "8. Derechos del titular de datos (art. 18 de la LGPD)",
         "paragraphs": [
-          "Usted, como titular de datos personales, posee los siguientes derechos, que pueden ejercerse en cualquier momento mediante solicitud al correo electrónico contato@fustinoni.adv.br:"
+          "Usted, como titular de datos personales, posee los siguientes derechos, que pueden ejercerse en cualquier momento mediante solicitud al correo electrónico tiago@fustinoni.adv.br:"
         ],
         "items": [
           "Confirmación de la existencia de tratamiento de sus datos personales.",
@@ -448,15 +391,15 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         ]
       },
       {
-        "heading": "10. Cómo ejercer sus derechos",
+        "heading": "9. Cómo ejercer sus derechos",
         "paragraphs": [
-          "Para ejercer cualquiera de los derechos enumerados anteriormente, envíe una solicitud a contato@fustinoni.adv.br, identificándose y describiendo el derecho que desea ejercer. Responderemos en un plazo máximo de 15 (quince) días, conforme a lo previsto en el art. 18, § 3.º, de la LGPD.",
+          "Para ejercer cualquiera de los derechos enumerados anteriormente, envíe una solicitud a tiago@fustinoni.adv.br, identificándose y describiendo el derecho que desea ejercer. Responderemos en un plazo máximo de 15 (quince) días, conforme a lo previsto en el art. 18, § 3.º, de la LGPD.",
           "Podemos solicitar información adicional para confirmar su identidad antes de procesar la solicitud, como medida de seguridad y para protección del propio titular."
         ],
         "items": []
       },
       {
-        "heading": "11. Seguridad de la información",
+        "heading": "10. Seguridad de la información",
         "paragraphs": [
           "Adoptamos medidas técnicas y administrativas adecuadas para proteger los datos personales contra accesos no autorizados, situaciones accidentales o ilícitas de destrucción, pérdida, alteración, comunicación o difusión, de conformidad con el art. 46 de la LGPD.",
           "En caso de incidente de seguridad que pueda acarrear riesgo o daño relevante a los titulares, comunicaremos el hecho a la ANPD y a los titulares afectados en el plazo legal, conforme al art. 48 de la LGPD y a la Resolución CD/ANPD n.º 15/2024, con la información necesaria sobre la naturaleza de los datos involucrados, los riesgos relacionados y las medidas adoptadas para su mitigación."
@@ -464,7 +407,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "12. Legislación aplicable y fuero",
+        "heading": "11. Legislación aplicable y fuero",
         "paragraphs": [
           "Esta Política de Privacidad se rige por la LGPD (Ley n.º 13.709/2018), por el Marco Civil de Internet (Ley n.º 12.965/2014) y, cuando corresponda, por el Código de Defensa del Consumidor (Ley n.º 8.078/1990), sin perjuicio de otras normas regulatorias pertinentes, incluidas las resoluciones y orientaciones de la ANPD.",
           "Las eventuales controversias se someterán al fuero de la comarca del domicilio del despacho FUSTINONI ADVOCACIA, salvo disposición legal en contrario."
@@ -472,7 +415,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "13. Modificaciones en esta Política",
+        "heading": "12. Modificaciones en esta Política",
         "paragraphs": [
           "Esta Política de Privacidad puede actualizarse periódicamente para reflejar cambios en los servicios ofrecidos, en la legislación aplicable o en las prácticas de tratamiento de datos. La versión vigente es siempre la publicada en esta página, identificada por la fecha de última actualización indicada al inicio del documento.",
           "Le recomendamos consultar esta Política con regularidad. Las modificaciones relevantes se comunicarán de forma adecuada, incluso a los suscriptores del boletín informativo cuando el tratamiento relacionado con esos datos se vea afectado."
@@ -488,15 +431,15 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
     "title": "Informativa sulla Privacy",
     "lastUpdated": "Ultimo aggiornamento: 14 ottobre 2026",
     "intro": [
-      "Lo studio FUSTINONI ADVOCACIA dà valore alla privacy e alla protezione dei dati personali dei suoi visitatori, potenziali clienti e abbonati alla newsletter. La presente Informativa sulla Privacy descrive, in modo chiaro e trasparente, quali dati personali raccogliamo attraverso il sito www.escritoriofustinoni.com.br, per quali finalità li utilizziamo, con chi li condividiamo e quali diritti hai, in conformità con la Legge Generale sulla Protezione dei Dati Personali (LGPD, Lei n.º 13.709/2018), il Quadro Civile di Internet (Lei n.º 12.965/2014) e, ove applicabile, il Codice di Difesa del Consumatore (Lei n.º 8.078/1990). La sezione 7 tratta, inoltre, dei dati personali dei clienti dello studio nella prestazione dei servizi legali.",
-      "Utilizzando il nostro sito, riconosci di aver letto e compreso le condizioni qui descritte. In caso di dubbi o se desideri esercitare i tuoi diritti, contattaci all'indirizzo e-mail contato@fustinoni.adv.br."
+      "Lo studio FUSTINONI ADVOCACIA dà valore alla privacy e alla protezione dei dati personali dei suoi visitatori, potenziali clienti e abbonati alla newsletter. La presente Informativa sulla Privacy descrive, in modo chiaro e trasparente, quali dati personali raccogliamo attraverso il sito www.escritoriofustinoni.com.br, per quali finalità li utilizziamo, con chi li condividiamo e quali diritti hai, in conformità con la Legge Generale sulla Protezione dei Dati Personali (LGPD, Lei n.º 13.709/2018), il Quadro Civile di Internet (Lei n.º 12.965/2014) e, ove applicabile, il Codice di Difesa del Consumatore (Lei n.º 8.078/1990).",
+      "Utilizzando il nostro sito, riconosci di aver letto e compreso le condizioni qui descritte. In caso di dubbi o se desideri esercitare i tuoi diritti, contattaci all'indirizzo e-mail tiago@fustinoni.adv.br."
     ],
     "sections": [
       {
         "heading": "1. Titolare del trattamento e responsabile della protezione dei dati",
         "paragraphs": [
           "Il titolare responsabile del trattamento dei tuoi dati personali è la T. S. FUSTINONI SOCIEDADE INDIVIDUAL DE ADVOCACIA (FUSTINONI ADVOCACIA), iscritta al CNPJ con il n.º 54.489.975/0001-54, con sede in Rua Amaro de Morais, 233, anexo 231, Vila Sabrina, São Paulo/SP, CEP 02138-070.",
-          "Il responsabile della protezione dei dati (DPO), ai sensi dell'art. 41 della LGPD, è l'avvocato Tiago Sales Fustinoni, iscritto all'OAB/SP con il n. 395.178, incaricato dell'assistenza agli interessati e dell'adempimento degli obblighi previsti dalla LGPD. Per esercitare i tuoi diritti o chiarire dubbi sul trattamento dei tuoi dati, contatta il responsabile della protezione dei dati all'indirizzo e-mail: contato@fustinoni.adv.br."
+          "Il responsabile della protezione dei dati (DPO), ai sensi dell'art. 41 della LGPD, è l'avvocato Tiago Sales Fustinoni, iscritto all'OAB/SP con il n. 395.178, incaricato dell'assistenza agli interessati e dell'adempimento degli obblighi previsti dalla LGPD. Per esercitare i tuoi diritti o chiarire dubbi sul trattamento dei tuoi dati, contatta il responsabile della protezione dei dati all'indirizzo e-mail: tiago@fustinoni.adv.br."
         ],
         "items": []
       },
@@ -537,7 +480,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
       {
         "heading": "5. Condivisione dei dati con terzi",
         "paragraphs": [
-          "Lo studio non vende, non cede e non condivide dati personali a fini commerciali di terzi. Per quanto riguarda i dati raccolti tramite il sito, la condivisione avviene esclusivamente con i responsabili del trattamento elencati di seguito, nella misura strettamente necessaria alla prestazione dei loro servizi, e sempre nel rispetto di un obbligo contrattuale di riservatezza e di conformità alla normativa applicabile in materia di protezione dei dati:"
+          "Lo studio non vende, non cede e non condivide dati personali a fini commerciali di terzi. La condivisione avviene esclusivamente con i responsabili del trattamento elencati di seguito, nella misura strettamente necessaria alla prestazione dei loro servizi, e sempre nel rispetto di un obbligo contrattuale di riservatezza e di conformità alla normativa applicabile in materia di protezione dei dati:"
         ],
         "items": [
           "Vercel: hosting e distribuzione del sito; fornisce inoltre metriche di utilizzo aggregate e anonimizzate (Vercel Analytics), senza cookie di identificazione personale.",
@@ -557,26 +500,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "7. Clienti dello studio e uso dell'intelligenza artificiale",
-        "paragraphs": [
-          "Oltre ai dati raccolti tramite il sito, lo studio tratta i dati personali necessari alla prestazione dei servizi legali. Le e-mail, i documenti e i messaggi ricevuti nell'ambito di tale attività possono essere organizzati e analizzati con il supporto di strumenti di intelligenza artificiale, sotto la supervisione dell'avvocato responsabile, che verifica gli atti e i documenti prodotti prima di utilizzarli, nel rispetto del segreto professionale.",
-          "Al di fuori dello studio, tali dati sono ricevuti dagli strumenti di intelligenza artificiale di Anthropic, PBC, e di OpenAI, entrambe negli Stati Uniti. Nel sistema gestionale dello studio, Anthropic è incaricata mediante un contratto commerciale, nei cui termini dichiara di non utilizzare i dati ricevuti per addestrare i propri modelli; negli altri strumenti di tali fornitori, tale uso segue i termini e le impostazioni dell'account utilizzato. L'archivio dei documenti è conservato su un server contrattato dallo studio presso Locaweb, in Brasile.",
-          "L'elenco completo dei fornitori che partecipano a tale attività, con le informazioni sui relativi trasferimenti internazionali, può essere richiesto al responsabile della protezione dei dati; tra questi si segnalano i seguenti:"
-        ],
-        "items": [
-          "Anthropic, PBC (Stati Uniti): organizzazione e analisi di testi e documenti mediante intelligenza artificiale, con trasferimento internazionale dei dati inviati.",
-          "OpenAI (Stati Uniti): supporto alla redazione, alla revisione e all'estrazione di documenti mediante intelligenza artificiale, con trasferimento internazionale dei dati inviati.",
-          "Locaweb (Brasile): hosting del server dello studio.",
-          "Google (Google Workspace, con trattamento anche negli Stati Uniti): servizio di posta elettronica dello studio.",
-          "Resend (Stati Uniti): invio di avvisi interni via e-mail, contenenti il nome del cliente e il numero del procedimento.",
-          "Cloudflare (Stati Uniti): connessione protetta attraverso la quale si accede al server dello studio, con transito dei documenti consultati.",
-          "Backblaze (Unione Europea): copia di backup cifrata, la cui chiave non viene fornita al fornitore.",
-          "ZapSign (con sede in Brasile, la cui informativa ammette trasferimenti verso altri paesi, tra cui gli Stati Uniti): firma elettronica di contratti e procure, in qualità di responsabile del trattamento per conto dello studio.",
-          "WhatsApp (Meta Platforms, con trattamento anche negli Stati Uniti e in altri paesi): applicazione tramite la quale si ricevono messaggi dei clienti, disciplinata dall'informativa sulla privacy di Meta."
-        ]
-      },
-      {
-        "heading": "8. Conservazione ed eliminazione dei dati",
+        "heading": "7. Conservazione ed eliminazione dei dati",
         "paragraphs": [
           "I dati personali sono conservati per il tempo necessario all'adempimento delle finalità per le quali sono stati raccolti, fermi restando i termini di legge applicabili, compresi gli obblighi di conservazione documentale inerenti all'esercizio dell'avvocatura.",
           "I dati del modulo di contatto che non si traducono nell'affidamento di servizi sono eliminati o anonimizzati quando cessano di essere necessari per le finalità descritte. I dati della newsletter sono conservati fino alla cancellazione da parte dell'interessato. I dati di navigazione e i cookie seguono le politiche di conservazione dei rispettivi responsabili del trattamento (Google, Cloudflare e Vercel)."
@@ -584,9 +508,9 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "9. Diritti dell'interessato (art. 18 della LGPD)",
+        "heading": "8. Diritti dell'interessato (art. 18 della LGPD)",
         "paragraphs": [
-          "In qualità di interessato dei dati personali, hai i seguenti diritti, che possono essere esercitati in qualsiasi momento mediante richiesta all'indirizzo e-mail contato@fustinoni.adv.br:"
+          "In qualità di interessato dei dati personali, hai i seguenti diritti, che possono essere esercitati in qualsiasi momento mediante richiesta all'indirizzo e-mail tiago@fustinoni.adv.br:"
         ],
         "items": [
           "Conferma dell'esistenza di un trattamento dei tuoi dati personali.",
@@ -602,15 +526,15 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         ]
       },
       {
-        "heading": "10. Come esercitare i tuoi diritti",
+        "heading": "9. Come esercitare i tuoi diritti",
         "paragraphs": [
-          "Per esercitare uno qualsiasi dei diritti sopra elencati, invia una richiesta a contato@fustinoni.adv.br, identificandoti e descrivendo il diritto che desideri esercitare. Risponderemo entro un termine massimo di 15 (quindici) giorni, come previsto dall'art. 18, § 3.º, della LGPD.",
+          "Per esercitare uno qualsiasi dei diritti sopra elencati, invia una richiesta a tiago@fustinoni.adv.br, identificandoti e descrivendo il diritto che desideri esercitare. Risponderemo entro un termine massimo di 15 (quindici) giorni, come previsto dall'art. 18, § 3.º, della LGPD.",
           "Possiamo richiedere informazioni aggiuntive per confermare la tua identità prima di elaborare la richiesta, quale misura di sicurezza e a tutela dell'interessato stesso."
         ],
         "items": []
       },
       {
-        "heading": "11. Sicurezza delle informazioni",
+        "heading": "10. Sicurezza delle informazioni",
         "paragraphs": [
           "Adottiamo misure tecniche e organizzative adeguate a proteggere i dati personali da accessi non autorizzati, situazioni accidentali o illecite di distruzione, perdita, alterazione, comunicazione o diffusione, in conformità con l'art. 46 della LGPD.",
           "In caso di incidente di sicurezza che possa comportare un rischio o un danno rilevante per gli interessati, comunicheremo il fatto all'ANPD e agli interessati coinvolti entro il termine di legge, ai sensi dell'art. 48 della LGPD e della Resolução CD/ANPD n.º 15/2024, con le informazioni necessarie sulla natura dei dati coinvolti, sui rischi correlati e sulle misure adottate per la mitigazione."
@@ -618,7 +542,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "12. Normativa applicabile e foro competente",
+        "heading": "11. Normativa applicabile e foro competente",
         "paragraphs": [
           "La presente Informativa sulla Privacy è disciplinata dalla LGPD (Lei n.º 13.709/2018), dal Quadro Civile di Internet (Lei n.º 12.965/2014) e, ove applicabile, dal Codice di Difesa del Consumatore (Lei n.º 8.078/1990), fatte salve le altre norme regolamentari pertinenti, comprese le risoluzioni e gli orientamenti dell'ANPD.",
           "Eventuali controversie saranno sottoposte al foro della circoscrizione del domicilio dello studio FUSTINONI ADVOCACIA, salvo diversa disposizione di legge."
@@ -626,7 +550,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "items": []
       },
       {
-        "heading": "13. Modifiche alla presente Informativa",
+        "heading": "12. Modifiche alla presente Informativa",
         "paragraphs": [
           "La presente Informativa sulla Privacy può essere aggiornata periodicamente per riflettere modifiche ai servizi offerti, alla normativa applicabile o alle pratiche di trattamento dei dati. La versione vigente è sempre quella pubblicata in questa pagina, identificata dalla data dell'ultimo aggiornamento indicata all'inizio del documento.",
           "Ti consigliamo di consultare regolarmente la presente Informativa. Le modifiche rilevanti saranno comunicate in modo adeguato, anche agli abbonati alla newsletter qualora il trattamento relativo a tali dati ne risulti interessato."
