@@ -97,15 +97,18 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
       {
         "heading": "7. Clientes do escritório e uso de inteligência artificial",
         "paragraphs": [
-          "Além dos dados coletados pelo site, o escritório trata os dados pessoais necessários à prestação dos serviços advocatícios. Os e-mails, documentos e mensagens recebidos nessa atividade podem ser organizados e analisados com o apoio de ferramentas de inteligência artificial, sempre sob a supervisão do advogado responsável, a quem cabe conferir o resultado e decidir sobre sua utilização, com observância do sigilo profissional.",
-          "A ferramenta de inteligência artificial utilizada provém da Anthropic, PBC, que declara em seus termos comerciais não utilizar os dados recebidos para treinar seus modelos. O acervo de documentos fica guardado em servidor próprio do escritório, no Brasil, e os operadores que participam desse atendimento constam do registro das operações de tratamento mantido pelo escritório, cuja relação completa pode ser solicitada ao encarregado, destacando-se os seguintes:"
+          "Além dos dados coletados pelo site, o escritório trata os dados pessoais necessários à prestação dos serviços advocatícios. Os e-mails, documentos e mensagens recebidos nessa atividade podem ser organizados e analisados com o apoio de ferramentas de inteligência artificial, sob a supervisão do advogado responsável, que confere as peças e os documentos produzidos antes de utilizá-los, com observância do sigilo profissional.",
+          "A ferramenta de inteligência artificial que recebe esses dados fora do escritório é a da Anthropic, PBC, que declara em seus termos comerciais não utilizar os dados recebidos para treinar seus modelos. O acervo de documentos fica guardado em servidor contratado pelo escritório na Locaweb, no Brasil.",
+          "A relação completa dos fornecedores que participam desse atendimento pode ser solicitada ao encarregado; destacam-se os seguintes:"
         ],
         "items": [
           "Anthropic, PBC (Estados Unidos): organização e análise de textos e documentos por inteligência artificial, com transferência internacional dos dados enviados.",
-          "Google (Google Workspace): serviço de correio eletrônico do escritório.",
+          "Locaweb (Brasil): hospedagem do servidor do escritório.",
+          "Google (Google Workspace, com tratamento também nos Estados Unidos): serviço de correio eletrônico do escritório.",
           "Cloudflare (Estados Unidos): conexão protegida pela qual se acessa o servidor do escritório, com trânsito dos documentos consultados.",
           "Backblaze (União Europeia): cópia de segurança cifrada, cuja chave o fornecedor não recebe.",
-          "ZapSign (sede no Brasil): assinatura eletrônica de contratos e procurações, nos termos de sua própria política de privacidade."
+          "ZapSign (sede no Brasil, cuja política admite transferência a outros países, entre eles os Estados Unidos): assinatura eletrônica de contratos e procurações, como operadora do escritório.",
+          "WhatsApp (Meta Platforms, com tratamento também nos Estados Unidos e em outros países): aplicativo pelo qual se recebem mensagens de clientes, regido pela política de privacidade da Meta."
         ]
       },
       {
@@ -246,15 +249,18 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
       {
         "heading": "7. Firm clients and the use of artificial intelligence",
         "paragraphs": [
-          "In addition to the data collected through the website, the firm processes the personal data necessary to provide its legal services. Emails, documents and messages received in the course of this work may be organized and analyzed with the support of artificial intelligence tools, always under the supervision of the responsible attorney, who reviews the output and decides on its use, in observance of professional secrecy.",
-          "The artificial intelligence tool used is provided by Anthropic, PBC, which states in its commercial terms that it does not use the data it receives to train its models. The firm's document files are stored on the firm's own server in Brazil, and the processors involved in this work are listed in the record of processing operations kept by the firm, the complete list of which may be requested from the data protection officer; the main ones are the following:"
+          "In addition to the data collected through the website, the firm processes the personal data necessary to provide its legal services. Emails, documents and messages received in the course of this work may be organized and analyzed with the support of artificial intelligence tools, under the supervision of the responsible attorney, who reviews the pleadings and documents produced before using them, in observance of professional secrecy.",
+          "The artificial intelligence tool that receives this data outside the firm is that of Anthropic, PBC, which states in its commercial terms that it does not use the data it receives to train its models. The firm's document files are stored on a server contracted by the firm from Locaweb, in Brazil.",
+          "The complete list of the vendors involved in this work may be requested from the data protection officer; the main ones are the following:"
         ],
         "items": [
           "Anthropic, PBC (United States): organization and analysis of texts and documents by artificial intelligence, involving the international transfer of the data sent.",
-          "Google (Google Workspace): the firm's email service.",
+          "Locaweb (Brazil): hosting of the firm's server.",
+          "Google (Google Workspace, with processing also in the United States): the firm's email service.",
           "Cloudflare (United States): protected connection through which the firm's server is accessed, with transit of the documents consulted.",
           "Backblaze (European Union): encrypted backup copy, the key to which is not provided to the vendor.",
-          "ZapSign (headquartered in Brazil): electronic signature of contracts and powers of attorney, under its own privacy policy."
+          "ZapSign (headquartered in Brazil, whose policy allows transfers to other countries, including the United States): electronic signature of contracts and powers of attorney, as the firm's processor.",
+          "WhatsApp (Meta Platforms, with processing also in the United States and other countries): application through which messages from clients are received, governed by Meta's privacy policy."
         ]
       },
       {
@@ -329,10 +335,10 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
     ],
     "sections": [
       {
-        "heading": "1. Responsable y encargado del tratamiento de datos",
+        "heading": "1. Responsable del tratamiento y delegado de protección de datos",
         "paragraphs": [
           "El responsable del tratamiento de sus datos personales es T. S. FUSTINONI SOCIEDADE INDIVIDUAL DE ADVOCACIA (FUSTINONI ADVOCACIA), inscrita en el CNPJ bajo el n.º 54.489.975/0001-54, con sede en Rua Amaro de Morais, 233, anexo 231, Vila Sabrina, São Paulo/SP, CEP 02138-070.",
-          "El encargado del tratamiento de datos (DPO), en los términos del art. 41 de la LGPD, es el abogado Tiago Sales Fustinoni, inscrito en la OAB/SP con el n.º 395.178, responsable de la atención a los titulares y del cumplimiento de las obligaciones previstas en la LGPD. Para ejercer sus derechos o aclarar dudas sobre el tratamiento de sus datos, póngase en contacto con el encargado a través del correo electrónico: contato@fustinoni.adv.br."
+          "El delegado de protección de datos (DPO), en los términos del art. 41 de la LGPD, es el abogado Tiago Sales Fustinoni, inscrito en la OAB/SP con el n.º 395.178, responsable de la atención a los titulares y del cumplimiento de las obligaciones previstas en la LGPD. Para ejercer sus derechos o aclarar dudas sobre el tratamiento de sus datos, póngase en contacto con el delegado de protección de datos a través del correo electrónico: contato@fustinoni.adv.br."
         ],
         "items": []
       },
@@ -395,15 +401,18 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
       {
         "heading": "7. Clientes del despacho y uso de inteligencia artificial",
         "paragraphs": [
-          "Además de los datos recopilados a través del sitio, el despacho trata los datos personales necesarios para la prestación de los servicios jurídicos. Los correos electrónicos, documentos y mensajes recibidos en esa actividad pueden organizarse y analizarse con el apoyo de herramientas de inteligencia artificial, siempre bajo la supervisión del abogado responsable, a quien corresponde revisar el resultado y decidir sobre su utilización, con observancia del secreto profesional.",
-          "La herramienta de inteligencia artificial utilizada es proporcionada por Anthropic, PBC, que declara en sus términos comerciales no utilizar los datos recibidos para entrenar sus modelos. El archivo de documentos se conserva en un servidor propio del despacho, en Brasil, y los encargados del tratamiento que participan en esta atención constan en el registro de las operaciones de tratamiento que mantiene el despacho, cuya relación completa puede solicitarse al encargado (DPO); entre ellos destacan los siguientes:"
+          "Además de los datos recopilados a través del sitio, el despacho trata los datos personales necesarios para la prestación de los servicios jurídicos. Los correos electrónicos, documentos y mensajes recibidos en esa actividad pueden organizarse y analizarse con el apoyo de herramientas de inteligencia artificial, bajo la supervisión del abogado responsable, que revisa los escritos y documentos producidos antes de utilizarlos, con observancia del secreto profesional.",
+          "La herramienta de inteligencia artificial que recibe esos datos fuera del despacho es la de Anthropic, PBC, que declara en sus términos comerciales no utilizar los datos recibidos para entrenar sus modelos. El archivo de documentos se conserva en un servidor contratado por el despacho a Locaweb, en Brasil.",
+          "La relación completa de los proveedores que participan en esta atención puede solicitarse al delegado de protección de datos (DPO); entre ellos destacan los siguientes:"
         ],
         "items": [
           "Anthropic, PBC (Estados Unidos): organización y análisis de textos y documentos mediante inteligencia artificial, con transferencia internacional de los datos enviados.",
-          "Google (Google Workspace): servicio de correo electrónico del despacho.",
+          "Locaweb (Brasil): alojamiento del servidor del despacho.",
+          "Google (Google Workspace, con tratamiento también en los Estados Unidos): servicio de correo electrónico del despacho.",
           "Cloudflare (Estados Unidos): conexión protegida a través de la cual se accede al servidor del despacho, con tránsito de los documentos consultados.",
           "Backblaze (Unión Europea): copia de seguridad cifrada, cuya clave el proveedor no recibe.",
-          "ZapSign (con sede en Brasil): firma electrónica de contratos y poderes, en los términos de su propia política de privacidad."
+          "ZapSign (con sede en Brasil, cuya política admite transferencias a otros países, entre ellos los Estados Unidos): firma electrónica de contratos y poderes, como encargada del tratamiento del despacho.",
+          "WhatsApp (Meta Platforms, con tratamiento también en los Estados Unidos y en otros países): aplicación por la que se reciben mensajes de clientes, regida por la política de privacidad de Meta."
         ]
       },
       {
@@ -478,7 +487,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
     ],
     "sections": [
       {
-        "heading": "1. Titolare e responsabile del trattamento dei dati",
+        "heading": "1. Titolare del trattamento e responsabile della protezione dei dati",
         "paragraphs": [
           "Il titolare responsabile del trattamento dei tuoi dati personali è la T. S. FUSTINONI SOCIEDADE INDIVIDUAL DE ADVOCACIA (FUSTINONI ADVOCACIA), iscritta al CNPJ con il n.º 54.489.975/0001-54, con sede in Rua Amaro de Morais, 233, anexo 231, Vila Sabrina, São Paulo/SP, CEP 02138-070.",
           "Il responsabile della protezione dei dati (DPO), ai sensi dell'art. 41 della LGPD, è l'avvocato Tiago Sales Fustinoni, iscritto all'OAB/SP con il n. 395.178, incaricato dell'assistenza agli interessati e dell'adempimento degli obblighi previsti dalla LGPD. Per esercitare i tuoi diritti o chiarire dubbi sul trattamento dei tuoi dati, contatta il responsabile della protezione dei dati all'indirizzo e-mail: contato@fustinoni.adv.br."
@@ -544,15 +553,18 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
       {
         "heading": "7. Clienti dello studio e uso dell'intelligenza artificiale",
         "paragraphs": [
-          "Oltre ai dati raccolti tramite il sito, lo studio tratta i dati personali necessari alla prestazione dei servizi legali. Le e-mail, i documenti e i messaggi ricevuti nell'ambito di tale attività possono essere organizzati e analizzati con il supporto di strumenti di intelligenza artificiale, sempre sotto la supervisione dell'avvocato responsabile, al quale spetta verificare il risultato e decidere sul suo utilizzo, nel rispetto del segreto professionale.",
-          "Lo strumento di intelligenza artificiale utilizzato è fornito da Anthropic, PBC, che dichiara nei propri termini commerciali di non utilizzare i dati ricevuti per addestrare i propri modelli. L'archivio dei documenti è conservato su un server proprio dello studio, in Brasile, e i responsabili del trattamento che partecipano a tale attività sono indicati nel registro delle attività di trattamento tenuto dallo studio, il cui elenco completo può essere richiesto al responsabile della protezione dei dati; tra questi si segnalano i seguenti:"
+          "Oltre ai dati raccolti tramite il sito, lo studio tratta i dati personali necessari alla prestazione dei servizi legali. Le e-mail, i documenti e i messaggi ricevuti nell'ambito di tale attività possono essere organizzati e analizzati con il supporto di strumenti di intelligenza artificiale, sotto la supervisione dell'avvocato responsabile, che verifica gli atti e i documenti prodotti prima di utilizzarli, nel rispetto del segreto professionale.",
+          "Lo strumento di intelligenza artificiale che riceve tali dati al di fuori dello studio è quello di Anthropic, PBC, che dichiara nei propri termini commerciali di non utilizzare i dati ricevuti per addestrare i propri modelli. L'archivio dei documenti è conservato su un server contrattato dallo studio presso Locaweb, in Brasile.",
+          "L'elenco completo dei fornitori che partecipano a tale attività può essere richiesto al responsabile della protezione dei dati; tra questi si segnalano i seguenti:"
         ],
         "items": [
           "Anthropic, PBC (Stati Uniti): organizzazione e analisi di testi e documenti mediante intelligenza artificiale, con trasferimento internazionale dei dati inviati.",
-          "Google (Google Workspace): servizio di posta elettronica dello studio.",
+          "Locaweb (Brasile): hosting del server dello studio.",
+          "Google (Google Workspace, con trattamento anche negli Stati Uniti): servizio di posta elettronica dello studio.",
           "Cloudflare (Stati Uniti): connessione protetta attraverso la quale si accede al server dello studio, con transito dei documenti consultati.",
           "Backblaze (Unione Europea): copia di backup cifrata, la cui chiave non viene fornita al fornitore.",
-          "ZapSign (con sede in Brasile): firma elettronica di contratti e procure, ai sensi della propria informativa sulla privacy."
+          "ZapSign (con sede in Brasile, la cui informativa ammette trasferimenti verso altri paesi, tra cui gli Stati Uniti): firma elettronica di contratti e procure, in qualità di responsabile del trattamento per conto dello studio.",
+          "WhatsApp (Meta Platforms, con trattamento anche negli Stati Uniti e in altri paesi): applicazione tramite la quale si ricevono messaggi dei clienti, disciplinata dall'informativa sulla privacy di Meta."
         ]
       },
       {
