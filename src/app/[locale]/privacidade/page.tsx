@@ -26,7 +26,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
     "title": "Política de Privacidade",
     "lastUpdated": "Última atualização: 14 de outubro de 2026",
     "intro": [
-      "O escritório FUSTINONI ADVOCACIA valoriza a privacidade e a proteção dos dados pessoais de seus visitantes, potenciais clientes e assinantes da newsletter. Esta Política de Privacidade descreve, de forma clara e transparente, quais dados pessoais coletamos por meio do site www.escritoriofustinoni.com.br, para quais finalidades os utilizamos, com quem os compartilhamos e quais direitos você possui, em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD, Lei n.º 13.709/2018), o Marco Civil da Internet (Lei n.º 12.965/2014) e, quando aplicável, o Código de Defesa do Consumidor (Lei n.º 8.078/1990).",
+      "O escritório FUSTINONI ADVOCACIA valoriza a privacidade e a proteção dos dados pessoais de seus visitantes, potenciais clientes e assinantes da newsletter. Esta Política de Privacidade descreve, de forma clara e transparente, quais dados pessoais coletamos por meio do site www.escritoriofustinoni.com.br, para quais finalidades os utilizamos, com quem os compartilhamos e quais direitos você possui, em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD, Lei n.º 13.709/2018), o Marco Civil da Internet (Lei n.º 12.965/2014) e, quando aplicável, o Código de Defesa do Consumidor (Lei n.º 8.078/1990). A seção 7 trata, ainda, dos dados pessoais dos clientes na prestação dos serviços advocatícios.",
       "Ao utilizar nosso site, você reconhece que leu e compreendeu as condições aqui descritas. Caso tenha dúvidas ou queira exercer seus direitos, entre em contato pelo e-mail contato@fustinoni.adv.br."
     ],
     "sections": [
@@ -75,7 +75,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
       {
         "heading": "5. Compartilhamento de dados com terceiros",
         "paragraphs": [
-          "O escritório não vende, não cede e não compartilha dados pessoais para fins comerciais de terceiros. O compartilhamento ocorre exclusivamente com os operadores listados abaixo, na medida estritamente necessária para a prestação de seus serviços, e sempre sob obrigação contratual de confidencialidade e conformidade com a legislação de proteção de dados aplicável:"
+          "O escritório não vende, não cede e não compartilha dados pessoais para fins comerciais de terceiros. Quanto aos dados coletados pelo site, o compartilhamento ocorre exclusivamente com os operadores listados abaixo, na medida estritamente necessária para a prestação de seus serviços, e sempre sob obrigação contratual de confidencialidade e conformidade com a legislação de proteção de dados aplicável:"
         ],
         "items": [
           "Vercel: hospedagem e entrega do site; fornece tambem metricas de uso agregadas e anonimizadas (Vercel Analytics), sem cookies de identificacao pessoal.",
@@ -98,13 +98,15 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "heading": "7. Clientes do escritório e uso de inteligência artificial",
         "paragraphs": [
           "Além dos dados coletados pelo site, o escritório trata os dados pessoais necessários à prestação dos serviços advocatícios. Os e-mails, documentos e mensagens recebidos nessa atividade podem ser organizados e analisados com o apoio de ferramentas de inteligência artificial, sob a supervisão do advogado responsável, que confere as peças e os documentos produzidos antes de utilizá-los, com observância do sigilo profissional.",
-          "A ferramenta de inteligência artificial que recebe esses dados fora do escritório é a da Anthropic, PBC, que declara em seus termos comerciais não utilizar os dados recebidos para treinar seus modelos. O acervo de documentos fica guardado em servidor contratado pelo escritório na Locaweb, no Brasil.",
-          "A relação completa dos fornecedores que participam desse atendimento pode ser solicitada ao encarregado; destacam-se os seguintes:"
+          "Recebem esses dados, fora do escritório, as ferramentas de inteligência artificial da Anthropic, PBC, e da OpenAI, ambas nos Estados Unidos. No sistema de gestão do escritório, a Anthropic é contratada na modalidade comercial, em cujos termos declara não utilizar os dados recebidos para treinar seus modelos; nas demais ferramentas desses fornecedores, esse uso segue os termos e as configurações da conta empregada. O acervo de documentos fica guardado em servidor contratado pelo escritório na Locaweb, no Brasil.",
+          "A relação completa dos fornecedores que participam desse atendimento, com as informações sobre as transferências internacionais correspondentes, pode ser solicitada ao encarregado; destacam-se os seguintes:"
         ],
         "items": [
           "Anthropic, PBC (Estados Unidos): organização e análise de textos e documentos por inteligência artificial, com transferência internacional dos dados enviados.",
+          "OpenAI (Estados Unidos): apoio à redação, à revisão e à extração de documentos por inteligência artificial, com transferência internacional dos dados enviados.",
           "Locaweb (Brasil): hospedagem do servidor do escritório.",
           "Google (Google Workspace, com tratamento também nos Estados Unidos): serviço de correio eletrônico do escritório.",
+          "Resend (Estados Unidos): envio de avisos internos por e-mail, com o nome do cliente e o número do processo.",
           "Cloudflare (Estados Unidos): conexão protegida pela qual se acessa o servidor do escritório, com trânsito dos documentos consultados.",
           "Backblaze (União Europeia): cópia de segurança cifrada, cuja chave o fornecedor não recebe.",
           "ZapSign (sede no Brasil, cuja política admite transferência a outros países, entre eles os Estados Unidos): assinatura eletrônica de contratos e procurações, como operadora do escritório.",
@@ -178,7 +180,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
     "title": "Privacy Policy",
     "lastUpdated": "Last updated: October 14, 2026",
     "intro": [
-      "The law firm FUSTINONI ADVOCACIA values the privacy and protection of the personal data of its visitors, prospective clients, and newsletter subscribers. This Privacy Policy describes, in a clear and transparent manner, what personal data we collect through the website www.escritoriofustinoni.com.br, the purposes for which we use it, with whom we share it, and what rights you have, in compliance with the Brazilian General Data Protection Law (Lei Geral de Proteção de Dados Pessoais - LGPD, Law No. 13.709/2018), the Brazilian Internet Civil Framework (Marco Civil da Internet, Law No. 12.965/2014) and, where applicable, the Consumer Protection Code (Código de Defesa do Consumidor, Law No. 8.078/1990).",
+      "The law firm FUSTINONI ADVOCACIA values the privacy and protection of the personal data of its visitors, prospective clients, and newsletter subscribers. This Privacy Policy describes, in a clear and transparent manner, what personal data we collect through the website www.escritoriofustinoni.com.br, the purposes for which we use it, with whom we share it, and what rights you have, in compliance with the Brazilian General Data Protection Law (Lei Geral de Proteção de Dados Pessoais - LGPD, Law No. 13.709/2018), the Brazilian Internet Civil Framework (Marco Civil da Internet, Law No. 12.965/2014) and, where applicable, the Consumer Protection Code (Código de Defesa do Consumidor, Law No. 8.078/1990). Section 7 also addresses the personal data of the firm's clients in the provision of legal services.",
       "By using our website, you acknowledge that you have read and understood the conditions described herein. Should you have any questions or wish to exercise your rights, please contact us at contato@fustinoni.adv.br."
     ],
     "sections": [
@@ -227,7 +229,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
       {
         "heading": "5. Data sharing with third parties",
         "paragraphs": [
-          "The firm does not sell, assign, or share personal data for the commercial purposes of third parties. Sharing occurs exclusively with the processors listed below, to the extent strictly necessary for the provision of their services, and always under a contractual obligation of confidentiality and compliance with the applicable data protection legislation:"
+          "The firm does not sell, assign, or share personal data for the commercial purposes of third parties. With regard to the data collected through the website, sharing occurs exclusively with the processors listed below, to the extent strictly necessary for the provision of their services, and always under a contractual obligation of confidentiality and compliance with the applicable data protection legislation:"
         ],
         "items": [
           "Vercel: hosting and delivery of the website; it also provides aggregated, anonymized usage metrics (Vercel Analytics) without personal-identification cookies.",
@@ -250,13 +252,15 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "heading": "7. Firm clients and the use of artificial intelligence",
         "paragraphs": [
           "In addition to the data collected through the website, the firm processes the personal data necessary to provide its legal services. Emails, documents and messages received in the course of this work may be organized and analyzed with the support of artificial intelligence tools, under the supervision of the responsible attorney, who reviews the pleadings and documents produced before using them, in observance of professional secrecy.",
-          "The artificial intelligence tool that receives this data outside the firm is that of Anthropic, PBC, which states in its commercial terms that it does not use the data it receives to train its models. The firm's document files are stored on a server contracted by the firm from Locaweb, in Brazil.",
-          "The complete list of the vendors involved in this work may be requested from the data protection officer; the main ones are the following:"
+          "Outside the firm, this data is received by the artificial intelligence tools of Anthropic, PBC, and OpenAI, both in the United States. In the firm's management system, Anthropic is engaged under a commercial contract, in whose terms it states that it does not use the data it receives to train its models; in the other tools of these vendors, such use follows the terms and settings of the account used. The firm's document files are stored on a server contracted by the firm from Locaweb, in Brazil.",
+          "The complete list of the vendors involved in this work, with information on the corresponding international transfers, may be requested from the data protection officer; the main ones are the following:"
         ],
         "items": [
           "Anthropic, PBC (United States): organization and analysis of texts and documents by artificial intelligence, involving the international transfer of the data sent.",
+          "OpenAI (United States): support in drafting, reviewing and extracting documents by artificial intelligence, involving the international transfer of the data sent.",
           "Locaweb (Brazil): hosting of the firm's server.",
           "Google (Google Workspace, with processing also in the United States): the firm's email service.",
+          "Resend (United States): sending of internal email notices, containing the client's name and the case number.",
           "Cloudflare (United States): protected connection through which the firm's server is accessed, with transit of the documents consulted.",
           "Backblaze (European Union): encrypted backup copy, the key to which is not provided to the vendor.",
           "ZapSign (headquartered in Brazil, whose policy allows transfers to other countries, including the United States): electronic signature of contracts and powers of attorney, as the firm's processor.",
@@ -330,7 +334,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
     "title": "Política de Privacidad",
     "lastUpdated": "Última actualización: 14 de octubre de 2026",
     "intro": [
-      "El despacho FUSTINONI ADVOCACIA valora la privacidad y la protección de los datos personales de sus visitantes, potenciales clientes y suscriptores del boletín informativo. Esta Política de Privacidad describe, de forma clara y transparente, qué datos personales recopilamos a través del sitio web www.escritoriofustinoni.com.br, para qué finalidades los utilizamos, con quién los compartimos y qué derechos posee usted, de conformidad con la Lei Geral de Proteção de Dados Pessoais (Ley General de Protección de Datos Personales (LGPD), Ley n.º 13.709/2018), el Marco Civil de Internet (Ley n.º 12.965/2014) y, cuando corresponda, el Código de Defensa del Consumidor (Ley n.º 8.078/1990).",
+      "El despacho FUSTINONI ADVOCACIA valora la privacidad y la protección de los datos personales de sus visitantes, potenciales clientes y suscriptores del boletín informativo. Esta Política de Privacidad describe, de forma clara y transparente, qué datos personales recopilamos a través del sitio web www.escritoriofustinoni.com.br, para qué finalidades los utilizamos, con quién los compartimos y qué derechos posee usted, de conformidad con la Lei Geral de Proteção de Dados Pessoais (Ley General de Protección de Datos Personales (LGPD), Ley n.º 13.709/2018), el Marco Civil de Internet (Ley n.º 12.965/2014) y, cuando corresponda, el Código de Defensa del Consumidor (Ley n.º 8.078/1990). La sección 7 trata, además, de los datos personales de los clientes del despacho en la prestación de los servicios jurídicos.",
       "Al utilizar nuestro sitio web, usted reconoce que ha leído y comprendido las condiciones aquí descritas. En caso de tener dudas o desear ejercer sus derechos, póngase en contacto a través del correo electrónico contato@fustinoni.adv.br."
     ],
     "sections": [
@@ -379,7 +383,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
       {
         "heading": "5. Compartición de datos con terceros",
         "paragraphs": [
-          "El despacho no vende, no cede y no comparte datos personales con fines comerciales de terceros. La compartición se produce exclusivamente con los encargados del tratamiento enumerados a continuación, en la medida estrictamente necesaria para la prestación de sus servicios, y siempre bajo obligación contractual de confidencialidad y cumplimiento de la legislación de protección de datos aplicable:"
+          "El despacho no vende, no cede y no comparte datos personales con fines comerciales de terceros. En cuanto a los datos recopilados a través del sitio, la compartición se produce exclusivamente con los encargados del tratamiento enumerados a continuación, en la medida estrictamente necesaria para la prestación de sus servicios, y siempre bajo obligación contractual de confidencialidad y cumplimiento de la legislación de protección de datos aplicable:"
         ],
         "items": [
           "Vercel: alojamiento y entrega del sitio web; tambien proporciona metricas de uso agregadas y anonimizadas (Vercel Analytics), sin cookies de identificacion personal.",
@@ -402,13 +406,15 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "heading": "7. Clientes del despacho y uso de inteligencia artificial",
         "paragraphs": [
           "Además de los datos recopilados a través del sitio, el despacho trata los datos personales necesarios para la prestación de los servicios jurídicos. Los correos electrónicos, documentos y mensajes recibidos en esa actividad pueden organizarse y analizarse con el apoyo de herramientas de inteligencia artificial, bajo la supervisión del abogado responsable, que revisa los escritos y documentos producidos antes de utilizarlos, con observancia del secreto profesional.",
-          "La herramienta de inteligencia artificial que recibe esos datos fuera del despacho es la de Anthropic, PBC, que declara en sus términos comerciales no utilizar los datos recibidos para entrenar sus modelos. El archivo de documentos se conserva en un servidor contratado por el despacho a Locaweb, en Brasil.",
-          "La relación completa de los proveedores que participan en esta atención puede solicitarse al delegado de protección de datos (DPO); entre ellos destacan los siguientes:"
+          "Fuera del despacho, reciben esos datos las herramientas de inteligencia artificial de Anthropic, PBC, y de OpenAI, ambas en los Estados Unidos. En el sistema de gestión del despacho, Anthropic se contrata en la modalidad comercial, en cuyos términos declara no utilizar los datos recibidos para entrenar sus modelos; en las demás herramientas de estos proveedores, ese uso se rige por los términos y la configuración de la cuenta utilizada. El archivo de documentos se conserva en un servidor contratado por el despacho a Locaweb, en Brasil.",
+          "La relación completa de los proveedores que participan en esta atención, con la información sobre las transferencias internacionales correspondientes, puede solicitarse al delegado de protección de datos (DPO); entre ellos destacan los siguientes:"
         ],
         "items": [
           "Anthropic, PBC (Estados Unidos): organización y análisis de textos y documentos mediante inteligencia artificial, con transferencia internacional de los datos enviados.",
+          "OpenAI (Estados Unidos): apoyo a la redacción, revisión y extracción de documentos mediante inteligencia artificial, con transferencia internacional de los datos enviados.",
           "Locaweb (Brasil): alojamiento del servidor del despacho.",
           "Google (Google Workspace, con tratamiento también en los Estados Unidos): servicio de correo electrónico del despacho.",
+          "Resend (Estados Unidos): envío de avisos internos por correo electrónico, con el nombre del cliente y el número del proceso.",
           "Cloudflare (Estados Unidos): conexión protegida a través de la cual se accede al servidor del despacho, con tránsito de los documentos consultados.",
           "Backblaze (Unión Europea): copia de seguridad cifrada, cuya clave el proveedor no recibe.",
           "ZapSign (con sede en Brasil, cuya política admite transferencias a otros países, entre ellos los Estados Unidos): firma electrónica de contratos y poderes, como encargada del tratamiento del despacho.",
@@ -482,7 +488,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
     "title": "Informativa sulla Privacy",
     "lastUpdated": "Ultimo aggiornamento: 14 ottobre 2026",
     "intro": [
-      "Lo studio FUSTINONI ADVOCACIA dà valore alla privacy e alla protezione dei dati personali dei suoi visitatori, potenziali clienti e abbonati alla newsletter. La presente Informativa sulla Privacy descrive, in modo chiaro e trasparente, quali dati personali raccogliamo attraverso il sito www.escritoriofustinoni.com.br, per quali finalità li utilizziamo, con chi li condividiamo e quali diritti hai, in conformità con la Legge Generale sulla Protezione dei Dati Personali (LGPD, Lei n.º 13.709/2018), il Quadro Civile di Internet (Lei n.º 12.965/2014) e, ove applicabile, il Codice di Difesa del Consumatore (Lei n.º 8.078/1990).",
+      "Lo studio FUSTINONI ADVOCACIA dà valore alla privacy e alla protezione dei dati personali dei suoi visitatori, potenziali clienti e abbonati alla newsletter. La presente Informativa sulla Privacy descrive, in modo chiaro e trasparente, quali dati personali raccogliamo attraverso il sito www.escritoriofustinoni.com.br, per quali finalità li utilizziamo, con chi li condividiamo e quali diritti hai, in conformità con la Legge Generale sulla Protezione dei Dati Personali (LGPD, Lei n.º 13.709/2018), il Quadro Civile di Internet (Lei n.º 12.965/2014) e, ove applicabile, il Codice di Difesa del Consumatore (Lei n.º 8.078/1990). La sezione 7 tratta, inoltre, dei dati personali dei clienti dello studio nella prestazione dei servizi legali.",
       "Utilizzando il nostro sito, riconosci di aver letto e compreso le condizioni qui descritte. In caso di dubbi o se desideri esercitare i tuoi diritti, contattaci all'indirizzo e-mail contato@fustinoni.adv.br."
     ],
     "sections": [
@@ -531,7 +537,7 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
       {
         "heading": "5. Condivisione dei dati con terzi",
         "paragraphs": [
-          "Lo studio non vende, non cede e non condivide dati personali a fini commerciali di terzi. La condivisione avviene esclusivamente con i responsabili del trattamento elencati di seguito, nella misura strettamente necessaria alla prestazione dei loro servizi, e sempre nel rispetto di un obbligo contrattuale di riservatezza e di conformità alla normativa applicabile in materia di protezione dei dati:"
+          "Lo studio non vende, non cede e non condivide dati personali a fini commerciali di terzi. Per quanto riguarda i dati raccolti tramite il sito, la condivisione avviene esclusivamente con i responsabili del trattamento elencati di seguito, nella misura strettamente necessaria alla prestazione dei loro servizi, e sempre nel rispetto di un obbligo contrattuale di riservatezza e di conformità alla normativa applicabile in materia di protezione dei dati:"
         ],
         "items": [
           "Vercel: hosting e distribuzione del sito; fornisce inoltre metriche di utilizzo aggregate e anonimizzate (Vercel Analytics), senza cookie di identificazione personale.",
@@ -554,13 +560,15 @@ const CONTENT: Record<AppLocale, PrivacyContent> = {
         "heading": "7. Clienti dello studio e uso dell'intelligenza artificiale",
         "paragraphs": [
           "Oltre ai dati raccolti tramite il sito, lo studio tratta i dati personali necessari alla prestazione dei servizi legali. Le e-mail, i documenti e i messaggi ricevuti nell'ambito di tale attività possono essere organizzati e analizzati con il supporto di strumenti di intelligenza artificiale, sotto la supervisione dell'avvocato responsabile, che verifica gli atti e i documenti prodotti prima di utilizzarli, nel rispetto del segreto professionale.",
-          "Lo strumento di intelligenza artificiale che riceve tali dati al di fuori dello studio è quello di Anthropic, PBC, che dichiara nei propri termini commerciali di non utilizzare i dati ricevuti per addestrare i propri modelli. L'archivio dei documenti è conservato su un server contrattato dallo studio presso Locaweb, in Brasile.",
-          "L'elenco completo dei fornitori che partecipano a tale attività può essere richiesto al responsabile della protezione dei dati; tra questi si segnalano i seguenti:"
+          "Al di fuori dello studio, tali dati sono ricevuti dagli strumenti di intelligenza artificiale di Anthropic, PBC, e di OpenAI, entrambe negli Stati Uniti. Nel sistema gestionale dello studio, Anthropic è incaricata mediante un contratto commerciale, nei cui termini dichiara di non utilizzare i dati ricevuti per addestrare i propri modelli; negli altri strumenti di tali fornitori, tale uso segue i termini e le impostazioni dell'account utilizzato. L'archivio dei documenti è conservato su un server contrattato dallo studio presso Locaweb, in Brasile.",
+          "L'elenco completo dei fornitori che partecipano a tale attività, con le informazioni sui relativi trasferimenti internazionali, può essere richiesto al responsabile della protezione dei dati; tra questi si segnalano i seguenti:"
         ],
         "items": [
           "Anthropic, PBC (Stati Uniti): organizzazione e analisi di testi e documenti mediante intelligenza artificiale, con trasferimento internazionale dei dati inviati.",
+          "OpenAI (Stati Uniti): supporto alla redazione, alla revisione e all'estrazione di documenti mediante intelligenza artificiale, con trasferimento internazionale dei dati inviati.",
           "Locaweb (Brasile): hosting del server dello studio.",
           "Google (Google Workspace, con trattamento anche negli Stati Uniti): servizio di posta elettronica dello studio.",
+          "Resend (Stati Uniti): invio di avvisi interni via e-mail, contenenti il nome del cliente e il numero del procedimento.",
           "Cloudflare (Stati Uniti): connessione protetta attraverso la quale si accede al server dello studio, con transito dei documenti consultati.",
           "Backblaze (Unione Europea): copia di backup cifrata, la cui chiave non viene fornita al fornitore.",
           "ZapSign (con sede in Brasile, la cui informativa ammette trasferimenti verso altri paesi, tra cui gli Stati Uniti): firma elettronica di contratti e procure, in qualità di responsabile del trattamento per conto dello studio.",
