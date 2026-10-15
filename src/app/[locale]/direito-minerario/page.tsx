@@ -651,7 +651,7 @@ export default async function DireitoMinerarioPage({ params }: PageProps) {
       {/* Hero fotográfico — mineração a céu aberto / escavadeiras (Pexels, uso comercial livre) */}
       <section className="relative flex min-h-[48vh] flex-col justify-end overflow-hidden border-b border-black/15 px-4 py-14 sm:px-6 sm:py-16 md:px-10 md:py-20">
         <Image src="/hero-minerario.jpg" alt="" fill priority sizes="100vw" className="object-cover object-center" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1A16]/60 via-[#0B1A16]/66 to-[#0B1A16]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#121417]/60 via-[#121417]/66 to-[#121417]/90" />
         <div className="relative z-10 w-full max-w-4xl">
           <Link
             href={{ pathname: "/direito-aduaneiro" }}

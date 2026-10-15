@@ -94,7 +94,7 @@ export default async function ServicoPage({ params }: PageProps) {
       {/* Hero fotográfico */}
       <section className="relative flex min-h-[48vh] flex-col justify-end overflow-hidden border-b border-black/15 px-4 py-14 sm:px-6 sm:py-16 md:px-10 md:py-20">
         <Image src={HERO_IMG} alt="" fill priority sizes="100vw" className="object-cover object-center" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1A16]/55 via-[#0B1A16]/62 to-[#0B1A16]/88" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#121417]/55 via-[#121417]/62 to-[#121417]/88" />
         <div className="relative z-10 w-full max-w-4xl">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px w-8 bg-[#B7B1A3]" />

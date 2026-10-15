@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import { Check, Minus } from "lucide-react";
 
 import { Link } from "@/i18n/navigation";
@@ -1043,12 +1043,12 @@ const SCHEMA_LANGUAGE_LABEL_BY_LOCALE: Record<AppLocale, string> = {
 /* Identidade oficial (07/10/2026): medidas e acabamentos da página inicial. */
 const WRAP = "mx-auto w-full max-w-[min(88vw,96rem)] px-6 sm:px-10";
 const SECAO = "py-24 sm:py-28 lg:py-36";
-const TITULO = "text-balance font-serif text-[2rem] leading-[1.15] tracking-[-0.012em] text-[#14231D] sm:text-[2.5rem] lg:text-[2.85rem]";
-const TEXTO = "text-[0.95rem] leading-7 text-[#4F5A54] sm:text-base sm:leading-8";
+const TITULO = "text-balance font-serif text-[2rem] leading-[1.15] tracking-[-0.012em] text-[#16181B] sm:text-[2.5rem] lg:text-[2.85rem]";
+const TEXTO = "text-[0.95rem] leading-7 text-[#55585D] sm:text-base sm:leading-8";
 const BTN_BASE = "inline-flex h-auto items-center justify-center rounded-none px-10 py-5 text-[0.6875rem] font-medium uppercase tracking-[0.24em] shadow-none transition-colors duration-300";
-const BTN_LINHA = `${BTN_BASE} border border-[#0F2A22]/60 bg-transparent text-[#0F2A22] hover:border-[#0F2A22] hover:bg-[#0F2A22] hover:text-[#F6F3EE]`;
-const BTN_OURO = `${BTN_BASE} border border-[#B08D46] bg-transparent text-[#F6F3EE] hover:bg-[#B08D46] hover:text-[#0B1A16]`;
-const LINK_SETA = "inline-flex items-center gap-3 self-start text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-[#0F2A22]";
+const BTN_LINHA = `${BTN_BASE} border border-[#1C2025]/60 bg-transparent text-[#1C2025] hover:border-[#1C2025] hover:bg-[#1C2025] hover:text-[#F6F3EE]`;
+const BTN_OURO = `${BTN_BASE} border border-[#B08D46] bg-transparent text-[#F6F3EE] hover:bg-[#B08D46] hover:text-[#121417]`;
+const LINK_SETA = "inline-flex items-center gap-3 self-start text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-[#1C2025]";
 
 function Rotulo({ children, claro = false, centro = false }: { children: React.ReactNode; claro?: boolean; centro?: boolean }) {
   return (
@@ -1061,6 +1061,11 @@ function Rotulo({ children, claro = false, centro = false }: { children: React.R
     </div>
   );
 }
+
+/* Foto do topo: retrato no celular, larga do md em diante (art direction com <picture>). */
+const HERO_IMG = { alt: "", fill: true, sizes: "100vw", fetchPriority: "high", loading: "eager" } as const;
+const heroDesktop = getImageProps({ ...HERO_IMG, src: "/hero-ponte-noite.jpg" }).props;
+const { alt: _heroAlt, ...heroCelular } = getImageProps({ ...HERO_IMG, src: "/hero-ponte-noite-m.jpg" }).props;
 
 export default async function Home({ params }: HomePageProps) {
   const { locale } = await params;
@@ -1162,20 +1167,17 @@ export default async function Home({ params }: HomePageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Hero (identidade oficial, 07/10/2026): Ponte Estaiada ao entardecer + véu verde.
+      {/* Hero (identidade oficial, 07/10/2026; foto noturna e véu grafite em 15/10/2026): Ponte Estaiada à noite.
+          No celular (até 767px) vai o retrato, com a Ponte enquadrada à direita; do md em diante, a foto larga.
           Cores em hex arbitrário: o hero é sempre escuro e o overlay de compat remapeia
           text-white/bg-white. */}
       <section className="relative flex min-h-[calc(100svh-5rem)] flex-col items-center justify-center overflow-hidden px-6 py-28 text-center sm:py-32">
-        <Image
-          src="/hero-ponte-estaiada.jpg"
-          alt={text.heroImageAlt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[93%_50%] md:object-center"
-        />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(11,26,22,0.8)_0%,rgba(11,26,22,0.58)_52%,rgba(11,26,22,0.4)_100%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#0B1A16]" />
+        <picture>
+          <source media="(min-width: 768px)" srcSet={heroDesktop.srcSet} sizes={heroDesktop.sizes} />
+          <img {...heroCelular} alt={text.heroImageAlt} className="object-cover object-[85%_50%] md:object-center" />
+        </picture>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(18,20,23,0.8)_0%,rgba(18,20,23,0.58)_52%,rgba(18,20,23,0.4)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#121417]" />
 
         <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center">
           <div className="mb-7 text-[0.6875rem] font-medium uppercase tracking-[0.42em] text-[#C9A86A]">
@@ -1187,7 +1189,7 @@ export default async function Home({ params }: HomePageProps) {
             {text.heroTitle}
           </h1>
 
-          <p className="mx-auto mb-12 max-w-xl text-[0.975rem] leading-8 text-[#F6F3EE]/75 sm:text-[1.0625rem]">
+          <p className="mx-auto mb-12 max-w-xl text-[0.975rem] leading-8 text-[#F6F3EE]/90 sm:text-[1.0625rem] md:text-[#F6F3EE]/75">
             {text.heroDescription}
           </p>
 
@@ -1204,7 +1206,7 @@ export default async function Home({ params }: HomePageProps) {
       </section>
 
       {/* Faixa das frentes principais */}
-      <div className="bg-[#0B1A16]">
+      <div className="bg-[#121417]">
         <ul className={`${WRAP} grid grid-cols-2 py-4 md:grid-cols-3 md:py-2 lg:grid-cols-6 lg:py-0`}>
           {localizedPracticeAreas.map(area => (
             <li
@@ -1233,10 +1235,10 @@ export default async function Home({ params }: HomePageProps) {
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     {oab && (
-                      <span className="text-[0.625rem] font-medium uppercase tracking-[0.22em] text-[#4F5A54]">{oab}</span>
+                      <span className="text-[0.625rem] font-medium uppercase tracking-[0.22em] text-[#55585D]">{oab}</span>
                     )}
                   </div>
-                  <h3 className="mb-4 font-serif text-[1.45rem] leading-snug text-[#14231D] sm:text-[1.6rem]">{nome}</h3>
+                  <h3 className="mb-4 font-serif text-[1.45rem] leading-snug text-[#16181B] sm:text-[1.6rem]">{nome}</h3>
                   <p className={TEXTO}>{member.description}</p>
                 </article>
               );
@@ -1254,7 +1256,7 @@ export default async function Home({ params }: HomePageProps) {
             <p className={`${TEXTO} mt-8 max-w-lg`}>{text.studioDescription}</p>
             <ul className="mt-12 max-w-lg border-t border-[#E3DDD1]">
               {text.studioPillars.map(pilar => (
-                <li key={pilar} className="flex items-center gap-4 border-b border-[#E3DDD1] py-4 text-[0.95rem] text-[#14231D]">
+                <li key={pilar} className="flex items-center gap-4 border-b border-[#E3DDD1] py-4 text-[0.95rem] text-[#16181B]">
                   <span className="h-px w-5 shrink-0 bg-[#B08D46]" aria-hidden="true" />
                   {pilar}
                 </li>
@@ -1286,7 +1288,7 @@ export default async function Home({ params }: HomePageProps) {
           <div className="mt-16 grid grid-cols-1 gap-6 sm:mt-20 md:grid-cols-2 lg:gap-8">
             <div className="flex flex-col border border-[#E3DDD1] bg-[#FFFDF9]">
               <div className="p-8 sm:p-10 lg:p-12">
-                <h3 className="mb-4 font-serif text-[1.6rem] leading-snug text-[#14231D]">{text.consultingTitle}</h3>
+                <h3 className="mb-4 font-serif text-[1.6rem] leading-snug text-[#16181B]">{text.consultingTitle}</h3>
                 <p className={`${TEXTO} mb-10`}>{text.consultingDescription}</p>
                 <WhatsAppCTAButton origem="pagina_principal"
                   whatsappPhone={whatsappPhone}
@@ -1299,16 +1301,16 @@ export default async function Home({ params }: HomePageProps) {
               <ul className="mt-auto border-t border-[#E3DDD1] px-8 sm:px-10 lg:px-12">
                 {localizedProcessRows.map((label, index) => (
                   <li key={label} className="flex items-center justify-between gap-6 border-b border-[#E3DDD1] py-4 text-[0.9rem] last:border-b-0">
-                    <span className={index < 5 ? "text-[#14231D]" : "text-[#4F5A54]/60"}>{label}</span>
+                    <span className={index < 5 ? "text-[#16181B]" : "text-[#55585D]/60"}>{label}</span>
                     {index < 5
                       ? <Check className="h-4 w-4 shrink-0 text-[#B08D46]" strokeWidth={1.5} />
-                      : <Minus className="h-4 w-4 shrink-0 text-[#4F5A54]/40" strokeWidth={1.5} />}
+                      : <Minus className="h-4 w-4 shrink-0 text-[#55585D]/40" strokeWidth={1.5} />}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="flex flex-col border border-[#0F2A22] bg-[#0F2A22]">
+            <div className="flex flex-col border border-[#1C2025] bg-[#1C2025]">
               <div className="p-8 sm:p-10 lg:p-12">
                 <h3 className="mb-4 font-serif text-[1.6rem] leading-snug text-[#F6F3EE]">{text.fullActingTitle}</h3>
                 <p className="mb-10 text-[0.95rem] leading-7 text-[#F6F3EE]/70">{text.fullActingDescription}</p>
@@ -1334,7 +1336,7 @@ export default async function Home({ params }: HomePageProps) {
       </section>
 
       {/* Áreas de atuação (bloco escuro) */}
-      <section id={homeSectionHashes.sectors} className="scroll-mt-24 bg-[#0F2A22] sm:scroll-mt-28">
+      <section id={homeSectionHashes.sectors} className="scroll-mt-24 bg-[#1C2025] sm:scroll-mt-28">
         <div className={`${WRAP} ${SECAO}`}>
           <Rotulo claro>{text.sectorsLabel}</Rotulo>
           <h2 className={`${TITULO} max-w-3xl text-[#F6F3EE]`}>{text.sectorsTitle}</h2>
@@ -1380,7 +1382,7 @@ export default async function Home({ params }: HomePageProps) {
                   <span className="mb-8 font-serif text-sm tracking-[0.2em] text-[#B08D46]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="mb-4 font-serif text-[1.45rem] leading-snug text-[#14231D] sm:text-[1.55rem]">{service.title}</h3>
+                  <h3 className="mb-4 font-serif text-[1.45rem] leading-snug text-[#16181B] sm:text-[1.55rem]">{service.title}</h3>
                   <p className={`${TEXTO} mb-10 flex-1`}>{service.description}</p>
 
                   {service.href && !service.disabled ? (
@@ -1389,7 +1391,7 @@ export default async function Home({ params }: HomePageProps) {
                       <span className="text-[#B08D46] transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
                     </Link>
                   ) : (
-                    <span className="text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-[#4F5A54]/60">
+                    <span className="text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-[#55585D]/60">
                       {service.ctaLabel}
                     </span>
                   )}
@@ -1402,17 +1404,17 @@ export default async function Home({ params }: HomePageProps) {
             .map(service => (
               <article key={service.title} className="mt-24 border-t border-[#E3DDD1] pt-24 text-center sm:mt-28 sm:pt-28">
                 <div className="mx-auto mb-8 h-px w-14 bg-[#B08D46]" aria-hidden="true" />
-                <h3 className="mb-6 font-serif text-[1.9rem] leading-tight text-[#14231D] sm:text-[2.25rem]">{service.title}</h3>
+                <h3 className="mb-6 font-serif text-[1.9rem] leading-tight text-[#16181B] sm:text-[2.25rem]">{service.title}</h3>
                 <p className={`${TEXTO} mx-auto max-w-2xl`}>{service.description}</p>
                 {"subCards" in service && service.subCards && (
                   <div className="mt-14 grid grid-cols-1 gap-6 text-left md:grid-cols-2 lg:gap-8">
                     {service.subCards.map(sub => (
                       <div key={sub.title} className="flex flex-col justify-between border border-[#E3DDD1] bg-[#FFFDF9] p-8 sm:p-10">
                         <div>
-                          <h4 className="mb-6 font-serif text-[1.35rem] leading-snug text-[#14231D]">{sub.title}</h4>
+                          <h4 className="mb-6 font-serif text-[1.35rem] leading-snug text-[#16181B]">{sub.title}</h4>
                           <ul className="mb-10 space-y-3">
                             {sub.bullets.map(bullet => (
-                              <li key={bullet} className="flex items-start gap-3 text-[0.925rem] leading-7 text-[#4F5A54]">
+                              <li key={bullet} className="flex items-start gap-3 text-[0.925rem] leading-7 text-[#55585D]">
                                 <span className="mt-[0.85rem] h-px w-3 shrink-0 bg-[#B08D46]" aria-hidden="true" />
                                 {bullet}
                               </li>
@@ -1450,10 +1452,10 @@ export default async function Home({ params }: HomePageProps) {
             <Accordion type="single" collapsible className="w-full border-t border-[#E3DDD1]">
               {localizedFaqs.map((item, index) => (
                 <AccordionItem key={item.question} value={`item-${index}`} className="border-b border-[#E3DDD1]">
-                  <AccordionTrigger className="py-7 text-left font-serif text-[1.1rem] font-normal leading-snug text-[#14231D] hover:no-underline sm:text-[1.2rem]">
+                  <AccordionTrigger className="py-7 text-left font-serif text-[1.1rem] font-normal leading-snug text-[#16181B] hover:no-underline sm:text-[1.2rem]">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="pr-8 pb-7 text-[0.95rem] leading-7 text-[#4F5A54]">
+                  <AccordionContent className="pr-8 pb-7 text-[0.95rem] leading-7 text-[#55585D]">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -1464,7 +1466,7 @@ export default async function Home({ params }: HomePageProps) {
       </section>
 
       {/* Convite final (bloco escuro sobre a foto do escritório) */}
-      <section className="relative overflow-hidden bg-[#0B1A16]">
+      <section className="relative overflow-hidden bg-[#121417]">
         <Image
           src="/office-corredor.jpg"
           alt={text.heroImageAlt}
@@ -1472,7 +1474,7 @@ export default async function Home({ params }: HomePageProps) {
           sizes="100vw"
           className="object-cover object-center opacity-25"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1A16]/70 via-[#0B1A16]/55 to-[#0B1A16]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#121417]/70 via-[#121417]/55 to-[#121417]/90" />
 
         <div className={`${WRAP} relative py-28 text-center sm:py-36`}>
           <Rotulo claro centro>{text.finalLabel}</Rotulo>

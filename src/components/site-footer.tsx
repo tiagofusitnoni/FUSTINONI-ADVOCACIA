@@ -14,7 +14,7 @@ export async function SiteFooter({ locale }: SiteFooterProps) {
 
   const linkCls = "text-[#F6F3EE]/75 transition-colors hover:text-[#C9A86A]";
   return (
-    <footer className="border-t border-[#B08D46]/25 bg-[#0B1A16] text-sm text-[#F6F3EE]">
+    <footer className="border-t border-[#B08D46]/25 bg-[#121417] text-sm text-[#F6F3EE]">
       <div className="mx-auto grid w-full max-w-[min(88vw,96rem)] grid-cols-1 gap-14 px-6 py-20 sm:grid-cols-2 sm:px-10 lg:grid-cols-12 lg:gap-10 lg:py-24">
         <div className="sm:col-span-2 lg:col-span-5">
           <div className="marca marca-clara" aria-label="Fustinoni Advocacia">

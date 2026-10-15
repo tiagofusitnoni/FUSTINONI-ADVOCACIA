@@ -31,7 +31,7 @@ export async function PublicacoesHomeBlock() {
               <span className="h-px w-10 bg-[#B08D46]" aria-hidden="true" />
               <span className="text-[0.6875rem] font-medium uppercase tracking-[0.32em] text-[#9A7A3A]">Publicações</span>
             </div>
-            <h2 className="font-serif text-[2rem] leading-[1.15] tracking-[-0.012em] text-[#14231D] sm:text-[2.5rem] lg:text-[2.85rem]">
+            <h2 className="font-serif text-[2rem] leading-[1.15] tracking-[-0.012em] text-[#16181B] sm:text-[2.5rem] lg:text-[2.85rem]">
               O que estamos
               <br />
               acompanhando agora
@@ -39,7 +39,7 @@ export async function PublicacoesHomeBlock() {
           </div>
           <Link
             href="/publicacoes"
-            className="group inline-flex items-center gap-3 whitespace-nowrap text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-[#0F2A22]"
+            className="group inline-flex items-center gap-3 whitespace-nowrap text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-[#1C2025]"
           >
             <span className="border-b border-[#B08D46] pb-1">Ver todas as publicações</span>
             <span className="text-[#B08D46] transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
@@ -53,24 +53,24 @@ export async function PublicacoesHomeBlock() {
               href={{ pathname: "/publicacoes/[slug]", params: { slug: p.slug } }}
               className="group flex flex-col border border-[#E3DDD1] bg-[#F6F3EE] p-8 transition-colors duration-300 hover:border-[#B08D46]/60"
             >
-              <div className="mb-6 flex flex-wrap items-center gap-2 text-[0.625rem] font-medium uppercase tracking-[0.18em] text-[#4F5A54]">
+              <div className="mb-6 flex flex-wrap items-center gap-2 text-[0.625rem] font-medium uppercase tracking-[0.18em] text-[#55585D]">
                 <span>{formatarDataPublicacao(p.publicada_em)}</span>
                 {p.tribunal && p.tribunal.toLowerCase() !== "nenhum" && (
                   <>
                     <span className="text-[#B08D46]">·</span>
-                    <span className="text-[#14231D]">{p.tribunal}</span>
+                    <span className="text-[#16181B]">{p.tribunal}</span>
                   </>
                 )}
                 <span className="text-[#B08D46]">·</span>
                 <span>{formatarArea(p.area_direito)}</span>
               </div>
-              <h3 className="mb-4 font-serif text-[1.25rem] leading-snug text-[#14231D]">
+              <h3 className="mb-4 font-serif text-[1.25rem] leading-snug text-[#16181B]">
                 {p.titulo}
               </h3>
-              <p className="mb-8 line-clamp-3 flex-1 text-[0.9rem] leading-7 text-[#4F5A54]">
+              <p className="mb-8 line-clamp-3 flex-1 text-[0.9rem] leading-7 text-[#55585D]">
                 {p.lead}
               </p>
-              <div className="flex items-center gap-3 border-t border-[#E3DDD1] pt-5 text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-[#0F2A22]">
+              <div className="flex items-center gap-3 border-t border-[#E3DDD1] pt-5 text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-[#1C2025]">
                 Ler publicação
                 <span className="text-[#B08D46] transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
               </div>
